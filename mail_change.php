@@ -7,4 +7,3 @@ Stylista
 <h3>メールアドレスの変更</h3>
 メールアドレス <input type="text" name="action" placeholder="メールアドレス"><br>
 <button type="submit" name="action" value="send">変更する</button>
- 
