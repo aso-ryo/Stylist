@@ -12,6 +12,6 @@ Stylista
     <button type="submit" name="kato"></button>
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
-    お気に入り
+
 </body>
 </html>
