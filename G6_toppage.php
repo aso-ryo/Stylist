@@ -12,6 +12,9 @@
     <button type="submit" name="kato"></button>
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
+
+
+    
     カテゴリーから探す<br>
     <a href="">トップス</a><br>
     <a href="">アウター</a><br>
