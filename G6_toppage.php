@@ -35,15 +35,5 @@
     <button name=ladies type="submit"></button>
     </form>
 
-    
-
-
-
-
-
-
-
-
-</form>
 </body>
 </html>
