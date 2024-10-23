@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+Stylista
 <input type="text" name="query" placeholder="アイテムの検索">
     <button type="submit">検索</button>
     <button type="submit" name="kato"></button>
@@ -14,5 +15,5 @@
     
 </body>
 </html>
-Stylista
+
     
