@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 Stylista
     <input type="text" name="query" placeholder="アイテムの検索">
     <button type="submit">検索</button>
@@ -28,4 +36,8 @@ Stylista
             ?>
     </select>
     <button type="submit" name="action" value="send">計算</button>
-<button type="submit" name="action" value="send">変更する</button>
+    <form action="G24_user_info_complete.php" method="post">
+        <button type="submit" name="action" value="send">変更する</button>
+    </form>
+</body>
+</html>

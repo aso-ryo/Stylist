@@ -30,13 +30,13 @@ Stylista
     <hr>
 
     <p>会員登録情報</p>
-    <form action="" method="post">
+    <form action="G19_user_info.php" method="post">
     <button type="submit">会員登録の確認・変更</button>
     </form>
-    <form action="" method="post">
+    <form action="G25_goods_history.php" method="post">
     <button type="submit">購入履歴</button>
     </form>
-    <form action="" method="post">
+    <form action="G27_logout.php" method="post">
     <button type="submit">ログアウト</button>
     </form>
 </body>
