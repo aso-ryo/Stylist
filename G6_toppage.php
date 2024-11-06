@@ -14,12 +14,29 @@
     <button type="submit" name="mypage"></button>
 
 
+    
+    カテゴリーから探す<br>
+    <a href="">トップス</a><br>
+    <a href="">アウター</a><br>
+    <a href="">パンツ</a><br>
+    <a href="">オールインワン</a><br>
+    <a href="">スカート</a><br>
+    <a href="">ワンピース</a><br>
+    <a href="">シューズ</a><br>
+    <a href="">バッグ</a><br>
+    <a href="">アクセサリー</a><br>
+    <a href="">帽子</a><br>
+    <a href="">ファッション雑貨</a><br>
 
+    <form action="" method="post">
+    <button name=all type="submit">すべて</button>
+    </form>
+    <form action="" method="post">
+    <button name=mens type="submit"></button>
+    </form>
+    <form action="" method="post">
+    <button name=ladies type="submit"></button>
+    </form>
 
-
-
-
-
-</form>
 </body>
 </html>

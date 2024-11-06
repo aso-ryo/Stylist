@@ -12,11 +12,10 @@ Stylista
     <button type="submit" name="kato"></button>
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
-<h3>パスワードの変更</h3>
-パスワード <input type="text" name="action" placeholder="パスワード"><br>
-<form action="G24_user_info_complete.php" method="post">
-<button type="submit" name="action" value="send">変更する</button>
-</form>
- 
+    <h1>会員情報の変更が完了しました</h1>
+    <form action="G19_user_info.php" method="post">
+        <button type="submit">会員情報画面へ戻る</button>
+    </form>
 </body>
 </html>
+    
