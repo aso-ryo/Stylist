@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>注文詳細画面</title>
 </head>
 <body>
 Stylista
@@ -13,6 +13,9 @@ Stylista
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
     
+    <button type="submit" name="kato">カートに入れる</button>
+    <button type="submit" name="favorite">☆</button>
+
 </body>
 </html>
 
