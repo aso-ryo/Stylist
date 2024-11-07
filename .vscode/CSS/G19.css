@@ -1,0 +1,28 @@
+G19　ログアウト
+import React form "react";
+import "./style.css";
+
+export const Screen = () => {
+    return(
+        <div className="screen">
+        <div className="div">
+        <div className="text-wrapper-2">ログイン</div>
+
+        <div className="overlap">
+        <div className="text-wrapper-2">メールアドレス</div>
+        </div>
+
+        <div className="overlap">
+        <div className="text-wrapper-2">パスワード</div>
+        </div>
+
+        <button className="button">
+        <button className="button-2">ログイン</butoon>
+
+        <div className="text-wrapper-3">Stylista</div>
+
+        <div className="text-wrapper-4">ログアウトしました</div>
+        </div>
+        </div>
+    );  
+};
