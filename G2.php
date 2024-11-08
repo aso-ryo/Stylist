@@ -15,9 +15,8 @@
     <p>氏名(カナ)　必須<input type="text" name="seikana" placeholder="セイ">　
                 <input type="text" name="meikana" placeholder="メイ"></p>
     <p>郵便番号　必須<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
-    <p>住所　必須<textarea name="jyuusyo" rows="5" cols="33"></p>
+    <p>住所　必須<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
     <p>電話番号　必須<input type="text" name="tell" placeholder="半角数字"></p>
-    <p>生年月日　必須
     <?php
 //日付の初期値
 $theYear2 = date('Y');
@@ -47,8 +46,8 @@ function yearOption()
 {
   global $theYear2;
   $thisYear = date('Y');
-  $startYear = $thisYear - 15;
-  $endYear = $thisYear + 15;
+  $startYear = $thisYear - 100;
+  $endYear = $thisYear + 0;
   echo '<select name = "year">', '\n';
   for ($i = $startYear; $i <= $endYear; $i++) {
     if ($i == $theYear2) {
@@ -96,7 +95,7 @@ function dayOption()
       <?php yearOption(); ?>年
       <?php monthOption(); ?>月
       <?php dayOption(); ?>日
-      <input type="submit" value="送信する">
+      <p><input type="submit" value="送信する"></p>
 </form>
 
 <?php

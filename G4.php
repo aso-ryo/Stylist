@@ -12,10 +12,10 @@
     <button type="submit" name="kato"></button>
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
-
+    <br>
 
     
-    カテゴリーから探す<br>
+    <p>カテゴリーから探す</p>
     <a href="">トップス</a><br>
     <a href="">アウター</a><br>
     <a href="">パンツ</a><br>
