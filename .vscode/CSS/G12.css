@@ -1,2 +1,300 @@
 G12　検索結果画面
-岡
+import React from "react";
+import { Icon } from "./Icon";
+import { IconComponentNode } from "./IconComponentNode";
+import { ShoppingCart } from "./ShoppingCart";
+import { Star } from "./Star";
+import { User } from "./User";
+import "./style.css";
+
+export const Screen = () => {
+  return (
+    <div className="screen">
+      <div className="div">
+        <div className="overlap-group">
+          <div className="chrome-browser-bar">
+            <div className="text-wrapper">Stylista</div>
+
+            <div className="search-bar">
+              <div className="state-layer">
+                <div className="container-wrapper">
+                  <div className="container">
+                    <div className="icon-wrapper">
+                      <Icon className="icon-instance" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div className="supporting-text">アイテムの検索</div>
+                </div>
+
+                <div className="trailing-elements">
+                  <div className="container-wrapper">
+                    <div className="container">
+                      <div className="icon-wrapper">
+                        <IconComponentNode className="icon-instance" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ShoppingCart className="icon-instance-node" />
+            <Star className="icon-instance-node" />
+            <User className="icon-instance-node" />
+          </div>
+
+          <div className="chrome-browser-bar">
+            <div className="text-wrapper">Stylista</div>
+
+            <div className="search-bar">
+              <div className="state-layer">
+                <div className="container-wrapper">
+                  <div className="container">
+                    <div className="icon-wrapper">
+                      <Icon className="icon-instance" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div className="supporting-text">アイテムの検索</div>
+                </div>
+
+                <div className="trailing-elements">
+                  <div className="container-wrapper">
+                    <div className="container">
+                      <div className="icon-wrapper">
+                        <IconComponentNode className="icon-instance" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ShoppingCart className="icon-instance-node" />
+            <Star className="icon-instance-node" />
+            <User className="icon-instance-node" />
+          </div>
+
+          <div className="chrome-browser-bar">
+            <div className="text-wrapper">Stylista</div>
+
+            <div className="search-bar">
+              <div className="state-layer">
+                <div className="container-wrapper">
+                  <div className="container">
+                    <div className="icon-wrapper">
+                      <Icon className="icon-instance" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div className="supporting-text">アイテムの検索</div>
+                </div>
+
+                <div className="trailing-elements">
+                  <div className="container-wrapper">
+                    <div className="container">
+                      <div className="icon-wrapper">
+                        <IconComponentNode className="icon-instance" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ShoppingCart className="icon-instance-node" />
+            <Star className="icon-instance-node" />
+            <User className="icon-instance-node" />
+          </div>
+
+          <div className="chrome-browser-bar">
+            <div className="text-wrapper">Stylista</div>
+
+            <div className="search-bar">
+              <div className="state-layer">
+                <div className="container-wrapper">
+                  <div className="container">
+                    <div className="icon-wrapper">
+                      <Icon className="icon-instance" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="content">
+                  <div className="supporting-text">アイテムの検索</div>
+                </div>
+
+                <div className="trailing-elements">
+                  <div className="container-wrapper">
+                    <div className="container">
+                      <div className="icon-wrapper">
+                        <IconComponentNode className="icon-instance" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <ShoppingCart className="icon-instance-node" />
+            <Star className="icon-instance-node" />
+            <User className="icon-instance-node" />
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="image" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-2">
+          <div className="image-2" />
+
+          <div className="title-wrapper">
+            <div className="title">アウター</div>
+          </div>
+        </div>
+
+        <div className="card-3">
+          <div className="image-3" />
+
+          <div className="title-wrapper">
+            <div className="title">ファッション雑貨</div>
+          </div>
+        </div>
+
+        <div className="card-4">
+          <div className="image-4" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-5">
+          <div className="image-5" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-6">
+          <div className="image-6" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="text-wrapper-2">〇〇の検索結果</div>
+
+        <div className="card-7">
+          <div className="image-7" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-8">
+          <div className="image-8" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-9">
+          <div className="image-9" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-10">
+          <div className="image-10" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-11">
+          <div className="image-11" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-12">
+          <div className="image-12" />
+
+          <div className="title-wrapper">
+            <div className="title">トップス</div>
+          </div>
+        </div>
+
+        <div className="card-13">
+          <div className="image-13" />
+
+          <div className="title-wrapper">
+            <div className="title">帽子</div>
+          </div>
+        </div>
+
+        <div className="card-14">
+          <div className="image-14" />
+
+          <div className="title-wrapper">
+            <div className="title">帽子</div>
+          </div>
+        </div>
+
+        <div className="card-15">
+          <div className="image-15" />
+
+          <div className="title-wrapper">
+            <div className="title">アクセサリー</div>
+          </div>
+        </div>
+
+        <div className="card-16">
+          <div className="image-16" />
+
+          <div className="title-wrapper">
+            <div className="title">アクセサリー</div>
+          </div>
+        </div>
+
+        <div className="card-17">
+          <div className="image-17" />
+
+          <div className="title-wrapper">
+            <div className="title">バッグ</div>
+          </div>
+        </div>
+
+        <div className="card-18">
+          <div className="image-18" />
+
+          <div className="title-wrapper">
+            <div className="title">シューズ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
