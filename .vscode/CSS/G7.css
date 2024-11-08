@@ -1,2 +1,543 @@
 G7　商品詳細
-香
+.screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .screen .div-2 {
+    background-color: var(--m3-schemes-on-error);
+    border: 8px solid;
+    border-color: var(--m3-schemes-outline-variant);
+    height: 1007px;
+    position: relative;
+    width: 1432px;
+  }
+  
+  .screen .overlap {
+    height: 88px;
+    left: 174px;
+    position: absolute;
+    top: 20px;
+    width: 1084px;
+  }
+  
+  .screen .chrome-browser-bar {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    left: 0;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 1084px;
+  }
+  
+  .screen .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .screen .search-bar-instance {
+    background-color: #ffffff !important;
+    border: 1px solid !important;
+    border-color: #a9a9a9 !important;
+    height: 58px !important;
+    margin-bottom: -1.00px !important;
+    margin-top: -1.00px !important;
+    width: 722px !important;
+  }
+  
+  .screen .icon-2 {
+    height: 24px !important;
+    position: relative !important;
+    width: 24px !important;
+  }
+  
+  .screen .icon-instance-node-2 {
+    height: 40px !important;
+    position: relative !important;
+    width: 40px !important;
+  }
+  
+  .screen .size-40 {
+    height: 40px !important;
+    left: 1304px !important;
+    position: absolute !important;
+    top: 463px !important;
+    width: 40px !important;
+  }
+  
+  .screen .overlap-group {
+    height: 615px;
+    left: 65px;
+    position: absolute;
+    top: 210px;
+    width: 1322px;
+  }
+  
+  .screen .overlap-2 {
+    height: 613px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 765px;
+  }
+  
+  .screen .overlap-3 {
+    height: 604px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 679px;
+  }
+  
+  .screen .element {
+    height: 466px;
+    left: 36px;
+    position: absolute;
+    top: 0;
+    width: 580px;
+  }
+  
+  .screen .card {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 124px;
+    max-width: 220px;
+    position: absolute;
+    top: 444px;
+    width: 120px;
+  }
+  
+  .screen .image {
+    align-self: stretch;
+    background-image: url(./image.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .title-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    color: var(--m3-schemes-on-surface);
+    display: -webkit-box;
+    font-family: var(--m3-title-small-font-family);
+    font-size: var(--m3-title-small-font-size);
+    font-style: var(--m3-title-small-font-style);
+    font-weight: var(--m3-title-small-font-weight);
+    height: 20px;
+    letter-spacing: var(--m3-title-small-letter-spacing);
+    line-height: var(--m3-title-small-line-height);
+    margin-top: -1.00px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .screen .card-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 273px;
+    max-width: 220px;
+    position: absolute;
+    top: 444px;
+    width: 120px;
+  }
+  
+  .screen .image-2 {
+    align-self: stretch;
+    background-image: url(./image-2.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-3 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    left: 422px;
+    max-width: 220px;
+    position: absolute;
+    top: 444px;
+    width: 120px;
+  }
+  
+  .screen .image-3 {
+    align-self: stretch;
+    background-image: url(./image-3.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 415px;
+    width: 157px;
+  }
+  
+  .screen .text-wrapper-4 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 604px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 444px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .text-wrapper-5 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 619px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 393px;
+    white-space: nowrap;
+    width: 146px;
+  }
+  
+  .screen .text-wrapper-6 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 613px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 481px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .text-wrapper-7 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 598px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 554px;
+    white-space: nowrap;
+    width: 106px;
+  }
+  
+  .screen .text-wrapper-8 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 598px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 592px;
+    white-space: nowrap;
+    width: 106px;
+  }
+  
+  .screen .text-wrapper-9 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 32px;
+    font-weight: 500;
+    height: 76px;
+    left: 716px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 59px;
+    width: 606px;
+  }
+  
+  .screen .text-wrapper-10 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 32px;
+    font-weight: 500;
+    height: 37px;
+    left: 716px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 203px;
+    width: 194px;
+  }
+  
+  .screen .text-wrapper-11 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 444px;
+    white-space: nowrap;
+    width: 85px;
+  }
+  
+  .screen .text-wrapper-12 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 748px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 556px;
+    white-space: nowrap;
+    width: 129px;
+  }
+  
+  .screen .text-wrapper-13 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 592px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .overlap-group-2 {
+    height: 23px;
+    left: 690px;
+    position: absolute;
+    top: 260px;
+    width: 268px;
+  }
+  
+  .screen .text-wrapper-14 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .element-2 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 247px;
+  }
+  
+  .screen .text-wrapper-15 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 481px;
+    white-space: nowrap;
+    width: 247px;
+  }
+  
+  .screen .overlap-4 {
+    height: 95px;
+    left: 1063px;
+    position: absolute;
+    top: 453px;
+    width: 211px;
+  }
+  
+  .screen .text {
+    color: #000000;
+    font-family: var(--m3-headline-small-font-family);
+    font-size: var(--m3-headline-small-font-size);
+    font-style: var(--m3-headline-small-font-style);
+    font-weight: var(--m3-headline-small-font-weight);
+    left: 21px;
+    letter-spacing: var(--m3-headline-small-letter-spacing);
+    line-height: var(--m3-headline-small-line-height);
+    position: absolute;
+    top: 52px;
+    width: 1px;
+  }
+  
+  .screen .button-instance {
+    display: flex !important;
+    height: 60px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 211px !important;
+  }
+  
+  .screen .design-component-instance-node {
+    font-family: "Inter-Regular", Helvetica !important;
+    font-size: 20px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 20px !important;
+    margin-top: unset !important;
+  }
+  
+  .screen .text-wrapper-16 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 1128px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 603px;
+    white-space: nowrap;
+    width: 146px;
+  }
+  
+  .screen .text-wrapper-17 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1110px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 649px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-18 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1110px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 741px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-19 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1107px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 697px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-20 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1104px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 788px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
