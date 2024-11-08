@@ -16,7 +16,7 @@ export const Screen = () => {
   return (
     <div className="screen">
       <div className="div">
-        <div className="text-wrapper-2">新規�会員登録</div>
+        <div className="text-wrapper-2">新規会員登録</div>
 
         <div className="text-wrapper-3">Stylista</div>
 
