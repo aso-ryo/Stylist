@@ -1,22 +1,2 @@
 G3　会員登録完了画面
-import React from "react";
-import React from "./image.png";
-import ".style.css";
-
-export const Screen = () => {
-  return(
-    <div className="screen">
-    <div className="div">
-    <div className="text-wrapper">Stylista</div>
-
-    <div className="overlap-group">
-    <img className="image" alt="Image" src={image} />
-    </div>
-
-    <button className="button">
-    <button className="button-2">ログイン画面へ戻る</button>
-    </button>
-    </div>
-    </div>
-  );
-};
+中

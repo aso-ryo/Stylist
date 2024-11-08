@@ -1,27 +1,2 @@
 G5 カテゴリー画面
-import React from "react";
-import { Button } from "./Button";
-import image from "./image.png";
-import "./style.css";
-
-export const Screen = () => {
-  return (
-    <div className="screen">
-      <div className="div">
-        <div className="text-wrapper-2">Stylista</div>
-
-        <div className="overlap-group">
-          <img className="image" alt="Image" src={image} />
-        </div>
-
-        <Button
-          className="button-instance"
-          divClassName="design-component-instance-node"
-          label="ログイン画面へ戻る"
-          size="medium"
-          variant="primary"
-        />
-      </div>
-    </div>
-  );
-};
+香

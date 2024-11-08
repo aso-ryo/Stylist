@@ -1,31 +1,3 @@
 G2 新規会員登録画面
-import React from "react";
-import { Button } from "./Button";
-import "./style.css";
 
-export const Screen = () => {
-  return (
-    <div className="screen">
-      <div className="div">
-        <div className="text-wrapper-2">新規�会員登録</div>
-
-        <div className="overlap-group">
-          <div className="text-wrapper-3">メールアドレス</div>
-        </div>
-
-        <div className="overlap">
-          <div className="text-wrapper-4">パスワード</div>
-        </div>
-
-        <Button
-          className="button-instance"
-          divClassName="design-component-instance-node"
-          label="個人情報の入力へ進む"
-          size="medium"
-          variant="primary"
-        />
-        <div className="text-wrapper-5">Stylista</div>
-      </div>
-    </div>
-  );
-};
+香
