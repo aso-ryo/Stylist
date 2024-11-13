@@ -8,8 +8,8 @@
 <body>
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
-    <p><input type="text" name="mail" placeholder="メールアドレス"></p>
-    <p><input type="text" name="pass" placeholder="パスワード"></p>
+    <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>
+    <p>パスワード<input type="text" name="pass" placeholder="パスワード"></p>
     <p>氏名　必須<input type="text" name="sei" placeholder="姓">
                 <input type="text" name="mei" placeholder="名"></p>
     <p>氏名(カナ)　必須<input type="text" name="seikana" placeholder="セイ">
