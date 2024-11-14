@@ -1,2 +1,602 @@
 G15　マイページ
-古
+.screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .screen .div-2 {
+    background-color: var(--m3-schemes-on-error);
+    border: 8px solid;
+    border-color: var(--m3-schemes-outline-variant);
+    height: 1598px;
+    overflow: hidden;
+    position: relative;
+    width: 1432px;
+  }
+  
+  .screen .overlap-group {
+    height: 88px;
+    left: 174px;
+    position: absolute;
+    top: 20px;
+    width: 1084px;
+  }
+  
+  .screen .chrome-browser-bar {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    left: 0;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 1084px;
+  }
+  
+  .screen .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .screen .search-bar-instance {
+    background-color: #ffffff !important;
+    border: 1px solid !important;
+    border-color: #a9a9a9 !important;
+    height: 58px !important;
+    margin-bottom: -1.00px !important;
+    margin-top: -1.00px !important;
+    width: 722px !important;
+  }
+  
+  .screen .icon-2 {
+    height: 24px !important;
+    position: relative !important;
+    width: 24px !important;
+  }
+  
+  .screen .size-40 {
+    height: 40px !important;
+    position: relative !important;
+    width: 40px !important;
+  }
+  
+  .screen .text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 195px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 722px;
+    width: 207px;
+  }
+  
+  .screen .text-wrapper-4 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 187px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 1212px;
+    width: 207px;
+  }
+  
+  .screen .list {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    left: 240px;
+    padding: 0px 8px;
+    position: absolute;
+    top: 788px;
+    width: 924px;
+  }
+  
+  .screen .list-item {
+    align-self: stretch !important;
+    background-color: unset !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+  
+  .screen .list-item-list-item-0-density {
+    height: 89px !important;
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+    width: 908px !important;
+  }
+  
+  .screen .card-wrapper {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    left: 1032px;
+    position: absolute;
+    top: 225px;
+    width: 1272px;
+  }
+  
+  .screen .card {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    max-width: 220px;
+    position: relative;
+    width: 132px;
+  }
+  
+  .screen .image {
+    align-self: stretch;
+    background-image: url(./image-6.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .title-wrapper {
+    align-items: flex-start;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .title {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    align-self: stretch;
+    color: var(--m3-schemes-on-surface);
+    display: -webkit-box;
+    font-family: var(--m3-title-small-font-family);
+    font-size: var(--m3-title-small-font-size);
+    font-style: var(--m3-title-small-font-style);
+    font-weight: var(--m3-title-small-font-weight);
+    height: 20px;
+    letter-spacing: var(--m3-title-small-letter-spacing);
+    line-height: var(--m3-title-small-line-height);
+    margin-top: -1.00px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .screen .card-2 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 252px;
+    max-width: 220px;
+    position: absolute;
+    top: 227px;
+    width: 132px;
+  }
+  
+  .screen .image-2 {
+    align-self: stretch;
+    background-image: url(./image.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-3 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 408px;
+    max-width: 220px;
+    position: absolute;
+    top: 227px;
+    width: 132px;
+  }
+  
+  .screen .image-3 {
+    align-self: stretch;
+    background-image: url(./image-2.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-4 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 564px;
+    max-width: 220px;
+    position: absolute;
+    top: 227px;
+    width: 132px;
+  }
+  
+  .screen .image-4 {
+    align-self: stretch;
+    background-image: url(./image-3.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-5 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 720px;
+    max-width: 220px;
+    position: absolute;
+    top: 227px;
+    width: 132px;
+  }
+  
+  .screen .image-5 {
+    align-self: stretch;
+    background-image: url(./image-4.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-6 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 876px;
+    max-width: 220px;
+    position: absolute;
+    top: 227px;
+    width: 132px;
+  }
+  
+  .screen .image-6 {
+    align-self: stretch;
+    background-image: url(./image-5.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .text-wrapper-5 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 195px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 158px;
+    width: 207px;
+  }
+  
+  .screen .text-wrapper-6 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 969px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    text-align: center;
+    top: 169px;
+    white-space: nowrap;
+    width: 207px;
+  }
+  
+  .screen .div-wrapper {
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 160px;
+    left: 1032px;
+    position: absolute;
+    top: 504px;
+    width: 1272px;
+  }
+  
+  .screen .image-7 {
+    align-self: stretch;
+    background-image: url(./image-7.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-7 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 252px;
+    max-width: 220px;
+    position: absolute;
+    top: 504px;
+    width: 132px;
+  }
+  
+  .screen .image-8 {
+    align-self: stretch;
+    background-image: url(./image-8.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-8 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 408px;
+    max-width: 220px;
+    position: absolute;
+    top: 504px;
+    width: 132px;
+  }
+  
+  .screen .image-9 {
+    align-self: stretch;
+    background-image: url(./image-9.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-9 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 564px;
+    max-width: 220px;
+    position: absolute;
+    top: 504px;
+    width: 132px;
+  }
+  
+  .screen .image-10 {
+    align-self: stretch;
+    background-image: url(./image-10.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-10 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 720px;
+    max-width: 220px;
+    position: absolute;
+    top: 504px;
+    width: 132px;
+  }
+  
+  .screen .image-11 {
+    align-self: stretch;
+    background-image: url(./image-11.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .card-11 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 160px;
+    left: 876px;
+    max-width: 220px;
+    position: absolute;
+    top: 504px;
+    width: 132px;
+  }
+  
+  .screen .image-12 {
+    align-self: stretch;
+    background-image: url(./image-12.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .screen .text-wrapper-7 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 189px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 435px;
+    width: 207px;
+  }
+  
+  .screen .text-wrapper-8 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 969px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    text-align: center;
+    top: 446px;
+    white-space: nowrap;
+    width: 207px;
+  }
+  
+  .screen .text-wrapper-9 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 264px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 1297px;
+    white-space: nowrap;
+  }
+  
+  .screen .navigate-next {
+    height: 40px !important;
+    left: 1073px !important;
+    position: absolute !important;
+    top: 1297px !important;
+    width: 40px !important;
+  }
+  
+  .screen .line {
+    height: 1px;
+    left: 270px;
+    object-fit: cover;
+    position: absolute;
+    top: 1360px;
+    width: 862px;
+  }
+  
+  .screen .text-wrapper-10 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 264px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 1378px;
+    white-space: nowrap;
+  }
+  
+  .screen .navigate-next-instance {
+    height: 40px !important;
+    left: 1073px !important;
+    position: absolute !important;
+    top: 1378px !important;
+    width: 40px !important;
+  }
+  
+  .screen .img {
+    height: 1px;
+    left: 270px;
+    object-fit: cover;
+    position: absolute;
+    top: 1441px;
+    width: 862px;
+  }
+  
+  .screen .text-wrapper-11 {
+    color: #000000;
+    font-family: "Roboto-Regular", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 264px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 1459px;
+    white-space: nowrap;
+  }
+  
+  .screen .navigate-next-2 {
+    height: 40px !important;
+    left: 1073px !important;
+    position: absolute !important;
+    top: 1459px !important;
+    width: 40px !important;
+  }
+  
+  .screen .line-2 {
+    height: 1px;
+    left: 270px;
+    object-fit: cover;
+    position: absolute;
+    top: 1522px;
+    width: 862px;
+  }
+  
