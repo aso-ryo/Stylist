@@ -1,3 +1,181 @@
 G2 新規会員登録画面
 
-香
+import React from "react";
+import { ArrowDropDown } from "./ArrowDropDown";
+import { Button } from "./Button";
+import line5 from "./line-5.svg";
+import line6 from "./line-6.svg";
+import line7 from "./line-7.svg";
+import line8 from "./line-8.svg";
+import line9 from "./line-9.svg";
+import line10 from "./line-10.svg";
+import line12 from "./line-12.svg";
+import "./style.css";
+
+export const Screen = () => {
+  return (
+    <div className="screen">
+      <div className="div">
+        <div className="text-wrapper-2">新規会員登録</div>
+
+        <div className="text-wrapper-3">Stylista</div>
+
+        <Button
+          className="button-instance"
+          divClassName="design-component-instance-node"
+          label="登録する"
+          size="medium"
+          variant="primary"
+        />
+        <div className="overlap">
+          <div className="text-wrapper-4">氏名</div>
+
+          <div className="text-wrapper-4">氏名</div>
+        </div>
+
+        <div className="overlap-group">
+          <img className="line" alt="Line" src={line9} />
+        </div>
+
+        <div className="text-wrapper-5">氏名(カナ)</div>
+
+        <img className="img" alt="Line" src={line5} />
+
+        <img className="line-2" alt="Line" src={line7} />
+
+        <img className="line-3" alt="Line" src={line8} />
+
+        <div className="text-wrapper-6">郵便番号</div>
+
+        <div className="overlap-2">
+          <div className="text-wrapper-4">住所</div>
+
+          <div className="text-wrapper-4">住所</div>
+        </div>
+
+        <img className="line-4" alt="Line" src={line6} />
+
+        <div className="text-wrapper-7">電話番号</div>
+
+        <div className="overlap-3">
+          <div className="rectangle" />
+
+          <div className="text-wrapper-8">山田</div>
+
+          <div className="text-wrapper-8">山田</div>
+
+          <div className="rectangle" />
+
+          <div className="text-wrapper-8">山田</div>
+
+          <div className="text-wrapper-8">山田</div>
+        </div>
+
+        <div className="overlap-group-2">
+          <div className="rectangle" />
+
+          <div className="text-wrapper-9">太郎</div>
+
+          <div className="rectangle" />
+
+          <div className="text-wrapper-9">太郎</div>
+        </div>
+
+        <div className="overlap-4">
+          <div className="rectangle" />
+
+          <div className="text-wrapper-10">ヤマダ</div>
+        </div>
+
+        <div className="overlap-5">
+          <div className="rectangle-2" />
+
+          <div className="text-wrapper-8">000-0000</div>
+        </div>
+
+        <div className="overlap-6">
+          <div className="rectangle-3" />
+
+          <div className="text-wrapper-10">000-0000-0000</div>
+        </div>
+
+        <div className="overlap-7">
+          <div className="rectangle-4" />
+
+          <div className="text-wrapper-11">福岡県福岡市博多区***</div>
+        </div>
+
+        <div className="overlap-8">
+          <div className="rectangle-5" />
+
+          <div className="text-wrapper-9">タロウ</div>
+        </div>
+
+        <div className="text-wrapper-12">パスワード</div>
+
+        <div className="line-wrapper">
+          <img className="line" alt="Line" src={line12} />
+        </div>
+
+        <div className="overlap-9">
+          <div className="rectangle" />
+
+          <div className="text-wrapper-8">山田</div>
+
+          <div className="text-wrapper-8">山田</div>
+
+          <div className="rectangle-6" />
+
+          <div className="text-wrapper-13">Pass.</div>
+        </div>
+
+        <div className="text-wrapper-14">メールアドレス</div>
+
+        <img className="line-5" alt="Line" src={line10} />
+
+        <div className="overlap-10">
+          <div className="rectangle-7" />
+
+          <div className="text-wrapper-15">○○○○s.asojuku</div>
+        </div>
+
+        <div className="text-wrapper-16">生年月日</div>
+
+        <div className="overlap-11">
+          <div className="rectangle-8" />
+
+          <div className="text-wrapper-17">2004</div>
+
+          <div className="text-wrapper-17">2004</div>
+
+          <ArrowDropDown className="arrow-drop-down" />
+          <div className="text-wrapper-18">年</div>
+
+          <div className="text-wrapper-18">年</div>
+        </div>
+
+        <div className="overlap-12">
+          <div className="rectangle-8" />
+
+          <div className="text-wrapper-19">20</div>
+
+          <ArrowDropDown className="arrow-drop-down-instance" />
+          <div className="text-wrapper-18">日</div>
+        </div>
+
+        <div className="overlap-13">
+          <div className="rectangle-8" />
+
+          <div className="text-wrapper-17">2004</div>
+
+          <div className="rectangle-8" />
+
+          <div className="text-wrapper-17">9</div>
+
+          <ArrowDropDown className="arrow-drop-down-instance" />
+          <div className="text-wrapper-18">月</div>
+        </div>
+      </div>
+    </div>
+  );
+};

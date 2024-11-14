@@ -8,16 +8,15 @@
 <body>
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
-    <p><input type="text" name="mail" placeholder="メールアドレス"></p>
-    <p><input type="text" name="pass" placeholder="パスワード"></p>
-    <p>氏名　必須<input type="text" name="sei" placeholder="姓">
+    <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>
+    <p>パスワード<input type="text" name="pass" placeholder="パスワード"></p>
+    <p>氏名　<input type="text" name="sei" placeholder="姓">
                 <input type="text" name="mei" placeholder="名"></p>
-    <p>氏名(カナ)　必須<input type="text" name="seikana" placeholder="セイ">
+    <p>氏名(カナ)　<input type="text" name="seikana" placeholder="セイ">
                 <input type="text" name="meikana" placeholder="メイ"></p>
-    <p>郵便番号　必須<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
-    <p>住所　必須<textarea name="jyuusyo" rows="5" cols="33"></p>
-    <p>電話番号　必須<input type="text" name="tell" placeholder="半角数字"></p>
-    <p>生年月日　必須
+    <p>郵便番号　<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
+    <p>住所　<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
+    <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
     <?php
 //日付の初期値
 $theYear2 = date('Y');
@@ -47,8 +46,8 @@ function yearOption()
 {
   global $theYear2;
   $thisYear = date('Y');
-  $startYear = $thisYear - 15;
-  $endYear = $thisYear + 15;
+  $startYear = $thisYear - 100;
+  $endYear = $thisYear + 0;
   echo '<select name = "year">', '\n';
   for ($i = $startYear; $i <= $endYear; $i++) {
     if ($i == $theYear2) {
@@ -93,10 +92,10 @@ function dayOption()
 
 <!-- 年月日のプルダウンメニュー -->
 <form method="POST" action="<?php echo($_SERVER['PHP_SELF']); ?>">
-      <?php yearOption(); ?>年
+     生年月日 <?php yearOption(); ?>年
       <?php monthOption(); ?>月
       <?php dayOption(); ?>日
-      <input type="submit" value="送信する">
+      <p><input type="submit" value="送信する"></p>
 </form>
 
 <?php
