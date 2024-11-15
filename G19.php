@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,13 +14,3 @@
     <p><input type="submit" name="login" value="ログイン"></p>
 </body>
 </html>
-=======
-Stylista
-    <input type="text" name="query" placeholder="アイテムの検索">
-    <button type="submit">検索</button>
-    <button type="submit" name="kato"></button>
-    <button type="submit" name="favorite"></button>
-    <button type="submit" name="mypage"></button>
-    
->>>>>>> 5bc0928480d4420fe7e9b5961402437b1519e694
- 
