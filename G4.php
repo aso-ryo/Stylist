@@ -37,6 +37,20 @@
     <form action="" method="post">
     <button name=ladies type="submit"></button>
     </form>
+    <?
+    $sql_reviews = "SELECT * FROM image_posts";
+        $stmt_reviews = $pdo->prepare($sql_reviews);
+        $stmt_reviews->execute();
+        $reviews = $stmt_reviews->fetchAll(PDO::FETCH_ASSOC);
+        if ($reviews) {
+            foreach ($reviews as $review) {
+                echo '<p>' . $review['name'] . '</p>';
+                echo '<p>' . $review['comment'] . '</p>';
+                echo '<p><img src="'.$review['file_name'].'"></p>';
+                echo '<p>投稿日時:' . $review['created'] . '</p>';
+                echo '<hr>';
+            }
+            ?>
 
 </body>
 </html>
