@@ -5,7 +5,8 @@
     dbname=LAA1554862-kaihatsu;charset=utf8',
     'LAA1554862',
     'aso2024');
-    $sql = $pdo->prepare("insert into user");
+    $sql = $pdo->prepare("insert into user (user_name,e-mail,password,birthday,sex,adless,tell)VALUES (?,?,?,?,?,?,?)");
+    $sql->execute([$_POST['']]);
 
 ?>
 <form action="G1" method="post">
