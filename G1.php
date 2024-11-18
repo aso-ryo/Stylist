@@ -21,3 +21,5 @@
 <button type="subimt" name="touroku">新規会員登録はこちら</button>
 </form>
 </body>
+
+   
