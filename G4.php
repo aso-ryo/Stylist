@@ -37,8 +37,6 @@
     <form action="" method="post">
     <button name=ladies type="submit"></button>
     </form>
-<<<<<<< HEAD
-=======
     <?
     $sql_reviews = "SELECT * FROM image_posts";
         $stmt_reviews = $pdo->prepare($sql_reviews);
@@ -54,7 +52,6 @@
             }
         }
             ?>
->>>>>>> c496506e62eb2b3c3911d1ca1d829341b8d57d07
 
 </body>
 </html>

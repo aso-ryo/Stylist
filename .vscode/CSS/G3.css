@@ -1,2 +1,61 @@
-G3　会員登録完了画面
-中
+.screen{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: center;
+    width: 100%;
+}
+
+.screeen .div{
+    background-color: #ffffff;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+}
+
+.screeen .text-wrapper-2{
+    color: #000000;
+    font-family: "Inter-Bold",Helvetica;
+    font-size: 64px;
+    font-weight: 700;
+    left: 594px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 163px;
+}
+
+.screen .overlap-group{
+    background-image: url(./rectangle-3.svg);
+    background-size: 100% 100%;
+    height: 157px;
+    left: 325px;
+    position: absolute;
+    width: 789px;
+}
+
+.screen .image{
+    height: 45px;
+    left: 133px;
+    position: absolute;
+    top: 55px;
+    width: 522px;
+}
+
+.screen .button-instance{
+    display: flex !important;
+    height: 99px !important;
+    left:  573px !important;
+    position: absolute !important;
+    top: 723px !important;
+    width: 294px !important;
+}
+
+.screeen design-component-instance-node{
+    font-family: "Inter-SemiBold",Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    line-height: 33.6px !important;
+    margin-top: unset !important;
+}
