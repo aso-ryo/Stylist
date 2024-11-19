@@ -1,181 +1,573 @@
-G2 新規会員登録画面
+新規会員登録画面
+.screen{
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  width: 100%;
+}
 
-import React from "react";
-import { ArrowDropDown } from "./ArrowDropDown";
-import { Button } from "./Button";
-import line5 from "./line-5.svg";
-import line6 from "./line-6.svg";
-import line7 from "./line-7.svg";
-import line8 from "./line-8.svg";
-import line9 from "./line-9.svg";
-import line10 from "./line-10.svg";
-import line12 from "./line-12.svg";
-import "./style.css";
+.screen .div{
+  background-color: #ffffff;
+  height: 1534px;
+  position:relative;
+  width: 1440px;
+}
 
-export const Screen = () => {
-  return (
-    <div className="screen">
-      <div className="div">
-        <div className="text-wrapper-2">新規会員登録</div>
+.screen .text-wrapper{
+  color: #000000;
+  font-family: "Inter-Bold",Helvetica;
+  font-size: 32px;
+  font-weight: 700;
+  left: 610px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 301px;
+}
 
-        <div className="text-wrapper-3">Stylista</div>
+.screen .text-wrapper-2{
+  color: #000000;
+  font-family: "Inter-Bold",Helvetica;
+  font-size: 64px;
+  font-weight: 700;
+  left: 594px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 163px;
+}
 
-        <Button
-          className="button-instance"
-          divClassName="design-component-instance-node"
-          label="登録する"
-          size="medium"
-          variant="primary"
-        />
-        <div className="overlap">
-          <div className="text-wrapper-4">氏名</div>
+.screen .button{
+  all:unset;
+  align-items: center;
+  background-color: var(--color-background-brand-default);
+  border: 1px solid;
+  border-color: var(--color-border-brang-default);
+  border-radius: var(--size-radius-200);
+  box-sizing: border-box;
+  display: flex;
+  gap: var(--size-space-200);
+  height: 84px;
+  justify-content: center;
+  left: 609px;
+  overflow: hidden;
+  padding: var(--size-space-300);
+  position: absolute;
+  top: 1332px;
+  width: 246px;
+}
 
-          <div className="text-wrapper-4">氏名</div>
-        </div>
+.screen .button-2{
+  all:unset;
+  box-sizing: border-box;
+  color: var(--color-text-brand-on-brand);
+  font-family: var(--single-line-body-base-font-family);
+  font-size: var(--single-line-body-base-font-size);
+  font-style: var(--single-line-body-base-font-style);
+  font-weight: var(--single-line-body-base-font-weight);
+  letter-spacing: var(--single-line-body-base-letter-spacing);
+  line-height: var(--single-line-body-base-line-height);
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
 
-        <div className="overlap-group">
-          <img className="line" alt="Line" src={line9} />
-        </div>
+.screen .overlap{
+  height: 52px;
+  left: 359px;
+  position: absolute;
+  top: 595px;
+  width: 48px;
+}
 
-        <div className="text-wrapper-5">氏名(カナ)</div>
+.screen .text-wrapper-3{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
 
-        <img className="img" alt="Line" src={line5} />
+.screen .overlap-group{
+  background-image: url(./line-4.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1px;
+  left: 293px;
+  position: absolute;
+  top: 675px;
+  width: 862px;
+}
 
-        <img className="line-2" alt="Line" src={line7} />
+.screen .line{
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  width: 862px;
+}
 
-        <img className="line-3" alt="Line" src={line8} />
+.screen .text-wrapper-4{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 354px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 703px;
+  white-space: nowrap;
+}
 
-        <div className="text-wrapper-6">郵便番号</div>
+.screen .img{
+  height: 1px;
+  left: 288px;
+  object-fit: cover;
+  position: absolute;
+  top: 1039px;
+  width: 862px;
+}
 
-        <div className="overlap-2">
-          <div className="text-wrapper-4">住所</div>
+.screen .line-2{
+  height: 1px;
+  left: 288px;
+  object-fit: cover;
+  position: absolute;
+  top: 1152px;
+  width: 862px;
+}
 
-          <div className="text-wrapper-4">住所</div>
-        </div>
+.screen .line-3{
+  height: 1px;
+  left: 288px;
+  object-fit: cover;
+  position: absolute;
+  top: 1275px;
+  width: 862px;
+}
 
-        <img className="line-4" alt="Line" src={line6} />
+.screen .text-wrapper-5{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 354px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 805px;
+  white-space: nowrap;
+}
 
-        <div className="text-wrapper-7">電話番号</div>
+.screen .overlap-2{
+  height: 52px;
+  left: 354px;
+  position: absolute;
+  top: 875px;
+  width: 48px;
+}
 
-        <div className="overlap-3">
-          <div className="rectangle" />
+.screen .line-4{
+  height: 1px;
+  left: 288px;
+  object-fit: cover;
+  position: absolute;
+  top: 780px;
+  width: 862px;
+}
 
-          <div className="text-wrapper-8">山田</div>
+.screen .text-wrapper-6{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 355px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 1069px;
+  white-space: nowrap;
+}
 
-          <div className="text-wrapper-8">山田</div>
+.screen .overlap-3{
+  height: 52px;
+  left: 594px;
+  position: absolute;
+  top: 595px;
+  width: 207px;
+}
 
-          <div className="rectangle" />
+.screen .rectangle{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 207px;
+}
 
-          <div className="text-wrapper-8">山田</div>
+.screen .text-wrapper-7{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 118px;
+}
 
-          <div className="text-wrapper-8">山田</div>
-        </div>
+.screen .overlap-group-2{
+  height: 52px;
+  left: 840px;
+  position: absolute;
+  top: 595px;
+  width: 207px;
+}
 
-        <div className="overlap-group-2">
-          <div className="rectangle" />
+.screen .text-wrapper-8{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 118px;
+}
 
-          <div className="text-wrapper-9">太郎</div>
+.screen .overlap-4{
+  height: 52px;
+  left: 594px;
+  position: absolute;
+  top: 703px;
+  width: 207px;
+}
 
-          <div className="rectangle" />
+.screen .text-wrapper-9{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 118px;
+}
 
-          <div className="text-wrapper-9">太郎</div>
-        </div>
+.screen .overlap-5{
+  height: 52px;
+  left: 594px;
+  position: absolute;
+  top: 808px;
+  width: 207px;
+}
 
-        <div className="overlap-4">
-          <div className="rectangle" />
+.screen .rectangle-2{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 4px;
+  width: 207px;
+}
 
-          <div className="text-wrapper-10">ヤマダ</div>
-        </div>
+.screen .overlap-6{
+  height: 52px;
+  left: 594px;
+  position: absolute;
+  top: 1069px;
+  width: 207px;
+}
 
-        <div className="overlap-5">
-          <div className="rectangle-2" />
+.screen .rectangle-3{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 207px;
+}
 
-          <div className="text-wrapper-8">000-0000</div>
-        </div>
+.screen .overlap-7{
+  height: 128px;
+  left: 594px;
+  position: absolute;
+  top: 875px;
+  width: 453px;
+}
 
-        <div className="overlap-6">
-          <div className="rectangle-3" />
+.screen .rectangle-4{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 121px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 453px;
+}
 
-          <div className="text-wrapper-10">000-0000-0000</div>
-        </div>
+.screen .text-wrapper-10{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  width: 196px;
+}
 
-        <div className="overlap-7">
-          <div className="rectangle-4" />
+.screen .overlap-8{
+  height: 52px;
+  left: 840px;
+  position: absolute;
+  top: 703px;
+  width: 207px;
+}
 
-          <div className="text-wrapper-11">福岡県福岡市博多区***</div>
-        </div>
+.screen .rectangle-5{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 207px;
+}
 
-        <div className="overlap-8">
-          <div className="rectangle-5" />
+.screen .text-wrapper-11{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 370px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+ top: 498px;
+ white-space: nowrap;
+}
 
-          <div className="text-wrapper-9">タロウ</div>
-        </div>
+.screen .line-wrapper{
+  background-image: url(./line-11.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 1px;
+  left: 304px;
+  position: absolute;
+  top: 578px;
+  width: 862px;
+}
 
-        <div className="text-wrapper-12">パスワード</div>
+.screen .overlap-9{
+  height: 52px;
+  left: 605px;
+  position: absolute;
+  top: 498px;
+  width: 442px;
+}
 
-        <div className="line-wrapper">
-          <img className="line" alt="Line" src={line12} />
-        </div>
+.screen .rectangle-6{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 442px;
+}
 
-        <div className="overlap-9">
-          <div className="rectangle" />
+.screen .text-wrapper-12{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 425px;
+}
 
-          <div className="text-wrapper-8">山田</div>
+.screen .text-wrapper-13{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 371px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 401px;
+  width: 862px;
+}
 
-          <div className="text-wrapper-8">山田</div>
+.screen .line-5{
+  height: 1px;
+  left: 305px;
+  object-fit: cover;
+  position: absolute;
+  top: 481px;
+  width: 862px;
+}
 
-          <div className="rectangle-6" />
+.screen .overlap-10{
+  height: 52px;
+  left: 606px;
+  position: absolute;
+  top: 401px;
+  width: 435px;
+}
 
-          <div className="text-wrapper-13">Pass.</div>
-        </div>
+.screen .rectangle-7{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 435px;
+}
 
-        <div className="text-wrapper-14">メールアドレス</div>
+.screen .text-wrapper-14{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 11px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0;
+  width: 424px;
+}
 
-        <img className="line-5" alt="Line" src={line10} />
+.screen .text-wrapper-15{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 354px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 1187px;
+  white-space: nowrap;
+}
 
-        <div className="overlap-10">
-          <div className="rectangle-7" />
+.screen .overlap-11{
+  height: 52px;
+  left: 594px;
+  position: absolute;
+  top: 1189px;
+  width: 142px;
+}
 
-          <div className="text-wrapper-15">○○○○s.asojuku</div>
-        </div>
+.screen .rectangle-8{
+  background-color: #eeeeee;
+  border-radius: 5px;
+  height: 41px;
+  left: 0;
+  position: absolute;
+  top: 6px;
+  width: 118px;
+}
 
-        <div className="text-wrapper-16">生年月日</div>
+.screen .text-wrapper-16{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 118px;
+}
 
-        <div className="overlap-11">
-          <div className="rectangle-8" />
+.screen .arrow-drop-down{
+  height: 24px !important;
+  left: 86px !important;
+  position: absolute !important;
+  top: 15px !important;
+  width: 24px !important;
+}
 
-          <div className="text-wrapper-17">2004</div>
+.screen .text-wrapper-17{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 126px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  white-space: nowrap;
+}
 
-          <div className="text-wrapper-17">2004</div>
+.screen .overlap-12{
+  height: 52px;
+  left: 909px;
+  position: absolute;
+  top: 1189px;
+  width: 142px;
+}
 
-          <ArrowDropDown className="arrow-drop-down" />
-          <div className="text-wrapper-18">年</div>
+.screen .text-wrapper-18{
+  color: #000000;
+  font-family: "Roboto-Regular",Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  height: 52px;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 52px;
+  position: absolute;
+  top: 0px;
+  width: 118px;
+}
 
-          <div className="text-wrapper-18">年</div>
-        </div>
+.screen .arrw-drop-down-instance{
+  height: 24px !important;
+  left: 87px !important;
+  position: absolute !important;
+  top: 15px !important;
+  width: 24px !important;
+}
 
-        <div className="overlap-12">
-          <div className="rectangle-8" />
-
-          <div className="text-wrapper-19">20</div>
-
-          <ArrowDropDown className="arrow-drop-down-instance" />
-          <div className="text-wrapper-18">日</div>
-        </div>
-
-        <div className="overlap-13">
-          <div className="rectangle-8" />
-
-          <div className="text-wrapper-17">2004</div>
-
-          <div className="rectangle-8" />
-
-          <div className="text-wrapper-17">9</div>
-
-          <ArrowDropDown className="arrow-drop-down-instance" />
-          <div className="text-wrapper-18">月</div>
-        </div>
-      </div>
-    </div>
-  );
-};
+.screen .overlap-13{
+  height: 52px;
+  left: 752px;
+  position: absolute;
+  top: 1189px;
+  width: 142px;
+}
