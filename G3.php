@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".vscode/CSS/G3.css">
+    <title>会員登録完了画面</title>
+</head>
+<body>
 <h1>Stylista</h1>
 <h1>会員登録完了画面</h1>
 <?php
@@ -21,4 +30,6 @@
          echo 'データが正常に挿入されませんでした';
      }
 ?>
-
+    
+</body>
+</html>
