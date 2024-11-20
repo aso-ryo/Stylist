@@ -16,8 +16,10 @@
     <p>郵便番号　<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
     <p>住所　<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
     <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
-    <?php
-//日付の初期値
+    <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p>
+    <p><input type="submit" value="送信する"></p>
+<?php
+/*//日付の初期値
 $theYear2 = date('Y');
 $theMonth2 = date('n');
 $theDay2 = date('j');
@@ -113,9 +115,10 @@ if (count($error) > 0) {
   echo "<HR>";
   echo '<span class = "error">', implode("<br>", $error), '</span>';
 }
-?>
 
 
-    </select></p>
+
+    </select></p>*/
+    ?>
 </body>
 </html>
