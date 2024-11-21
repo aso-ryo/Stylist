@@ -22,6 +22,10 @@ Stylista
                 $s=$review['goods_id'];  
             }
         }
+        echo '<form action="G1" method="post">';
+        echo '<input type="submit" value="カートにいれる">';
+        echo '<button type="submit" name="action" value="send">☆</button>';
+
         $sql = $pdo->prepare("select stock from stock where goods_id=?");
         $sql->execute([$s]);
         $stock = $sql->fetchColumn();
