@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href=".vscode/CSS/G1.css">
+    <link rel="stylesheet" href="./css/G1.css">
 </head>
 <body>
 
 <h1>Stylista</h1>
-<h2>ログイン</h2>
+<h3>ログイン</h3>
 
 <input class="mail" type="text" name="mail" placeholder="メールアドレス"><br>
 <input class="pass" name="pass" placeholder="パスワード"><br>
