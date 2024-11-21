@@ -13,9 +13,6 @@ Stylista
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
 
-    <p>閲覧履歴</p>
-    <a href="">すべて見る</a>
-
     <p>お気に入り</p>
     <a href="">すべて見る</a>
 
