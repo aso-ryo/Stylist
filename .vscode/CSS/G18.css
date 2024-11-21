@@ -1,1 +1,438 @@
-G18　注文履歴
+.screen{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.screen .div{
+    background-color: var(--m3-schemes-on-error);
+    border: 8px solid;
+    border-color: var(--m3-schemes-outline-variant);
+    height: 1490px;
+    position: relative;
+    width: 1432px;
+}
+
+.screen .overlap{
+    height: 88px;
+    left: 174px;
+    position: absolute;
+    top: 20px;
+    width: 1084px;
+}
+
+.screen .chrome-browser-bar{
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    left: 0;
+    padding: 16px;
+    position: absolute;
+    top: 0;
+    width: 1084px;
+}
+
+.screen .text-wrapper{
+    color: #000000;
+    font-family: "Inter-Bold",Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-left: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.screen .search-bar{
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #a9a9a9;
+    border-radius: 28px;
+    display: flex;
+    gap: 4px;
+    height: 58px;
+    margin-bottom: -1.00px;
+    margin-top: -1.00px;
+    max-width: 720px;
+    overflow: hidden;
+    position: relative;
+    width: 722px;
+}
+
+.screen .state-layer{
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 4px;
+    padding: 4px;
+    position: relative;
+}
+
+.screen .container-warapper{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 48px;
+    justify-content: center;
+    position: relative;
+    width: 48px;
+}
+
+.screen .container{
+    align-items: center;
+    border-radius: 100px;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.screen .icon-wrapper{
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    justify-content: center;
+    padding: 8px;
+    position: relative;
+}
+
+.screen .icon-instance{
+    height: 24px !important;
+    position: relative !important;
+    width: 24px !important;
+}
+
+.screen .content{
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    position: relative;
+}
+
+.screen .supporting-text{
+color:var(--m3-schemes-surface-variant);
+font-family: var(--m3-body-large-font-family);
+font-size: var(--m3-body-large-font-size);
+font-style: var(--m3-body-large-font-style);
+font-weight: var(--m3-body-large-font-weight);
+letter-spacing: var(--m3-body-large-letter-spancing);
+line-height: var(--m3-body-large-line-height);
+position: relative;
+white-space: nowrap;
+width: fit-content;
+}
+
+.screen .trailing-elements{
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.screen .icon-instance-node{
+    height: 40px !important;
+    position: relative !important;
+    width: 40px !important;
+}
+
+.screen .text-wrapper-2{
+    color: #000000;
+    font-family: "Roboto-Regular",Helvetica;
+    font-size: 32px;
+    font-weight: 400;
+    left: 189px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 145px;
+    white-space: nowrap;
+    width: 155px;
+}
+
+.screen .overlap-group{
+    height: 590px;
+    left: 274px;
+    position: absolute;
+    top: 203px;
+    width: 892px;
+}
+
+.screen .text-wrapper-3{
+    color: #000000;
+    font-family: "Roboto-Regular",Helvetica;
+    font-size: 28px;
+    font-weight: 400;
+    left: 40px;
+    letter-spacing: 0;
+    line-height: 52px;
+    position: absolute;
+    top: 13px;
+    white-space: nowrap;
+}
+
+.screen .line{
+    height: 1px;
+    left: 13px;
+    object-fit: cover;
+    position: absolute;
+    top: 504px;
+    width: 862px;
+}
+
+.screen .image{
+    background-image: url(./image.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    left: 40px;
+    position: absolute;
+    top: 72px;
+    width: 125px;
+}
+
+.screen .image-2{
+    background-image: url(./image-2.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    left: 40px;
+    position: absolute;
+    top: 216px;
+    width: 125px;
+}
+
+.screen .image-3{
+    background-image: url(./image-3.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    left: 40px;
+    position: absolute;
+    top: 360px;
+    width: 125px;
+}
+
+.screen .element{
+    color: #000000;
+    font-family: "Roboto-Reular",Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 183px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 79px;
+}
+
+.screen .span{
+    line-height: 30px;
+}
+
+.screen .text-wrapper-4{
+    line-height: 40px;
+}
+
+.screen .text-wrapper-5{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.screen .text-wrapper-6{
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.screen .p{
+    color: #000000;
+    font-family: "Roboto-Regular",Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 184px;
+    letter-spacing: 24px;
+    position: absolute;
+    top: 223px;
+}
+
+.screen .element-2{
+    color: #000000;
+    font-family: "Roboto-Reular",Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 184px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 367px;
+}
+
+.screen .element-3{
+    color: #000000;
+    font-family: "Roboto-Reular",Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 64px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 528px;
+    white-space: nowrap;
+}
+
+.screen .text-wrapper-7{
+    color: #000000;
+    font-family: "Roboto-Regular",Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 40px;
+}
+
+.screen .text-wrapper-8{
+    font-size: 24px;
+}
+
+.screen .text-wrapper-9{
+    font-size: 32px;
+}
+
+.screen .elemnt-4{
+    color: #000000;
+    font-family: "Inter-Regular",Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 651px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 420px;
+}
+
+.screen .rectangle{
+    border: 1px solid;
+    border-color: #c7c7c7;
+    height: 590px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 892px;
+}
+
+.screen .overlap-group-2{
+    height: 457px;
+    left: 274px;
+    position: absolute;
+    top: 816px;
+    width: 892px;
+}
+
+.screen .img{
+    height: 1px;
+    left: 15px;
+    object-fit: cover;
+    position: absolute;
+    top: 363px;
+    width: 862px;
+}
+
+.screen .element-5{
+    color: #000000;
+    font-family: "Inter-Regular",Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 65px;
+    letter-spacing: 0;
+    line-height: 40px;
+    position: absolute;
+    top: 389px;
+    white-space: nowrap;
+}
+
+.screen .element-6{
+    color: #000000;
+    font-family: "Inter-Regular",Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    left: 652px;
+    letter-spacing: 0;
+    line-height: 30px;
+    position: absolute;
+    top: 276px;
+}
+
+.screen .rectangle-2{
+    border: 1px solid;
+    border-color:#c7c7c7;
+    height: 457px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 892px;
+}
+
+.screen .image-4{
+    background-image: url(./image-4.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    left: 39px;
+    position: absolute;
+    top: 79px;
+    width: 125px;
+}
+
+.screen .image-5{
+    background-image: url(./image-5.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 16px;
+    height: 120px;
+    left: 39px;
+    position: absolute;
+    top: 223px;
+    width: 125px;
+}
+
+.screen .element-7{
+    color: #000000;
+    font-family: "Inter-Regular",Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 182px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 86px;
+}
+
+.screen .element-8{
+    color: #000000;
+    font-family: "Inter-Regular",Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    left: 183px;
+    letter-spacing: 0;
+    line-height: 24px;
+    position: absolute;
+    top: 230px;
+}

@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".vscode/CSS/G2.css">
     <title>Stylista</title>
 </head>
 <body>
+  <form action="G3" method="post">
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
     <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>
     <p>パスワード<input type="text" name="pass" placeholder="パスワード"></p>
-    <p>氏名　<input type="text" name="sei" placeholder="姓">
-                <input type="text" name="mei" placeholder="名"></p>
-    <p>氏名(カナ)　<input type="text" name="seikana" placeholder="セイ">
-                <input type="text" name="meikana" placeholder="メイ"></p>
+    <p>氏名　<input type="text" name="name" placeholder="氏名"></p>
+    <p>氏名(カナ)　<input type="text" name="name_kana" placeholder="氏名(カナ)">
     <p>郵便番号　<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
     <p>住所　<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
     <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
-    <?php
-//日付の初期値
+    <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p>
+    <p><input type="submit" value="送信する"></p>
+<?php
+/*//日付の初期値
 $theYear2 = date('Y');
 $theMonth2 = date('n');
 $theDay2 = date('j');
@@ -114,9 +116,10 @@ if (count($error) > 0) {
   echo "<HR>";
   echo '<span class = "error">', implode("<br>", $error), '</span>';
 }
-?>
 
 
-    </select></p>
+
+    </select></p>*/
+    ?>
 </body>
 </html>

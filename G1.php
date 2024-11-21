@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href=".vscode/CSS/G1.css">
 </head>
 <body>
 
@@ -21,3 +22,5 @@
 <button type="subimt" name="touroku">新規会員登録はこちら</button>
 </form>
 </body>
+
+   
