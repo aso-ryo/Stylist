@@ -1,5 +1,44 @@
 <?php
     session_start();
+    if(isset($_POST['user_name'])&&isset($_POST['user_name'])&&isset($_POST['user_name_kana'])&&isset($_POST['e-mail'])&&isset($_POST['password'])&&isset($_POST['birthday'])&&isset($_POST['adless_number'])&&isset($_POST['adless'])&&isset($_POST['tell'])&&isset($_POST['cart_id'])){
+        $_SESSION['user_id']=$_POST['cart_id'];
+        $_SESSION['name']=$_POST['name'];
+        $_SESSION['name_kana']=$_POST['name_kana'];
+        $_SESSION['mail']=$_POST['mail'];
+        $_SESSION['pass']=$_POST['pass'];
+        $_SESSION['birthday']=$_POST['birthday'];
+        $_SESSION['yuubin']=$_POST['yuubin'];
+        $_SESSION['juusyo']=$_POST['juusyo'];
+        $_SESSION['tell']=$_POST['tell'];
+        $_SESSION['cart_id']=$_POST['cart_id'];
+       }
+
+       $sql = $pdo->prepare("select * from cart where goods_id=?");
+        $sql->execute([$s]);
+        $cart_goods = $sql->fetchColumn();
+        if($cart_goods!== false){       //同じ商品がカートに入ってないとき
+            $sql = "INSERT INTO carts (cart_id, goods_id,user_id,qty) VALUES (?,?,?,?)";
+            $stmt = $pdo->prepare($sql);
+            $result = $stmt->execute([$s, $goods_id,$_SESSION['name'],1]);
+            if ($result) {
+                $_SESSION['message'] = 'カートに入れました。';
+            } else {
+                $_SESSION['message'] = 'データ挿入に失敗しました。';
+                header('Location: index.html'); // 挿入後にHTMLページへリダイレクト
+                exit;
+            }      
+        }else{      //入っている時、個数を＋１する
+            $sql = "UPDATE carts SET qty = qty + 1 WHERE cart_id = ?";
+            $stmt = $pdo->prepare($sql);
+            $result = $stmt->execute([$cart_id]);
+            if ($stmt->rowCount() > 0) {
+                $_SESSION['message'] = 'カートに入れました。';
+            } else {
+                $_SESSION['message'] = 'データ挿入に失敗しました。';
+            } 
+            header('Location: index.html'); // 挿入後にHTMLページへリダイレクト
+            exit;   
+        }
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -23,8 +62,11 @@
                 'LAA1554862',
                 'aso2024');
 
+        echo '<form action="G8.php" method="post">';
+
+        $goods_id=$_POST['id'];
         $sql = $pdo->prepare("select * from goods where goods_id=?");
-        $sql->execute([$_POST['id']]);
+        $sql->execute([$goods_id]);
         $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
             foreach ($reviews as $review) {
@@ -35,12 +77,12 @@
                 $s=$review['goods_id'];  
             }
         }
-        echo '<form action="G8.php" method="post">';
-        echo '<input type="submit" value="カートにいれる">';
+
+        echo '<button disabled>カートにいれる</button>';
         echo '</form>';
 
 
-        echo '<button type="submit" name="action" value="send">☆</button>';
+        echo '<button disabled type="submit" name="action" value="send">☆</button>';
 
         $sql = $pdo->prepare("select stock from stock where goods_id=?");
         $sql->execute([$s]);
@@ -51,10 +93,16 @@
             echo "在庫なし";
         }
 
-        $sql = $pdo->prepare("select * from cart where goods_id=?");
-        $sql->execute([$_POST['id']]);
-        $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if (!empty($_SESSION['message'])){
+        //<div class="message" id="message-box"> //css紐づけ
+            echo $_SESSION['message'];
+            unset($_SESSION['message']); //メッセージを消去
+        //</div>
+    }
 ?>
+    <script src="scripts.js"></script> //JavaScriptファイル読み込み
         
-    </body>
-    </html>
+
+       
+</body>
+</html>

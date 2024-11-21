@@ -40,7 +40,7 @@ Stylista
         $sql->execute([$_POST['id']]);
         $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
-            foreach ($reviews as $review) {
+            foreach ($reviews as $review) {     //商品表示
                 echo '<p><img src="' . $review['image'] . '"></p>';
                 echo '<p>' . $review['goods_name'] . '</p>';
                 echo '<p>' . $review['price'] . '</p>';
