@@ -7,7 +7,7 @@
     <title>Stylista</title>
 </head>
 <body>
-  <form action="G3" method="post">
+  <form action="G3.php" method="post">
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
     <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>

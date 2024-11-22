@@ -1,4 +1,4 @@
-.screen {
+h1 {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -6,67 +6,72 @@
     width: 100%;
 }
 
-.screen .div {
+h3 {
     background-color: #ffffff;
-    height: 1024px;
-    position: relative;
-    width: 1440px;
-}
-
-.screen text-wrapper-2 {
-    color: #000000;
-    font-family: "Inter-Bold", Helvetica;
-    font-size: 32px;
-    font-weight: 700;
-    left: 657px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: 301px;
-}
-
-.screen .overlap-group {
-    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
     height: 53px;
     left: 502px;
-    position: absolute;
-    top: 402px;
-    width: 439px;
-}
-.screen .button-instance{
-    display: flex !important;
-    height: 57px !important;
-    left: 610px !important;
-    position: absolute !important;
-    top: 610px !important;
-    width: 221px !important;
+    
 }
 
-.screen .design-component-instance-node{
-    font-family: var(--body-small-strong-font-familiy)!important;
-    font-size: var(--body-small-strong-font-size)!important;
-    font-style: var(--body-small-strong-font-style)!important;
-    font-weight: var(--body-small-strong-font-weight)!important;
-    letter-spacing: var(--body-small-strong-letter-spancing)!important;
-    line-height: var(--body-small-strong-line-height)!important;
-}
-
-.screen .button-2{
-    display: flex !important;
-    height: 57px !important;
-    left: 611px !important;
-    position: absolute !important;
-    top: 708px !important;
-    width: 221px !important;
-}
-
-.screen text-wrapper-4{
+.mail {
+    background-color: #d9d9d9;
+    border: none;
     color: #000000;
-    font-family: "Inter-Bold",Helvetica;
-    font-size: 64px;
-    font-weight: 700;
-    left: 594px;
-    letter-spacing: 0;
-    line-height: normal;
+    display: flex;
+    flex-direction: row;
+    height: 53px;
+    left: 550px;
     position: absolute;
-    top: 163px;
+    justify-content: center;
+    top: 250px;
+    width: 450px;
+}
+
+.pass {
+    background-color: #d9d9d9;
+    border: none;
+    color: #000000;
+    display: flex;
+    flex-direction: row;
+    height: 53px;
+    left: 550px;
+    position: absolute;
+    justify-content: center;
+    top: 402px;
+    width: 450px;
+}
+.login-button{
+    background-color: black;
+    border: none;
+    flex-direction: row;
+    color: #ffffff;
+    display: flex;
+    height: 57px;
+    line-height: 57px;
+    left: 675px;
+    position: absolute;
+    justify-content: center;
+    top: 610px;
+    width: 200px;
+    border-radius: 20px; 
+}
+
+.new_user{
+    background-color: black;
+    border: none;
+    flex-direction: row;
+    color: #ffffff;
+    display: flex ;
+    height: 57px ;
+    line-height: 57px;
+    left: 675px;
+    position: absolute ;
+    justify-content: center;
+    top: 708px ;
+    width: 200px ;
+    border-radius: 20px; 
 }
