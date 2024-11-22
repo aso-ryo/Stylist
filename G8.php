@@ -70,11 +70,12 @@
         $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
             foreach ($reviews as $review) {
+                $goods_id=$review['goods_id'];
                 echo '<p><img src="' . $review['image'] . '"></p>';
                 echo '<p>' . $review['goods_name'] . '</p>';
                 echo '<p>' . $review['price'] . '</p>';
                 echo '<p>' . $review['explain'] . '</p>';
-                $s=$review['goods_id'];  
+                  
             }
         }
 
@@ -82,10 +83,13 @@
         echo '</form>';
 
 
-        echo '<button disabled type="submit" name="action" value="send">☆</button>';
+        // ボタン表示
+        echo '<button id="favorite-' . $goods_id . '" onclick="toggleFavorite(' . $goods_id . ')">';
+        echo $is_favorited ? '★' : '☆';
+        echo '</button>';
 
         $sql = $pdo->prepare("select stock from stock where goods_id=?");
-        $sql->execute([$s]);
+        $sql->execute([$goods_id]);
         $stock = $sql->fetchColumn();
         if ($stock !== false && $stock > 0) {
             echo "在庫あり: $stock 個";
@@ -100,7 +104,7 @@
         //</div>
     }
 ?>
-    <script src="scripts.js"></script> //JavaScriptファイル読み込み
+    <script src="cart.js"></script>
         
 
        
