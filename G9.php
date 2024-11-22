@@ -30,7 +30,21 @@ Stylista
     <button type="submit" name="mypage"></button>
     <p>カート</p>
 
-
+<?php
+ $sql = $pdo->prepare("select * from cart where cart_id=?");
+ $sql->execute([$_SESSION['cart_id']]);
+ $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+ if ($reviews) {
+     foreach ($reviews as $review) {     //商品表示
+         $goods_id=$review['goods_id']; 
+         echo '<p><img src="' . $review['image'] . '"></p>';
+         echo '<p>' . $review['goods_name'] . '</p>';
+         echo '<p>' . $review['price'] . '</p>';
+         echo '<p>' . $review['explain'] . '</p>';
+          
+     }
+ }
+?>
     商品合計：点
 
     <button type="submit">レジへ進む</button>
