@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,21 +42,23 @@
     <form action="" method="post">
     <button name=ladies type="submit"></button>
     </form>
-    <?
-    $sql_reviews = "SELECT * FROM image_posts";
-        $stmt_reviews = $pdo->prepare($sql_reviews);
-        $stmt_reviews->execute();
-        $reviews = $stmt_reviews->fetchAll(PDO::FETCH_ASSOC);
-        if ($reviews) {
-            foreach ($reviews as $review) {
-                echo '<p>' . $review['name'] . '</p>';
-                echo '<p>' . $review['comment'] . '</p>';
-                echo '<p><img src="'.$review['file_name'].'"></p>';
-                echo '<p>投稿日時:' . $review['created'] . '</p>';
-                echo '<hr>';
-            }
+    <?php
+        $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
+                    dbname=LAA1554862-kaihatsu;charset=utf8',
+                    'LAA1554862','aso2024');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                   
+        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
+        $stmt->execute();
+        $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
+         
+        foreach ($goods as $good){
+            echo '<a href="details.php?id=',$good['goods_id'],'">';
+            echo '<img src="',$good['image'],'" alt="',$good['category'],'" width="150" height="150"></a>';
+            echo $good['category'];
         }
-            ?>
+        ?>  
+    </div>
 
 </body>
 </html>
