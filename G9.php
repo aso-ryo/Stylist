@@ -29,25 +29,37 @@ Stylista
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
     <p>カート</p>
-
+<form action="G9" method="post">
 <?php
- $sql = $pdo->prepare("select * from cart where cart_id=?");
+ $sql = $pdo->prepare("select goods.image,goods.goods_name,goods.price,cart.qty 
+ from goods 
+ INNER JOIN cart ON cart.goods_id=goods.goods_id where cart.cart_id=?");
  $sql->execute([$_SESSION['cart_id']]);
  $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
  if ($reviews) {
      foreach ($reviews as $review) {     //商品表示
-         $goods_id=$review['goods_id']; 
-         echo '<p><img src="' . $review['image'] . '"></p>';
-         echo '<p>' . $review['goods_name'] . '</p>';
-         echo '<p>' . $review['price'] . '</p>';
-         echo '<p>' . $review['explain'] . '</p>';
+         $goods_id=$review['goods.goods_id']; 
+         echo '<p><img src="images/' . $review['goods.image'] . '"></p>';
+         echo '<p>' . $review['goods.goods_name'] . '</p>';
+         echo '<p>' . $review['goods.price'] . '</p>';
+         echo '<p>' . $review['cart.cart_id'] . '</p>';
+         echo '<button type="submit">削除</button>';
           
      }
  }
+ $sql = $pdo->prepare("
+    SELECT COUNT(*) AS row_count
+    FROM goods 
+    INNER JOIN cart 
+    ON cart.goods_id = goods.goods_id 
+    WHERE cart.cart_id = ?
+");
+$sql->execute([$_SESSION['cart_id']]);
+$rowCount = $sql->fetch(PDO::FETCH_ASSOC)['row_count'];
+echo '商品合計：',$rowCount,'点';
 ?>
-    商品合計：点
 
     <button type="submit">レジへ進む</button>
+    </form>
 </body>
 </html>
-    

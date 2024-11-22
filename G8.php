@@ -71,7 +71,7 @@
         if ($reviews) {
             foreach ($reviews as $review) {
                 $goods_id=$review['goods_id'];
-                echo '<p><img src="' . $review['image'] . '"></p>';
+                echo '<p><img src="images/' . $review['image'] . '"></p>';
                 echo '<p>' . $review['goods_name'] . '</p>';
                 echo '<p>' . $review['price'] . '</p>';
                 echo '<p>' . $review['explain'] . '</p>';
