@@ -1,111 +1,98 @@
-G17　会員情報変更完了画面
+G17 ログアウト画面
 .screen {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-  }
-  
-  .screen .div-2 {
-    background-color: var(--m3-schemes-on-error);
-    border: 8px solid;
-    border-color: var(--m3-schemes-outline-variant);
-    height: 1007px;
-    position: relative;
-    width: 1432px;
-  }
-  
-  .screen .overlap-group {
-    height: 88px;
-    left: 174px;
-    position: absolute;
-    top: 20px;
-    width: 1084px;
-  }
-  
-  .screen .chrome-browser-bar {
-    align-items: center;
+}
+
+.screen .div{
     background-color: #ffffff;
-    display: flex;
-    gap: 16px;
-    justify-content: flex-end;
-    left: 0;
-    padding: 16px;
-    position: absolute;
-    top: 0;
-    width: 1084px;
-  }
-  
-  .screen .text-wrapper-2 {
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+}
+
+.screen .text-wrepper{
     color: #000000;
-    font-family: "Inter-Bold", Helvetica;
-    font-size: 40px;
+    font-family: "Inter-Bold",Helvetica;
+    font-size: 32px;
     font-weight: 700;
+    left: 657px;
     letter-spacing: 0;
     line-height: normal;
-    margin-left: -1.00px;
+    position: absolute;
+    top: 322px;
+}
+
+.screen .overlap{
+    background-color: #d9d9d9;
+    height: 53px;
+    left: 502px;
+    position: absolute;
+    top: 402px;
+    width: 439px;
+}
+
+.screen .text-wrapper-2{
+    color: #000000;
+    font-family: var(--body-small-strong-font-family);
+    font-size: var(--body-small-strong-font-size);
+    font-style: var(--body-small-strong-font-style);
+    font-weight: var(--body-small-strong-font-weight);
+    left: 20px;
+    letter-spacing: var(--body-small-strong-line-height);
+    position: absolute;
+    top: 15px;
+    white-space: nowrap;
+}
+
+.screen .overlap-group{
+    background-color: #d9d9d9;
+    height: 53px;
+    left: 502px;
+    position: absolute;
+    top: 496px;
+    width: 439px;
+}
+
+.screen .button-2{
+    all: unset;
+    color: var(--color-text-brand-on-brand);
+    font-family: var(--body-small-strong-font-family);
+    font-size: var(--body-small-strong-font-size);
+    font-style: var(--body-small-strong-font-style);
+    font-weight: var(--body-small-strong-font-weight);
+    letter-spacing: var(--body-small-strong-letter-spacing);
+    line-height: var(--body-small-strong-line-height);
     position: relative;
     white-space: nowrap;
     width: fit-content;
-  }
-  
-  .screen .search-bar-instance {
-    background-color: #ffffff !important;
-    border: 1px solid !important;
-    border-color: #a9a9a9 !important;
-    height: 58px !important;
-    margin-bottom: -1.00px !important;
-    margin-top: -1.00px !important;
-    width: 722px !important;
-  }
-  
-  .screen .icon-2 {
-    height: 24px !important;
-    position: relative !important;
-    width: 24px !important;
-  }
-  
-  .screen .size-40 {
-    height: 40px !important;
-    position: relative !important;
-    width: 40px !important;
-  }
-  
-  .screen .overlap {
-    background-image: url(./rectangle-4.svg);
-    background-size: 100% 100%;
-    height: 156px;
-    left: 375px;
+}
+
+.screen .text-wrapper-3{
+    color: #000000;
+    font-family: "Inter-Bold",Helvetica;
+    font-size: 64px;
+    font-weight: 700;
+    left: 594px;
+    letter-spacing: 0;
+    line-height: normal;
     position: absolute;
-    top: 329px;
-    width: 680px;
-  }
-  
-  .screen .image {
-    height: 37px;
-    left: 60px;
+    top: 163px;
+}
+
+.screen .text-wrapper-4{
+    color: #e74141;
+    font-family: "Inter-Bold",Helvetica;
+    font-size: 32px;
+    font-weight: 700;
+    left: 572px;
+    letter-spacing: 0;
+    line-height: normal;
     position: absolute;
-    top: 60px;
-    width: 555px;
-  }
-  
-  .screen .button-instance {
-    display: flex !important;
-    height: 102px !important;
-    left: 560px !important;
-    position: absolute !important;
-    top: 651px !important;
-    width: 312px !important;
-  }
-  
-  .screen .design-component-instance-node {
-    font-family: var(--heading-font-family) !important;
-    font-size: var(--heading-font-size) !important;
-    font-style: var(--heading-font-style) !important;
-    font-weight: var(--heading-font-weight) !important;
-    letter-spacing: var(--heading-letter-spacing) !important;
-    line-height: var(--heading-line-height) !important;
-    margin-top: unset !important;
-  }
-  
+    top: 267px;
+    white-space: nowrap;
+    width: 300px;
+}

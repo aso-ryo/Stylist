@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".vscode/CSS/G2.css">
     <title>Stylista</title>
+    <link rel="stylesheet" href="./css/G2.css">
 </head>
 <body>
   <form action="G3.php" method="post">
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
-    <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>
-    <p>パスワード<input type="text" name="pass" placeholder="パスワード"></p>
-    <p>氏名　<input type="text" name="name" placeholder="氏名"></p>
-    <p>氏名(カナ)　<input type="text" name="name_kana" placeholder="氏名(カナ)">
-    <p>郵便番号　<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
-    <p>住所　<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
-    <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
-    <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p>
-    <p><input type="submit" value="送信する"></p>
+    <p>メールアドレス &ensp; <input type="text" name="mail" placeholder="○○○○s.asojuku" class="mail" ></p><br>
+    <p>パスワード　&ensp;<input type="text" name="pass" placeholder="Pass" ></p><br>
+    <p>氏名　<input type="text" name="name" placeholder="山田 太郎" ></p><br>
+    <p>氏名(カナ)　<input type="text" name="name_kana" placeholder="ヤマダ　タロウ" >&ensp;</p><br>
+    <p>郵便番号　<input type="text" name="yuubin" placeholder="000-0000" ></p><br>
+    <p>住所　<textarea name="jyuusyo" rows="5" cols="33" placeholder="福岡県福岡市博多区***" class="textarea"></textarea></p><br>
+    <p>電話番号　<input type="text" name="tell" placeholder="00-0000-0000"></p><br>
+    <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01" ></p><br>
+    <input type="submit" value="登録する" class="button">
+
 <?php
+/*&ensp;はホワイトスペースの追加*/
+
 /*//日付の初期値
 $theYear2 = date('Y');
 $theMonth2 = date('n');

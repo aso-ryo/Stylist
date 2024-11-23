@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".vscode/CSS/G17.css">
-    <title>Document</title>
+    <link rel="stylesheet" href=".vscode/CSS/G19.css">
+    <title>ログアウト画面
+    </title>
 </head>
 <body>
-Stylista
-    <input type="text" name="query" placeholder="アイテムの検索">
-    <button type="submit">検索</button>
-    <button type="submit" name="kato"></button>
-    <button type="submit" name="favorite"></button>
-    <button type="submit" name="mypage"></button>
-    <h1>会員情報の変更が完了しました</h1>
-    <form action="G19_user_info.php" method="post">
-        <button type="submit">会員情報画面へ戻る</button>
-    </form>
+    <h1>Stylista</h1>
+    <h3>ログアウトしました</h3>
+    <h2>ログイン</h2>
+    <p><input type="text" name="mail" value="メールアドレス"></p>
+    <p><input type="text" name="pass"　 value="パスワード"></p>
+    <p><input type="submit" name="login" value="ログイン"></p>
 </body>
 </html>
-    

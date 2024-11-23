@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <<<<<<< HEAD
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>注文履歴画面</title>
 </head>
 <body>
     Stylista
@@ -13,40 +13,43 @@
         <button type="submit" name="kato"></button>
         <button type="submit" name="favorite"></button>
         <button type="submit" name="mypage"></button>
-    
-    <h2>会員情報</h2>
-    基本情報<br>
-    <input type="text" name="name"><br>
-    <input type="text" name="adless_number"><br>
-    <textarea name="adless"></textarea>
-    <input type="text" name="tell"><br>
-    生年月日<br>
 
-    メールアドレス<br>
-    <input type="text" name="e-mail"><br>
-    パスワード<br>
-    <input type="text" name="password">
+    <h2>注文履歴</h2>
 
-    <p><button type="submit">変更する</button></p>
+    <h3>発送準備中</h3>
 
+    注文日：2024/09/09<br>
+    注文番号：123456789<br>
+
+    <p>合計　支払い済み</p>
+
+    <h3>配達済み</h3>
+
+    注文日：2024/06/06<br>
+    注文番号：987654321
+
+    <p>合計　支払い済み</p>
 </body>
 </html>
 =======
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href=".vscode/CSS/G16.css">
-        <title>Document</title>
-    </head>
-    <body>
-    Stylista
-    <input type="text" name="query" placeholder="アイテムの検索">
-    <button type="submit">検索</button>
-    <button type="submit" name="kato"></button>
-    <button type="submit" name="favorite"></button>
-    <button type="submit" name="mypage"></button>
-        
-    </body>
-    </html>
+ <!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href=".vscode/CSS/G18.css">
+     <title>Document</title>
+ </head>
+
+ <body>
+     Stylista
+     <input type="text" name="query" placeholder="アイテムの検索">
+     <button type="submit">検索</button>
+     <button type="submit" name="kato"></button>
+     <button type="submit" name="favorite"></button>
+     <button type="submit" name="mypage"></button>
+ </body>
+
+ </html>
 >>>>>>> bfbd8a673abd4ef93e9e4cf3585a37b370ba9b48

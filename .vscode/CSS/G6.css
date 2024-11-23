@@ -1,4 +1,4 @@
-G6 年齢性別画面
+G6　商品詳細
 .screen {
     background-color: #ffffff;
     display: flex;
@@ -12,7 +12,6 @@ G6 年齢性別画面
     border: 8px solid;
     border-color: var(--m3-schemes-outline-variant);
     height: 1007px;
-    overflow: hidden;
     position: relative;
     width: 1432px;
   }
@@ -73,36 +72,68 @@ G6 年齢性別画面
     width: 40px !important;
   }
   
+  .screen .size-40 {
+    height: 40px !important;
+    left: 1304px !important;
+    position: absolute !important;
+    top: 463px !important;
+    width: 40px !important;
+  }
+  
+  .screen .overlap-group {
+    height: 615px;
+    left: 65px;
+    position: absolute;
+    top: 210px;
+    width: 1322px;
+  }
+  
+  .screen .overlap-2 {
+    height: 613px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 765px;
+  }
+  
+  .screen .overlap-3 {
+    height: 604px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 679px;
+  }
+  
+  .screen .element {
+    height: 466px;
+    left: 36px;
+    position: absolute;
+    top: 0;
+    width: 580px;
+  }
+  
   .screen .card {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
     gap: 4px;
-    height: 182px;
-    left: 429px;
+    height: 160px;
+    left: 124px;
     max-width: 220px;
     position: absolute;
-    top: 392px;
-    width: 125px;
+    top: 444px;
+    width: 120px;
   }
   
   .screen .image {
     align-self: stretch;
-    background-image: url(./image-2.png);
+    background-image: url(./image.png);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 16px;
     height: 120px;
     position: relative;
     width: 100%;
-  }
-  
-  .screen .element {
-    height: 120px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 125px;
   }
   
   .screen .title-wrapper {
@@ -140,17 +171,17 @@ G6 年齢性別画面
     display: flex;
     flex-direction: column;
     gap: 4px;
-    height: 182px;
-    left: 579px;
+    height: 160px;
+    left: 273px;
     max-width: 220px;
     position: absolute;
-    top: 392px;
-    width: 125px;
+    top: 444px;
+    width: 120px;
   }
   
   .screen .image-2 {
     align-self: stretch;
-    background-image: url(./image-3.png);
+    background-image: url(./image-2.png);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 16px;
@@ -164,17 +195,16 @@ G6 年齢性別画面
     display: flex;
     flex-direction: column;
     gap: 4px;
-    height: 182px;
-    left: 728px;
+    left: 422px;
     max-width: 220px;
     position: absolute;
-    top: 392px;
-    width: 125px;
+    top: 444px;
+    width: 120px;
   }
   
   .screen .image-3 {
     align-self: stretch;
-    background-image: url(./image-4.png);
+    background-image: url(./image-3.png);
     background-position: 50% 50%;
     background-size: cover;
     border-radius: 16px;
@@ -183,60 +213,225 @@ G6 年齢性別画面
     width: 100%;
   }
   
-  .screen .card-4 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 182px;
-    left: 878px;
-    max-width: 220px;
-    position: absolute;
-    top: 392px;
-    width: 124px;
-  }
-  
-  .screen .image-4 {
-    align-self: stretch;
-    background-image: url(./image-5.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .overlap-group {
-    height: 182px;
-    left: 1027px;
-    position: absolute;
-    top: 392px;
-    width: 125px;
-  }
-  
-  .screen .card-5 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 182px;
+  .screen .text-wrapper-3 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
     left: 0;
-    max-width: 220px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 415px;
+    width: 157px;
+  }
+  
+  .screen .text-wrapper-4 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 604px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 444px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .text-wrapper-5 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 619px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 393px;
+    white-space: nowrap;
+    width: 146px;
+  }
+  
+  .screen .text-wrapper-6 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 613px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 481px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .text-wrapper-7 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 598px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 554px;
+    white-space: nowrap;
+    width: 106px;
+  }
+  
+  .screen .text-wrapper-8 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 598px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 592px;
+    white-space: nowrap;
+    width: 106px;
+  }
+  
+  .screen .text-wrapper-9 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 32px;
+    font-weight: 500;
+    height: 76px;
+    left: 716px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 59px;
+    width: 606px;
+  }
+  
+  .screen .text-wrapper-10 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 32px;
+    font-weight: 500;
+    height: 37px;
+    left: 716px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 203px;
+    width: 194px;
+  }
+  
+  .screen .text-wrapper-11 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 444px;
+    white-space: nowrap;
+    width: 85px;
+  }
+  
+  .screen .text-wrapper-12 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 748px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 556px;
+    white-space: nowrap;
+    width: 129px;
+  }
+  
+  .screen .text-wrapper-13 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 592px;
+    white-space: nowrap;
+    width: 75px;
+  }
+  
+  .screen .overlap-group-2 {
+    height: 23px;
+    left: 690px;
+    position: absolute;
+    top: 260px;
+    width: 268px;
+  }
+  
+  .screen .text-wrapper-14 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 20px;
     position: absolute;
     top: 0;
-    width: 125px;
+    white-space: nowrap;
+    width: 75px;
   }
   
-  .screen .image-5 {
-    align-self: stretch;
-    background-image: url(./image-6.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
+  .screen .element-2 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 21px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    white-space: nowrap;
+    width: 247px;
+  }
+  
+  .screen .text-wrapper-15 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 753px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 481px;
+    white-space: nowrap;
+    width: 247px;
+  }
+  
+  .screen .overlap-4 {
+    height: 95px;
+    left: 1063px;
+    position: absolute;
+    top: 453px;
+    width: 211px;
   }
   
   .screen .text {
@@ -245,461 +440,104 @@ G6 年齢性別画面
     font-size: var(--m3-headline-small-font-size);
     font-style: var(--m3-headline-small-font-style);
     font-weight: var(--m3-headline-small-font-weight);
-    left: 57px;
+    left: 21px;
     letter-spacing: var(--m3-headline-small-letter-spacing);
     line-height: var(--m3-headline-small-line-height);
     position: absolute;
-    top: 113px;
+    top: 52px;
     width: 1px;
-  }
-  
-  .screen .overlap-group-2 {
-    height: 118px;
-    left: 200px;
-    position: absolute;
-    top: 142px;
-    width: 255px;
-  }
-  
-  .screen .text-wrapper-3 {
-    color: #000000;
-    font-family: "Roboto-Medium", Helvetica;
-    font-size: 32px;
-    font-weight: 500;
-    height: 73px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: 20px;
-    position: absolute;
-    top: 0;
-    width: 255px;
-  }
-  
-  .screen .text-wrapper-4 {
-    color: #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 24px;
-    font-weight: 400;
-    left: 158px;
-    letter-spacing: 0;
-    line-height: 52px;
-    position: absolute;
-    top: 66px;
-    white-space: nowrap;
-  }
-  
-  .screen .text-wrapper-5 {
-    color: #000000;
-    font-family: "Roboto-Medium", Helvetica;
-    font-size: 32px;
-    font-weight: 500;
-    height: 73px;
-    left: 200px;
-    letter-spacing: 0;
-    line-height: 20px;
-    position: absolute;
-    top: 308px;
-    width: 255px;
-  }
-  
-  .screen .card-6 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 277px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-6 {
-    align-self: stretch;
-    background-image: url(./image-7.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-7 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 427px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-7 {
-    align-self: stretch;
-    background-image: url(./image-8.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-8 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 577px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-8 {
-    align-self: stretch;
-    background-image: url(./image-9.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-9 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 269px;
-    max-width: 220px;
-    position: absolute;
-    top: 392px;
-    width: 125px;
-  }
-  
-  .screen .image-9 {
-    align-self: stretch;
-    background-image: url(./image.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-10 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 726px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-10 {
-    align-self: stretch;
-    background-image: url(./image-10.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-11 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 876px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-11 {
-    align-self: stretch;
-    background-image: url(./image-11.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-12 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 1026px;
-    max-width: 220px;
-    position: absolute;
-    top: 619px;
-    width: 125px;
-  }
-  
-  .screen .image-12 {
-    align-self: stretch;
-    background-image: url(./image-12.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-13 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 280px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-13 {
-    align-self: stretch;
-    background-image: url(./image-13.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-14 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 430px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-14 {
-    align-self: stretch;
-    background-image: url(./image-14.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-15 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 580px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-15 {
-    align-self: stretch;
-    background-image: url(./image-15.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-16 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 729px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-16 {
-    align-self: stretch;
-    background-image: url(./image-16.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-17 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 879px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-17 {
-    align-self: stretch;
-    background-image: url(./image-17.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .card-18 {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    height: 217px;
-    left: 1029px;
-    max-width: 220px;
-    position: absolute;
-    top: 836px;
-    width: 125px;
-  }
-  
-  .screen .image-18 {
-    align-self: stretch;
-    background-image: url(./image-18.png);
-    background-position: 50% 50%;
-    background-size: cover;
-    border-radius: 16px;
-    height: 120px;
-    position: relative;
-    width: 100%;
-  }
-  
-  .screen .text-wrapper-6 {
-    color: #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 24px;
-    font-weight: 400;
-    left: 714px;
-    letter-spacing: 0;
-    line-height: 52px;
-    position: absolute;
-    top: 210px;
-    white-space: nowrap;
-  }
-  
-  .screen .line {
-    height: 2px;
-    left: 212px;
-    object-fit: cover;
-    position: absolute;
-    top: 296px;
-    width: 1010px;
-  }
-  
-  .screen .overlap-2 {
-    height: 45px;
-    left: 811px;
-    position: absolute;
-    top: 213px;
-    width: 154px;
-  }
-  
-  .screen .rectangle {
-    background-color: #eeeeee;
-    border-radius: 5px;
-    height: 41px;
-    left: 0;
-    position: absolute;
-    top: 4px;
-    width: 118px;
-  }
-  
-  .screen .arrow-drop-down {
-    height: 24px !important;
-    left: 83px !important;
-    position: absolute !important;
-    top: 13px !important;
-    width: 24px !important;
-  }
-  
-  .screen .text-wrapper-7 {
-    color: #000000;
-    font-family: "Roboto-Regular", Helvetica;
-    font-size: 16px;
-    font-weight: 400;
-    left: 35px;
-    letter-spacing: 0;
-    line-height: 52px;
-    position: absolute;
-    top: 0;
-    white-space: nowrap;
-    width: 119px;
-  }
-  
-  .screen .overlap-3 {
-    height: 45px;
-    left: 455px;
-    position: absolute;
-    top: 211px;
-    width: 154px;
   }
   
   .screen .button-instance {
     display: flex !important;
-    height: 65px !important;
-    left: 1054px !important;
+    height: 60px !important;
+    left: 0 !important;
     position: absolute !important;
-    top: 201px !important;
-    width: 152px !important;
+    top: 0 !important;
+    width: 211px !important;
   }
   
   .screen .design-component-instance-node {
-    font-family: var(--heading-font-family) !important;
-    font-size: var(--heading-font-size) !important;
-    font-style: var(--heading-font-style) !important;
-    font-weight: var(--heading-font-weight) !important;
-    letter-spacing: var(--heading-letter-spacing) !important;
-    line-height: var(--heading-line-height) !important;
+    font-family: "Inter-Regular", Helvetica !important;
+    font-size: 20px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 20px !important;
     margin-top: unset !important;
+  }
+  
+  .screen .text-wrapper-16 {
+    color: #000000;
+    font-family: "Roboto-Medium", Helvetica;
+    font-size: 24px;
+    font-weight: 500;
+    left: 1128px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 603px;
+    white-space: nowrap;
+    width: 146px;
+  }
+  
+  .screen .text-wrapper-17 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1110px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 649px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-18 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1110px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 741px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-19 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1107px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 697px;
+    white-space: nowrap;
+    width: 132px;
+  }
+  
+  .screen .text-wrapper-20 {
+    color: #000000;
+    font-family: "Roboto-CondensedMedium Italic", Helvetica;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 500;
+    left: 1104px;
+    letter-spacing: 0;
+    line-height: 20px;
+    position: absolute;
+    top: 788px;
+    white-space: nowrap;
+    width: 132px;
   }
   
