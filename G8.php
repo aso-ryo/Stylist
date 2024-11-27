@@ -48,15 +48,24 @@ Stylista
      }
  }
  $sql = $pdo->prepare("
-    SELECT COUNT(*) AS row_count
+    SELECT SUM(qty) AS total_qty
     FROM goods 
     INNER JOIN cart 
     ON cart.goods_id = goods.goods_id 
     WHERE cart.cart_id = ?
 ");
 $sql->execute([$_SESSION['cart_id']]);
-$rowCount = $sql->fetch(PDO::FETCH_ASSOC)['row_count'];
-echo '商品合計：',$rowCount,'点';
+$total_qty = $sql->fetch(PDO::FETCH_ASSOC)['total_qty'];
+echo '商品合計：',$total_qty,'点';
+$sql = $pdo->prepare("
+SELECT SUM(c.qty * g.price) AS total_amount
+FROM goods g
+JOIN cart c ON c.goods_id = g.goods_id
+WHERE c.cart_id = ?;");
+$sql->execute([$_SESSION['cart_id']]);
+$total_qty = $sql->fetch(PDO::FETCH_ASSOC)['total_amount'];
+echo '￥',$total_qty;
+
 ?>
 
     <button type="submit">レジへ進む</button>
