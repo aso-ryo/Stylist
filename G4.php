@@ -37,24 +37,24 @@
     <form action="" method="post">
     <button name=ladies type="submit"></button>
     </form>
-<<<<<<< HEAD
-=======
     <?
+$pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
+dbname=LAA1554862-kaihatsu;charset=utf8',
+'LAA1554862',
+'aso2024');
+
     $sql_reviews = "SELECT * FROM image_posts";
         $stmt_reviews = $pdo->prepare($sql_reviews);
         $stmt_reviews->execute();
         $reviews = $stmt_reviews->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
             foreach ($reviews as $review) {
-                echo '<p>' . $review['name'] . '</p>';
-                echo '<p>' . $review['comment'] . '</p>';
+                echo '<p>' . $review['category'] . '</p>';
                 echo '<p><img src="'.$review['file_name'].'"></p>';
-                echo '<p>投稿日時:' . $review['created'] . '</p>';
                 echo '<hr>';
             }
         }
             ?>
->>>>>>> c496506e62eb2b3c3911d1ca1d829341b8d57d07
 
 </body>
 </html>
