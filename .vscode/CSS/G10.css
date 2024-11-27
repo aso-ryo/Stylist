@@ -1,291 +1,165 @@
-G10　注文確認画面
-import React from "react";
-import { ArrowDropDown } from "./ArrowDropDown";
-import { Icon } from "./Icon";
-import { IconComponentNode } from "./IconComponentNode";
-import { ShoppingCart } from "./ShoppingCart";
-import { Star } from "./Star";
-import { User } from "./User";
-import divider2 from "./divider-2.svg";
-import divider3 from "./divider-3.svg";
-import divider from "./divider.svg";
-import image1 from "./image.png";
-import image from "./image.svg";
-import "./style.css";
-import thumbnail2 from "./thumbnail-2.png";
-import thumbnail3 from "./thumbnail-3.png";
-import thumbnail from "./thumbnail.png";
+G10 注文確定画面
+.screen {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
 
-export const Screen = () => {
-  return (
-    <div className="screen">
-      <div className="div">
-        <div className="overlap">
-          <div className="chrome-browser-bar">
-            <div className="text-wrapper">Stylista</div>
+.screen .div{
+    background-color: #ffffff;
+    height: 1024px;
+    position: relative;
+    width: 1440px;
+}
 
-            <div className="search-bar">
-              <div className="state-layer">
-                <div className="container-wrapper">
-                  <div className="container">
-                    <div className="icon-wrapper">
-                      <Icon className="icon-instance" />
-                    </div>
-                  </div>
-                </div>
+.screen .button-2{
+    all:unset;
+    box-sizing: border-box;
+    color: var(--color-text-brand-on-branf);
+    font-family: var(--single-line-body-base-font-family);
+    font-size: var(--single-line-body-base-font-size);
+    font-style: var(--single-line-body-base-font-style);
+    font-weight: var(--single-line-body-base-font-weight);
+    left: 30px;
+    letter-spacing: var(--single-line-body-base-letter-spanccing);
+    line-height: var(--single-line-body-base-line-height);
+    position: absolute;
+    top: 20px;
+    white-space: nowrap;
+}
 
-                <div className="content">
-                  <div className="supporting-text">アイテムの検索</div>
-                </div>
+.screen.text-wrapper-2{
+    color: #000000;
+    font-family: "Inter-ExtraLight",Helvetica;
+    font-size: 64px;
+    font-weight: 200;
+    height: 215px;
+    left: 403px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 36px;
+    width: 634px;
+}
 
-                <div className="trailing-elements">
-                  <div className="container-wrapper">
-                    <div className="container">
-                      <div className="icon-wrapper">
-                        <IconComponentNode className="icon-instance" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+.screen .overlap{
+    background-image: url(./rectangle-3.svg);
+    background-size: 100% 100%;
+    height: 59px;
+    left: 414px;
+    position: absolute;
+    top: 302px;
+    width: 634px;
+}
 
-            <ShoppingCart className="icon-instance-node" />
-            <Star className="icon-instance-node" />
-            <User className="icon-instance-node" />
-          </div>
+.screen .image{
+    height: 38px;
+    left: 31px;
+    position: absolute;
+    width: 550px;
+}
 
-          <div className="chrome-browser-bar">
-            <div className="text-wrapper">Stylista</div>
+.screen .screen.text-wrapper-3{
+    color: #000000;
+    font-family: "Inter-ThinItalic",Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 100;
+    height: 51px;
+    left: 327px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 387px;
+    width: 262px;
+}
 
-            <div className="search-bar">
-              <div className="state-layer">
-                <div className="container-wrapper">
-                  <div className="container">
-                    <div className="icon-wrapper">
-                      <Icon className="icon-instance" />
-                    </div>
-                  </div>
-                </div>
+.screen .overlap-group{
+    height: 51px;
+    left: 589px;
+    position: absolute;
+    top: 387px;
+    width: 495px;
+}
 
-                <div className="content">
-                  <div className="supporting-text">アイテムの検索</div>
-                </div>
+.screen .screen.text-wrapper-4{
+    color: #000000;
+    font-family: "Inter-ThinItalic",Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 100;
+    height: 51px;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 262px;
+}
 
-                <div className="trailing-elements">
-                  <div className="container-wrapper">
-                    <div className="container">
-                      <div className="icon-wrapper">
-                        <IconComponentNode className="icon-instance" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+.screen .screen.text-wrapper-5{
+    color: #000000;
+    font-family: "Inter-ThinItalic",Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 100;
+    height: 51px;
+    left: 233px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 262px;
+}
 
-            <ShoppingCart className="icon-instance-node" />
-            <Star className="icon-instance-node" />
-            <User className="icon-instance-node" />
-          </div>
+.screen .screen.text-wrapper-6{
+    color: #000000;
+    font-family: "Inter-ThinItalic",Helvetica;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 100;
+    height: 51px;
+    left: 327px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 438px;
+    width: 262px;
+}
 
-          <div className="chrome-browser-bar">
-            <div className="text-wrapper">Stylista</div>
+.screen .overlap-group-2{
+    height: 51px;
+    left: 589px;
+    position: absolute;
+    top: 438px;
+    width: 495px;
+}
 
-            <div className="search-bar">
-              <div className="state-layer">
-                <div className="container-wrapper">
-                  <div className="container">
-                    <div className="icon-wrapper">
-                      <Icon className="icon-instance" />
-                    </div>
-                  </div>
-                </div>
+.screen .button-instance{
+    background-color: var(--color-background-danger-default) !important;
+    border: unset !important;
+    border-color: unset !important;
+    display: flex !important;
+    height: 73px !important;
+    left: 580px !important;
+    position: absolute !important;
+    top: 774px !important;
+    width: 280px !important;
+}
 
-                <div className="content">
-                  <div className="supporting-text">アイテムの検索</div>
-                </div>
-
-                <div className="trailing-elements">
-                  <div className="container-wrapper">
-                    <div className="container">
-                      <div className="icon-wrapper">
-                        <IconComponentNode className="icon-instance" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ShoppingCart className="icon-instance-node" />
-            <Star className="icon-instance-node" />
-            <User className="icon-instance-node" />
-          </div>
-
-          <div className="chrome-browser-bar">
-            <div className="text-wrapper">Stylista</div>
-
-            <div className="search-bar">
-              <div className="state-layer">
-                <div className="container-wrapper">
-                  <div className="container">
-                    <div className="icon-wrapper">
-                      <Icon className="icon-instance" />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="content">
-                  <div className="supporting-text">アイテムの検索</div>
-                </div>
-
-                <div className="trailing-elements">
-                  <div className="container-wrapper">
-                    <div className="container">
-                      <div className="icon-wrapper">
-                        <IconComponentNode className="icon-instance" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <ShoppingCart className="icon-instance-node" />
-            <Star className="icon-instance-node" />
-            <User className="icon-instance-node" />
-          </div>
-
-          <div className="text-wrapper-2">配送先住所</div>
-
-          <div className="text-wrapper-3">≺ 注文確認</div>
-
-          <div className="element">
-            山田　太郎（ヤマダ　タロウ）　000-0000-0000
-            <br />
-            〒000-0000
-            <br />
-            福岡県福岡市博多区＊＊＊
-          </div>
-        </div>
-
-        <div className="list">
-          <div className="list-item">
-            <div className="state-layer-overlay" />
-
-            <div className="state-layer-2">
-              <div className="leading-element">
-                <div className="building-blocks">
-                  <img className="thumbnail" alt="Thumbnail" src={thumbnail} />
-                </div>
-              </div>
-
-              <div className="content-2">
-                <div className="headline">トップス</div>
-
-                <div className="supporting-text-2">¥3,000</div>
-              </div>
-
-              <div className="trailing-element" />
-            </div>
-
-            <div className="divider">
-              <img className="img" alt="Divider" src={divider} />
-            </div>
-          </div>
-        </div>
-
-        <div className="list-item-2">
-          <div className="state-layer-overlay-2" />
-
-          <div className="state-layer-2">
-            <div className="leading-element">
-              <div className="building-blocks">
-                <img className="thumbnail" alt="Thumbnail" src={image1} />
-              </div>
-            </div>
-
-            <div className="content-2">
-              <div className="headline">トップス</div>
-
-              <div className="supporting-text-2">¥2,500</div>
-            </div>
-
-            <div className="trailing-element" />
-          </div>
-
-          <div className="divider">
-            <img className="img" alt="Divider" src={image} />
-          </div>
-        </div>
-
-        <div className="list-item-3">
-          <div className="state-layer-overlay-3" />
-
-          <div className="state-layer-2">
-            <div className="leading-element">
-              <div className="building-blocks">
-                <img className="thumbnail" alt="Thumbnail" src={thumbnail2} />
-              </div>
-            </div>
-
-            <div className="content-2">
-              <div className="headline">スカート</div>
-
-              <div className="supporting-text-2">¥3,500</div>
-            </div>
-
-            <div className="trailing-element" />
-          </div>
-
-          <div className="divider-wrapper">
-            <img className="img" alt="Divider" src={divider2} />
-          </div>
-        </div>
-
-        <div className="list-item-4">
-          <div className="state-layer-overlay-4" />
-
-          <div className="state-layer-2">
-            <div className="leading-element">
-              <div className="building-blocks">
-                <img className="thumbnail" alt="Thumbnail" src={thumbnail3} />
-              </div>
-            </div>
-
-            <div className="content-2">
-              <div className="headline">アクセサリー</div>
-
-              <div className="supporting-text-2">¥999</div>
-            </div>
-
-            <div className="trailing-element" />
-          </div>
-
-          <div className="img-wrapper">
-            <img className="img" alt="Divider" src={divider3} />
-          </div>
-        </div>
-
-        <div className="overlap-group">
-          <button className="button">
-            <button className="button-2">注文する</button>
-          </button>
-
-          <div className="text-wrapper-4">商品合計：4点　　￥9,999</div>
-        </div>
-
-        <div className="overlap-group-2">
-          <div className="text-wrapper-5">支払い方法</div>
-
-          <div className="rectangle" />
-
-          <div className="text-wrapper-6">クレジットカード</div>
-
-          <ArrowDropDown className="arrow-drop-down" />
-        </div>
-      </div>
-    </div>
-  );
-};
+.screen .design-component-instance-node{
+    font-family: var(--heading-font-family) !important;
+    font-size: var(--heading-font-size) !important;
+    font-style: var(--heading-font-style) !important;
+    font-weight: var(--heading-font-weight);
+    letter-spacing: var(--heading-letter-spacing) !important;
+    line-height: var(--heading-line-height) !important;
+    margin-top: unset !important;
+}

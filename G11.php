@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href=".vscode/CSS/G12.css">
+    <title>検索結果画面</title>
 </head>
 <body>
-<h1>注文完了</h1>
-<p>ご注文ありがとうございました</p>
-お支払い日時    到着予定日  合計金額
-<form action="" mehtod="post">
-<button type="submit">トップページへ戻る</button>
-</form>
+Stylista
+    <input type="text" name="query" placeholder="アイテムの検索">
+    <button type="submit">検索</button>
+    <button type="submit" name="kato"></button>
+    <button type="submit" name="favorite"></button>
+    <button type="submit" name="mypage"></button>
+    <?php
+        echo $_POST['query'],'の検索結果';
+        ?>
 </body>
 </html>
-    

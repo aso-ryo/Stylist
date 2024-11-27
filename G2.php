@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="jp">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stylista</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href=".vscode/CSS/G2.css">
+  <title>Stylista</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/G2.css">
 </head>
+
 <body>
-  <form action="G3" method="post">
-    <h1>Stylista</h1>
-    <h3>新規会員登録</h3>
-    <p>メールアドレス<input type="text" name="mail" placeholder="メールアドレス"></p>
-    <p>パスワード<input type="text" name="pass" placeholder="パスワード"></p>
-    <p>氏名　<input type="text" name="sei" placeholder="姓">
-                <input type="text" name="mei" placeholder="名"></p>
-    <p>氏名(カナ)　<input type="text" name="seikana" placeholder="セイ">
-                <input type="text" name="meikana" placeholder="メイ"></p>
-    <p>郵便番号　<input type="text" name="yuubin" placeholder="半角数字7桁"></p>
-    <p>住所　<textarea name="jyuusyo" rows="5" cols="33"></textarea></p>
-    <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
+  <form action="G3.php" method="post">
+    <h1>Stylista</h1><br>
+    <h3>新規会員登録</h3><br>
+    <p>メールアドレス &ensp; <input type="text" name="mail" placeholder="○○○○s.asojuku" class="mail"></p><br><br>
+    <p>パスワード　&ensp;<input type="text" name="pass" placeholder="Pass"></p><br><br>
+    <p>氏名　<input type="text" name="name" placeholder="山田 太郎"></p><br><br>
+    <p>氏名(カナ)　<input type="text" name="name_kana" placeholder="ヤマダ　タロウ">&ensp;</p><br><br>
+    <p>郵便番号　<input type="text" name="yuubin" placeholder="000-0000"></p><br><br>
+    <p>住所　<textarea name="jyuusyo" rows="5" cols="33" placeholder="福岡県福岡市博多区***" class="textarea"></textarea></p><br><br>
+    <p>電話番号　<input type="text" name="tell" placeholder="00-0000-0000"></p><br><br>
+    <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p><br><br>
+    <input type="submit" value="登録する" class="button">
+
     <?php
-//日付の初期値
+    /*&ensp;はホワイトスペースの追加*/
+
+    /*//日付の初期値
 $theYear2 = date('Y');
 $theMonth2 = date('n');
 $theDay2 = date('j');
@@ -115,9 +123,11 @@ if (count($error) > 0) {
   echo "<HR>";
   echo '<span class = "error">', implode("<br>", $error), '</span>';
 }
-?>
 
 
-    </select></p>
+
+    </select></p>*/
+    ?>
 </body>
+
 </html>

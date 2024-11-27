@@ -1,0 +1,83 @@
+/* ヘッダー部分 */
+header {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    column-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 10vw;
+  }
+  
+  .site__name {
+    color: black;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .search__box {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search__box>.search__bar {
+    width: 100%;
+    padding: 0.5rem 3.5rem 0.5rem 2rem;
+    border-radius: 2rem;
+  }
+  
+  .search__box .search__icon {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 1rem;
+  }
+  
+  header button[type="submit"] {
+    display: contents;
+  }
+  
+  .header__icon {
+    font-size: 2.5rem;
+  }/* ヘッダー部分 */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto auto;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10vw;
+}
+
+.site__name {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.search__box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search__box>.search__bar {
+  width: 100%;
+  padding: 0.5rem 3.5rem 0.5rem 2rem;
+  border-radius: 2rem;
+}
+
+.search__box .search__icon {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+}
+
+header button[type="submit"] {
+  display: contents;
+}
+
+.header__icon {
+  font-size: 2.5rem;
+}
