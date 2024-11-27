@@ -7,17 +7,30 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".vscode/CSS/G4.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/G4.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <title>トップページ</title>
 </head>
 <body>
-    Stylista
-    <input type="text" name="query" placeholder="アイテムの検索">
-    <button type="submit">検索</button>
-    <button type="submit" name="kato"></button>
-    <button type="submit" name="favorite"></button>
-    <button type="submit" name="mypage"></button>
-    <br>
+<header>
+        <a href="" class="site__name">Stylista</a>
+        <form class="search__box" action="" method="post">
+            <input class="search__bar" type="text" name="query" placeholder="アイテムの検索">
+            <button type="submit"><i class="search__icon bi bi-search"></i>
+            </button>
+        </form>
+        <form action="" method="post">
+            <button type="submit"><i class="header__icon bi bi-cart"></i></button>
+        </form>
+        <form action="" method="post">
+            <button type="submit"><i class="header__icon bi bi-star"></i></button>
+        </form>
+        <form action="" method="post">
+            <button type="submit"><i class="header__icon bi bi-person"></i></button>
+        </form>
+    </header>
+
 
     
     <p>カテゴリーから探す</p>
@@ -61,6 +74,8 @@ session_start();
     </div>
 
 </body>
+<<<<<<< HEAD
+=======
 </html><?php
 session_start();
 ?>
@@ -187,4 +202,5 @@ session_start();
     </div>
 
 </body>
+>>>>>>> 5c6fa4bdd149e69c6620cf99409f1fd7937ee482
 </html>
