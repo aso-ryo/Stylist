@@ -1,111 +1,35 @@
 G15　会員情報変更完了画面
-.screen {
-    background-color: #ffffff;
+  .G15__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+  }
+
+  h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
   }
-  
-  .screen .div-2 {
-    background-color: var(--m3-schemes-on-error);
-    border: 8px solid;
-    border-color: var(--m3-schemes-outline-variant);
-    height: 1007px;
-    position: relative;
-    width: 1432px;
-  }
-  
-  .screen .overlap-group {
-    height: 88px;
-    left: 174px;
-    position: absolute;
-    top: 20px;
-    width: 1084px;
-  }
-  
-  .screen .chrome-browser-bar {
-    align-items: center;
-    background-color: #ffffff;
+
+  .kanryou {
+    background-color: skyblue;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    font-weight: bold;
     display: flex;
-    gap: 16px;
-    justify-content: flex-end;
-    left: 0;
-    padding: 16px;
-    position: absolute;
-    top: 0;
-    width: 1084px;
-  }
-  
-  .screen .text-wrapper-2 {
-    color: #000000;
-    font-family: "Inter-Bold", Helvetica;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 0;
-    line-height: normal;
-    margin-left: -1.00px;
-    position: relative;
-    white-space: nowrap;
-    width: fit-content;
-  }
-  
-  .screen .search-bar-instance {
-    background-color: #ffffff !important;
-    border: 1px solid !important;
-    border-color: #a9a9a9 !important;
-    height: 58px !important;
-    margin-bottom: -1.00px !important;
-    margin-top: -1.00px !important;
-    width: 722px !important;
-  }
-  
-  .screen .icon-2 {
-    height: 24px !important;
-    position: relative !important;
-    width: 24px !important;
-  }
-  
-  .screen .size-40 {
-    height: 40px !important;
-    position: relative !important;
-    width: 40px !important;
-  }
-  
-  .screen .overlap {
-    background-image: url(./rectangle-4.svg);
-    background-size: 100% 100%;
-    height: 156px;
-    left: 375px;
-    position: absolute;
-    top: 329px;
-    width: 680px;
-  }
-  
-  .screen .image {
-    height: 37px;
-    left: 60px;
-    position: absolute;
-    top: 60px;
-    width: 555px;
-  }
-  
-  .screen .button-instance {
-    display: flex !important;
-    height: 102px !important;
-    left: 560px !important;
-    position: absolute !important;
-    top: 651px !important;
-    width: 312px !important;
-  }
-  
-  .screen .design-component-instance-node {
-    font-family: var(--heading-font-family) !important;
-    font-size: var(--heading-font-size) !important;
-    font-style: var(--heading-font-style) !important;
-    font-weight: var(--heading-font-weight) !important;
-    letter-spacing: var(--heading-letter-spacing) !important;
-    line-height: var(--heading-line-height) !important;
-    margin-top: unset !important;
-  }
-  
+    justify-content: center;
+}
+
+.button {
+    background-color: black;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
+}
