@@ -42,26 +42,6 @@ session_start();
     <form action="" method="post">
     <button name=ladies type="submit"></button>
     </form>
-<<<<<<< HEAD
-    <?
-$pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
-dbname=LAA1554862-kaihatsu;charset=utf8',
-'LAA1554862',
-'aso2024');
-
-    $sql_reviews = "SELECT * FROM image_posts";
-        $stmt_reviews = $pdo->prepare($sql_reviews);
-        $stmt_reviews->execute();
-        $reviews = $stmt_reviews->fetchAll(PDO::FETCH_ASSOC);
-        if ($reviews) {
-            foreach ($reviews as $review) {
-                echo '<p>' . $review['category'] . '</p>';
-                echo '<p><img src="'.$review['file_name'].'"></p>';
-                echo '<hr>';
-            }
-        }
-            ?>
-=======
     <?php
         $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                     dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -205,7 +185,6 @@ session_start();
         }
         ?>  
     </div>
->>>>>>> 7143091181e5823dec71f3931780aa86698ebc76
 
 </body>
 </html>
