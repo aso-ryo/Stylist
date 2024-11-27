@@ -1,165 +1,26 @@
-G10 注文確定画面
-.screen {
-    background-color: #ffffff;
+h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
-.screen .div{
-    background-color: #ffffff;
-    height: 1024px;
-    position: relative;
-    width: 1440px;
+.button {
+    background-color: red;
+    color: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
-.screen .button-2{
-    all:unset;
-    box-sizing: border-box;
-    color: var(--color-text-brand-on-branf);
-    font-family: var(--single-line-body-base-font-family);
-    font-size: var(--single-line-body-base-font-size);
-    font-style: var(--single-line-body-base-font-style);
-    font-weight: var(--single-line-body-base-font-weight);
-    left: 30px;
-    letter-spacing: var(--single-line-body-base-letter-spanccing);
-    line-height: var(--single-line-body-base-line-height);
-    position: absolute;
-    top: 20px;
-    white-space: nowrap;
-}
-
-.screen.text-wrapper-2{
-    color: #000000;
-    font-family: "Inter-ExtraLight",Helvetica;
-    font-size: 64px;
-    font-weight: 200;
-    height: 215px;
-    left: 403px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 36px;
-    width: 634px;
-}
-
-.screen .overlap{
-    background-image: url(./rectangle-3.svg);
-    background-size: 100% 100%;
-    height: 59px;
-    left: 414px;
-    position: absolute;
-    top: 302px;
-    width: 634px;
-}
-
-.screen .image{
-    height: 38px;
-    left: 31px;
-    position: absolute;
-    width: 550px;
-}
-
-.screen .screen.text-wrapper-3{
-    color: #000000;
-    font-family: "Inter-ThinItalic",Helvetica;
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 100;
-    height: 51px;
-    left: 327px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 387px;
-    width: 262px;
-}
-
-.screen .overlap-group{
-    height: 51px;
-    left: 589px;
-    position: absolute;
-    top: 387px;
-    width: 495px;
-}
-
-.screen .screen.text-wrapper-4{
-    color: #000000;
-    font-family: "Inter-ThinItalic",Helvetica;
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 100;
-    height: 51px;
-    left: 0;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 262px;
-}
-
-.screen .screen.text-wrapper-5{
-    color: #000000;
-    font-family: "Inter-ThinItalic",Helvetica;
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 100;
-    height: 51px;
-    left: 233px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 262px;
-}
-
-.screen .screen.text-wrapper-6{
-    color: #000000;
-    font-family: "Inter-ThinItalic",Helvetica;
-    font-size: 32px;
-    font-style: italic;
-    font-weight: 100;
-    height: 51px;
-    left: 327px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 438px;
-    width: 262px;
-}
-
-.screen .overlap-group-2{
-    height: 51px;
-    left: 589px;
-    position: absolute;
-    top: 438px;
-    width: 495px;
-}
-
-.screen .button-instance{
-    background-color: var(--color-background-danger-default) !important;
-    border: unset !important;
-    border-color: unset !important;
-    display: flex !important;
-    height: 73px !important;
-    left: 580px !important;
-    position: absolute !important;
-    top: 774px !important;
-    width: 280px !important;
-}
-
-.screen .design-component-instance-node{
-    font-family: var(--heading-font-family) !important;
-    font-size: var(--heading-font-size) !important;
-    font-style: var(--heading-font-style) !important;
-    font-weight: var(--heading-font-weight);
-    letter-spacing: var(--heading-letter-spacing) !important;
-    line-height: var(--heading-line-height) !important;
-    margin-top: unset !important;
+.kanryou {
+    background-color: skyblue;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
 }

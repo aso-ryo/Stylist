@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".vscode/CSS/G11.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/G10.css">
+    <link rel="stylesheet" href="./css/header.css">
     <title>注文確定画面</title>
 </head>
 <body>
+<br><br>
 <h1>注文完了</h1>
-<p>ご注文ありがとうございました</p>
+<br><br>
+<p class="kanryou">ご注文ありがとうございました</p>
 <?php
 $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
 dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -54,9 +58,9 @@ foreach ($cart_items as $item) {
     ]);
 }
 ?>
+<button type="submit" class="button">トップページへ戻る</button>
 
 <form action="" mehtod="post">
-<button type="submit">トップページへ戻る</button>
 </form>
 </body>
 </html>
