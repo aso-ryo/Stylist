@@ -42,7 +42,15 @@ Stylista
          echo '<p><img src="images/' . $review['goods.image'] . '"></p>';
          echo '<p>' . $review['goods.goods_name'] . '</p>';
          echo '<p>￥' . $review['goods.price'] . '</p>';
-         echo '<p>' . $review['cart.qty'] . '</p>';
+         //個数
+         echo '<select name="count">';
+         echo '<option value="">',$review['cart.qty'],'</option>';
+        for($i=1;$i<=10;$i++){
+            echo '<option value="">',$i,'</option>';
+        }
+        
+        echo '</select>';
+
          echo '<button type="submit">削除</button>';
           
      }
