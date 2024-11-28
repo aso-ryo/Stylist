@@ -22,7 +22,8 @@ Stylista
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
-        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
+        $stmt=$pdo->prepare("SELECT goods_id, category, image FROM goods where `explain` LIKE :query");
+        $stmt->bindValue(':query', '%' . $_POST['query'] . '%', PDO::PARAM_STR);
         $stmt->execute();
         $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
          

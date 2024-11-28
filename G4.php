@@ -12,8 +12,9 @@ session_start();
 </head>
 <body>
     Stylista
+    <form action = G11.php method = 'post'>
     <input type="text" name="query" placeholder="アイテムの検索">
-    <button type="submit">検索</button>
+    <button type="submit">検索</button></form>
     <button type="submit" name="kato"></button>
     <button type="submit" name="favorite"></button>
     <button type="submit" name="mypage"></button>
