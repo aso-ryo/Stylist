@@ -12,7 +12,7 @@
     <div class="a">
         <br><br><br>
         <h1>Stylista</h1><br>
-        <h3>ログアウトしました</h3>
+        <h3>ログアウトしました</h3><br>
         <h2>ログイン</h2><br>
         <p><input type="text" class="mail" name="mail" placeholder="メールアドレス"></p><br>
         <p><input type="text" class="pass" name="pass"　 placeholder="パスワード"></p><br><br>

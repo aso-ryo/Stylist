@@ -25,11 +25,11 @@ h3 {
     color: #000000;
     display: flex;
     flex-direction: row;
-    height: 53px;
+    height: 45px;
     justify-content: center;
     top: 250px;
-    width: 450px;
-    border-radius: 10px;
+    width: 400px;
+    border-radius: 7px;
     margin: 0 auto;
 }
 
@@ -39,11 +39,11 @@ h3 {
     color: #000000;
     display: flex;
     flex-direction: row;
-    height: 53px;
+    height: 45px;
     justify-content: center;
     top: 350px;
-    width: 450px;
-    border-radius: 10px;
+    width: 400px;
+    border-radius: 7px;
     margin: 0 auto;
 }
 
@@ -55,7 +55,7 @@ h3 {
     height: 57px;
     justify-content: center;
     top: 400px;
-    width: 200px;
+    width: 180px;
     border-radius: 30px; 
 }
 
@@ -64,4 +64,4 @@ h3 {
 .a{
     text-align: center;
 
-}
+ }
