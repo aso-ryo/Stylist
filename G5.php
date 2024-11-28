@@ -11,7 +11,7 @@
 <body>
 <header>
         <a href="" class="site__name">Stylista</a>
-        <form class="search__box" action="" method="post">
+        <form class="search__box" action="G11.php" method="post">
             <input class="search__bar" type="text" name="query" placeholder="アイテムの検索">
             <button type="submit"><i class="search__icon bi bi-search"></i>
             </button>
