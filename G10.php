@@ -64,9 +64,10 @@ echo '合計金額';
 echo '￥',$SESSION['$total_amount'];
 
 ?>
+<form action="" mehtod="post">
 <button type="submit" class="button">トップページへ戻る</button>
 
-<form action="" mehtod="post">
+
 </form>
 </body>
 </html>
