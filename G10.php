@@ -32,12 +32,12 @@ foreach ($cart_items as $item) {
     // 必要な情報を取得
     $goods_id = $item['goods_id'];
     $qty = $item['qty'];
-    $user_id = $_SESSION['user_id']; // ログイン中のユーザーIDと仮定
+    $user_id = $_SESSION['user_id'];
     $order_date = date('Y-m-d H:i:s');
-    $pay_status = '未払い';
+    $pay_status = '支払い済み';
     $delivery = '準備中';
     $delivery_date = date('Y-m-d', strtotime('+7 days')); // 1週間後に配送予定
-    $pay_method = 'クレジットカード'; // 仮の支払い方法
+    $pay_method = $_POST['pay'];
 
     // order テーブルへの挿入クエリ
     $insert_sql = $pdo->prepare("
@@ -49,7 +49,6 @@ foreach ($cart_items as $item) {
         $goods_id,
         $order_date,
         $qty,
-        1, // 注文番号 (仮に1に設定)
         $pay_status,
         $delivery,
         $delivery_date,
@@ -57,10 +56,18 @@ foreach ($cart_items as $item) {
         $user_id
     ]);
 }
+echo 'お支払い日時';
+echo $order_date;
+echo '到着予定日';
+echo $delivery_date;
+echo '合計金額';
+echo '￥',$SESSION['$total_amount'];
+
 ?>
+<form action="" mehtod="post">
 <button type="submit" class="button">トップページへ戻る</button>
 
-<form action="" mehtod="post">
+
 </form>
 </body>
 </html>
