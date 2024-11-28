@@ -16,5 +16,7 @@ Stylista
     <?php
         echo $_POST['query'],'の検索結果';
         ?>
+           
+
 </body>
 </html>

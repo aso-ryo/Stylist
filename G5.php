@@ -26,10 +26,21 @@
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
-    
-    
-
-
-    
+    <?php
+        $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
+                    dbname=LAA1554862-kaihatsu;charset=utf8',
+                    'LAA1554862','aso2024');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                   
+        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
+        $stmt->execute();
+        $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
+         
+        foreach ($goods as $good){
+            echo '<a href="details.php?id=',$good['goods_id'],'">';
+            echo '<img src="images/'.$good['image'].'" alt="',$good['category'],'" width="150" height="150"></a>';
+            echo $good['category'];
+        }
+        ?>      
 </body>
 </html>
