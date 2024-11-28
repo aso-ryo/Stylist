@@ -41,8 +41,16 @@ Stylista
          $goods_id=$review['goods.goods_id']; 
          echo '<p><img src="images/' . $review['goods.image'] . '"></p>';
          echo '<p>' . $review['goods.goods_name'] . '</p>';
-         echo '<p>' . $review['goods.price'] . '</p>';
-         echo '<p>' . $review['cart.cart_id'] . '</p>';
+         echo '<p>￥' . $review['goods.price'] . '</p>';
+         //個数
+         echo '<select name="count">';
+         echo '<option value="">',$review['cart.qty'],'</option>';
+        for($i=1;$i<=10;$i++){
+            echo '<option value="">',$i,'</option>';
+        }
+        
+        echo '</select>';
+
          echo '<button type="submit">削除</button>';
           
      }
@@ -57,14 +65,16 @@ Stylista
 $sql->execute([$_SESSION['cart_id']]);
 $total_qty = $sql->fetch(PDO::FETCH_ASSOC)['total_qty'];
 echo '商品合計：',$total_qty,'点';
+$_SESSION['$total_qty']=$total_qty;
 $sql = $pdo->prepare("
 SELECT SUM(c.qty * g.price) AS total_amount
 FROM goods g
 JOIN cart c ON c.goods_id = g.goods_id
 WHERE c.cart_id = ?;");
 $sql->execute([$_SESSION['cart_id']]);
-$total_qty = $sql->fetch(PDO::FETCH_ASSOC)['total_amount'];
-echo '￥',$total_qty;
+$total_amount = $sql->fetch(PDO::FETCH_ASSOC)['total_amount'];
+echo '￥',$total_amount;
+$_SESSION['$total_amount']=$total_amount;
 
 ?>
 
