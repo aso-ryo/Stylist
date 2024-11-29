@@ -38,7 +38,6 @@ session_start();
         <img src="./images/トップページ画像１.png" alt="画像1">
         <img src="./images/トップページ画像２.png" alt="画像2">
     </div><br>
-    <form action="G5.php"method="post">
     <section class="main__container">
         <div class="category__container">
             <h3>カテゴリーから探す</h3>
@@ -55,7 +54,7 @@ session_start();
         <a href="./G5.php?category=ファッション雑貨">ファッション雑貨</a>
             
         </div>
-        </form>
+        
         <div class="card__container">
             <?php
             $pdo = new PDO(
