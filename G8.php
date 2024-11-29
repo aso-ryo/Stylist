@@ -20,7 +20,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".vscode/CSS/G9.css">
     <title>カート内画面</title>
-</head>
+</head> 
 <body>
 Stylista
     <input type="text" name="query" placeholder="アイテムの検索">
