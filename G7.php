@@ -1,7 +1,7 @@
 <?php
     session_start();
     if(isset($_POST['user_name'])&&isset($_POST['user_name'])&&isset($_POST['user_name_kana'])&&isset($_POST['e-mail'])&&isset($_POST['password'])&&isset($_POST['birthday'])&&isset($_POST['adless_number'])&&isset($_POST['adless'])&&isset($_POST['tell'])&&isset($_POST['cart_id'])){
-        $_SESSION['user_id']=$_POST['cart_id'];
+        $_SESSION['user_id']=$_POST['user_id'];
         $_SESSION['name']=$_POST['name'];
         $_SESSION['name_kana']=$_POST['name_kana'];
         $_SESSION['mail']=$_POST['mail'];
@@ -11,7 +11,7 @@
         $_SESSION['juusyo']=$_POST['juusyo'];
         $_SESSION['tell']=$_POST['tell'];
         $_SESSION['cart_id']=$_POST['cart_id'];
-       }
+    }
 
        $sql = $pdo->prepare("select * from cart where goods_id=?");
         $sql->execute([$s]);
