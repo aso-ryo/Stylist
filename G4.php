@@ -42,17 +42,17 @@ session_start();
     <section class="main__container">
         <div class="category__container">
             <h3>カテゴリーから探す</h3>
-            <a href="">トップス</a>
-            <a href="">アウター</a>
-            <a href="">パンツ</a>
-            <a href="">オールインワン</a>
-            <a href="">スカート</a>
-            <a href="">ワンピース</a>
-            <a href="">シューズ</a>
-            <a href="">バッグ</a>
-            <a href="">アクセサリー</a>
-            <a href="">帽子</a>
-            <a href="">ファッション雑貨</a>
+            <a href="G5.php" name="トップス">トップス</a>
+            <a href="G5.php" name="アウター">アウター</a>
+            <a href="G5.php" name="パンツ">パンツ</a>
+            <a href="G5.php" name="オールインワン">オールインワン</a>
+            <a href="G5.php" name="スカート">スカート</a>
+            <a href="G5.php" name="ワンピース">ワンピース</a>
+            <a href="G5.php" name="シューズ">シューズ</a>
+            <a href="G5.php" name="バッグ">バッグ</a>
+            <a href="G5.php" name="アクセサリー">アクセサリー</a>
+            <a href="G5.php" name="帽子">帽子</a>
+            <a href="G5.php" name="ファッション雑貨">ファッション雑貨</a>
         </div>
         <div class="card__container">
             <?php
