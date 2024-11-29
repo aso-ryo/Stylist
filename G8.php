@@ -31,6 +31,15 @@ Stylista
     <p>カート</p>
 <form action="G9" method="post">
 <?php
+
+$pdo = new PDO(
+    'mysql:host=mysql309.phy.lolipop.lan;
+        dbname=LAA1554862-kaihatsu;charset=utf8',
+    'LAA1554862',
+    'aso2024'
+);
+
+
  $sql = $pdo->prepare("select goods.image,goods.goods_name,goods.price,cart.qty 
  from goods 
  INNER JOIN cart ON cart.goods_id=goods.goods_id where cart.cart_id=?");
