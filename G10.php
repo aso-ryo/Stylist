@@ -64,10 +64,8 @@ echo '合計金額';
 echo '￥',$SESSION['$total_amount'];
 
 ?>
-<form action="" mehtod="post">
+<form action="G4.php" mehtod="post">
 <button type="submit" class="button">トップページへ戻る</button>
-
-
 </form>
 </body>
 </html>

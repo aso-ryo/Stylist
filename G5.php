@@ -32,9 +32,11 @@
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
-        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
-        $stmt->execute();
+        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods where category = '?'");
+        $stmt->execute($_POST['name']);
         $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        echo $_POST['name'];
          
         foreach ($goods as $good){
             echo '<a href="details.php?id=',$good['goods_id'],'">';
