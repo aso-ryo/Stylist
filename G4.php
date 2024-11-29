@@ -38,22 +38,24 @@ session_start();
         <img src="./images/トップページ画像１.png" alt="画像1">
         <img src="./images/トップページ画像２.png" alt="画像2">
     </div><br>
-
+    <form action="G5.php"method="post">
     <section class="main__container">
         <div class="category__container">
             <h3>カテゴリーから探す</h3>
-            <a href="./G5.php">トップス</a>
-            <a href="./G5.php">アウター</a>
-            <a href="./G5.php">パンツ</a>
-            <a href="./G5.php">オールインワン</a>
-            <a href="./G5.php">スカート</a>
-            <a href="./G5.php">ワンピース</a>
-            <a href="./G5.php">シューズ</a>
-            <a href="./G5.php">バッグ</a>
-            <a href="./G5.php">アクセサリー</a>
-            <a href="./G5.php">帽子</a>
-            <a href="./G5.php">ファッション雑貨</a>
+            <a href="./G5.php?category=トップス">トップス</a>
+        <a href="./G5.php?category=アウター">アウター</a>
+        <a href="./G5.php?category=パンツ">パンツ</a>
+        <a href="./G5.php?category=オールインワン">オールインワン</a>
+        <a href="./G5.php?category=スカート">スカート</a>
+        <a href="./G5.php?category=ワンピース">ワンピース</a>
+        <a href="./G5.php?category=シューズ">シューズ</a>
+        <a href="./G5.php?category=バッグ">バッグ</a>
+        <a href="./G5.php?category=アクセサリー">アクセサリー</a>
+        <a href="./G5.php?category=帽子">帽子</a>
+        <a href="./G5.php?category=ファッション雑貨">ファッション雑貨</a>
+            
         </div>
+        </form>
         <div class="card__container">
             <?php
             $pdo = new PDO(

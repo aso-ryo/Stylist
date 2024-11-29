@@ -32,17 +32,22 @@
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
-        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods where category = '?'");
-        $stmt->execute($_POST['name']);
-        $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
+        $category = isset($_GET['category']) ? htmlspecialchars($_GET['category'], ENT_QUOTES, 'UTF-8') : null;
 
-        echo $_POST['name'];
+    if ($category) {
+        // カテゴリーに基づいてデータを取得
+        $stmt = $pdo->prepare("SELECT goods_id, category, image FROM goods WHERE category = :category");
+        $stmt->bindParam(':category', $category, PDO::PARAM_STR);
+        $stmt->execute();
+        $goods = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo $category;
          
         foreach ($goods as $good){
             echo '<a href="details.php?id=',$good['goods_id'],'">';
             echo '<img src="images/'.$good['image'].'" alt="',$good['category'],'" width="150" height="150"></a>';
             echo $good['category'];
         }
+    }
         ?>      
 </body>
 </html>
