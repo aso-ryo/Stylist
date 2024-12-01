@@ -13,10 +13,10 @@
     <br><br><br>
     <h1>Stylista</h1><br>
     <h3>ログイン</h3><br>
-
-    <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
-    <p><input class="pass" name="pass" placeholder="パスワード"></p><br><br>
     <form action="G4.php" method="post">
+    <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
+    <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
+
     <p><button class="login-button" name="login">ログイン</button><br><br>
 
 <form action="G2.php" method="post">

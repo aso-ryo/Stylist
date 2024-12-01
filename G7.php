@@ -1,13 +1,19 @@
 <?php
     session_start();
 
-       $sql = $pdo->prepare("select * from cart where goods_id=?");
-        $sql->execute([$s]);
-        $cart_goods = $sql->fetchColumn();
-        if($cart_goods!== false){       //同じ商品がカートに入ってないとき
-            $sql = "INSERT INTO carts (cart_id, goods_id,user_id,qty) VALUES (?,?,?,?)";
-            $stmt = $pdo->prepare($sql);
-            $result = $stmt->execute([$s, $goods_id,$_SESSION['name'],1]);
+
+    $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
+                dbname=LAA1554862-kaihatsu;charset=utf8',
+                'LAA1554862',
+                'aso2024');
+
+    $sql = $pdo->prepare("select * from cart where goods_id=?");
+    $sql->execute([$_SESSION['goods_id']]);
+    $cart_goods = $sql->fetchColumn();
+    if($cart_goods!== false){       //同じ商品がカートに入ってないとき
+        $sql = "INSERT INTO carts (cart_id, goods_id,user_id,qty) VALUES (?,?,?,?)";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute([$_SESSION['goods_id'], $goods_id,$_SESSION['name'],1]);
             if ($result) {
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
@@ -15,10 +21,10 @@
                 header('Location: index.html'); // 挿入後にHTMLページへリダイレクト
                 exit;
             }      
-        }else{      //入っている時、個数を＋１する
-            $sql = "UPDATE carts SET qty = qty + 1 WHERE cart_id = ?";
-            $stmt = $pdo->prepare($sql);
-            $result = $stmt->execute([$cart_id]);
+    }else{      //入っている時、個数を＋１する
+        $sql = "UPDATE carts SET qty = qty + 1 WHERE cart_id = ?";
+        $stmt = $pdo->prepare($sql);
+        $result = $stmt->execute([$cart_id]);
             if ($stmt->rowCount() > 0) {
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
@@ -50,7 +56,7 @@
                 'LAA1554862',
                 'aso2024');
 
-        echo '<form action="G8.php" method="post">';
+        echo '<form action="G7.php" method="post">';
 
         $goods_id=$_POST['id'];
         $sql = $pdo->prepare("select * from goods where goods_id=?");
