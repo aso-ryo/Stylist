@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stylista</title>
+    <link rel="stylesheet" href=".vscode/CSS/reset.css">
+    <link rel="stylesheet" href=".vscode/CSS/G2.css">
 </head>
 <body>
   <form action="G3" method="post">

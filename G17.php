@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/G17.css">
-    <link rel="stylesheet" href="./css/reset.css">
     <title>ログアウト画面</title>
+    <link rel="stylesheet" href=".vscode/CSS/reset.css">
+    <link rel="stylesheet" href=".vscode/CSS/G17.css">
 </head>
+
 <body>
     <div class="a">
         <br><br><br>
