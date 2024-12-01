@@ -9,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/G4.css">
+    <link rel="stylesheet" href=".vscode/CSS/G4.css">
     <link rel="stylesheet" href="./css/header.css">
     <title>トップページ</title>
 </head>
@@ -34,6 +34,34 @@ session_start();
     </header>
 
 
+    <?php
+    //会員情報の記憶
+    $pdo = new PDO(
+        'mysql:host=mysql309.phy.lolipop.lan;
+            dbname=LAA1554862-kaihatsu;charset=utf8',
+        'LAA1554862',
+        'aso2024'
+    );
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    $sql = $pdo->prepare("select * from user where `e-mail`=? and password=?");
+    
+        $sql->execute([$_POST['mail'], $_POST['password']]);
+        foreach ($sql as $row) {
+        $_SESSION['user_id']=$row['user_id'];
+        $_SESSION['user_name']=$row['user_name'];
+        $_SESSION['user_name_kana']=$row['user_name_kana'];
+        $_SESSION['e-mail']=$row['e-mail'];
+        $_SESSION['password']=$row['password'];
+        $_SESSION['birthday']=$row['birthday'];
+        $_SESSION['adless_number']=$row['adless_number'];
+        $_SESSION['adless']=$row['adless'];
+        $_SESSION['tell']=$row['tell'];
+        $_SESSION['cart_id']=$row['cart_id'];
+        }
+    ?>
+
+
     <div class="image-topp">
         <img src="./images/トップページ画像１.png" alt="画像1">
         <img src="./images/トップページ画像２.png" alt="画像2">
@@ -54,17 +82,10 @@ session_start();
         <a href="./G5.php?category=ファッション雑貨">ファッション雑貨</a>
             
         </div>
-        
+
         <div class="card__container">
             <?php
-            $pdo = new PDO(
-                'mysql:host=mysql309.phy.lolipop.lan;
-                    dbname=LAA1554862-kaihatsu;charset=utf8',
-                'LAA1554862',
-                'aso2024'
-            );
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+           
             $stmt = $pdo->query("SELECT goods_id, category, image FROM goods");
             $stmt->execute();
             $goods = $stmt->fetchAll(PDO::FETCH_ASSOC);
