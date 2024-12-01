@@ -18,19 +18,19 @@
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
-                header('Location: index.html'); // 挿入後にHTMLページへリダイレクト
+                header('Location: G7.php'); // 挿入後にHTMLページへリダイレクト
                 exit;
             }      
     }else{      //入っている時、個数を＋１する
-        $sql = "UPDATE carts SET qty = qty + 1 WHERE cart_id = ?";
+        $sql = "UPDATE cart SET qty = qty + 1 WHERE cart_id = ?";
         $stmt = $pdo->prepare($sql);
-        $result = $stmt->execute([$cart_id]);
+        $result = $stmt->execute([$_SESSION['cart_id']]);
             if ($stmt->rowCount() > 0) {
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
             } 
-            header('Location: index.html'); // 挿入後にHTMLページへリダイレクト
+            header('Location: G7.php'); // 挿入後にHTMLページへリダイレクト
             exit;   
         }
 ?>

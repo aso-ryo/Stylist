@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".vscode/CSS/G9.css">
     <title>カート内画面</title>
-    <script src="cart.js" defer></script>
+    <script src="cartlist.js" defer></script>
 </head>
 <body>
 Stylista

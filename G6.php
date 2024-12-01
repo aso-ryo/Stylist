@@ -33,7 +33,7 @@ Stylista
                 $_SESSION['goods_id']=$review['goods_id']; 
                 echo '<img src="images/'.$review['image'].'" alt="',$good['category'],'"></a>';
                 echo '<p>' . $review['goods_name'] . '</p>';
-                echo '<p>' . $review['price'] . '</p>';
+                echo '<p>￥' . $review['price'] . '</p>';
                 echo '<p>' . $review['explain'] . '</p>';
                  
             }
@@ -53,7 +53,7 @@ Stylista
         }
         
             // ボタン表示
-            echo '<button id="favorite-' . $goods_id . '" onclick="toggleFavorite(' . $goods_id . ')">';
+            echo '<button id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
             echo $is_favorited ? '★' : '☆';
             echo '</button>';
 
