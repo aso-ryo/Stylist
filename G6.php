@@ -26,7 +26,12 @@ Stylista
         echo '<form action="G7.php" method="post">';
 
         $sql = $pdo->prepare("select * from goods where goods_id=?");
-        $sql->execute([$_GET['id']]);
+        if(isset($_SESSION['goods_id'])){
+            $sql->execute([$_SESSION['goods_id']]);
+        }else{
+            $sql->execute([$_GET['id']]);    
+        }
+        
         $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
             foreach ($reviews as $review) {     //商品表示
@@ -65,8 +70,13 @@ Stylista
         } else {
             echo "在庫なし";
         }
-
+        if (!empty($_SESSION['message'])){
+            echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
+                unset($_SESSION['message']); //メッセージを消去
+    
+        }
 ?>
 <script src="favorite.js" defer></script>
+<script src="cart.js"></script>
 </body>
 </html>

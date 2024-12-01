@@ -7,32 +7,31 @@
                 'LAA1554862',
                 'aso2024');
 
-    $sql = $pdo->prepare("select * from cart where goods_id=?");
+    $sql = $pdo->prepare("select cart_id from cart where goods_id=?");
     $sql->execute([$_SESSION['goods_id']]);
     $cart_goods = $sql->fetchColumn();
-    if($cart_goods!== false){       //同じ商品がカートに入ってないとき
-        $sql = "INSERT INTO carts (cart_id, goods_id,user_id,qty) VALUES (?,?,?,?)";
+    if($cart_goods=== false){       //同じ商品がカートに入ってないとき
+        $sql = "INSERT INTO cart (cart_id, goods_id,user_id,qty) VALUES (?,?,?,?)";
         $stmt = $pdo->prepare($sql);
-        $result = $stmt->execute([$_SESSION['goods_id'], $goods_id,$_SESSION['name'],1]);
+        $result = $stmt->execute([$_SESSION['cart_id'],$_SESSION['goods_id'],$_SESSION['user_id'],1]);
             if ($result) {
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
-                header('Location: G7.php'); // 挿入後にHTMLページへリダイレクト
-                exit;
             }      
     }else{      //入っている時、個数を＋１する
         $sql = "UPDATE cart SET qty = qty + 1 WHERE cart_id = ?";
         $stmt = $pdo->prepare($sql);
         $result = $stmt->execute([$_SESSION['cart_id']]);
-            if ($stmt->rowCount() > 0) {
+            if ($result) {
                 $_SESSION['message'] = 'カートに入れました。';
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
             } 
-            header('Location: G7.php'); // 挿入後にHTMLページへリダイレクト
-            exit;   
+            
         }
+        header('Location: G6.php');
+        exit;
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -89,18 +88,7 @@
             echo "在庫あり: $stock 個";
         } else {
             echo "在庫なし";
-        }
-
-    if (!empty($_SESSION['message'])){
-        //<div class="message" id="message-box"> //css紐づけ
-            echo $_SESSION['message'];
-            unset($_SESSION['message']); //メッセージを消去
-        //</div>
-    }
-?>
-    <script src="cart.js"></script>
-        
-
-       
+        }   
+     ?>  
 </body>
 </html>
