@@ -41,6 +41,7 @@
         $stmt->execute();
         $goods = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo $category;
+        unset($_SESSION['goods_id']);
          
         foreach ($goods as $good){
             echo '<a href="./G6.php?id=',$good['goods_id'],'">';
