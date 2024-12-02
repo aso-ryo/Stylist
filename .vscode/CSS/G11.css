@@ -1,1 +1,37 @@
-G11 検索結果画面
+.goods {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    position: relative;
+  
+  }
+  
+  .category-card {
+    padding: 16px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    width: 100%;
+  }
+  
+  .category-card img {
+    width: 150%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .image-topp {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .card__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+  }
