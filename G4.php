@@ -1,5 +1,37 @@
 <?php
 session_start();
+
+//会員情報の記憶
+$pdo = new PDO(
+    'mysql:host=mysql309.phy.lolipop.lan;
+        dbname=LAA1554862-kaihatsu;charset=utf8',
+    'LAA1554862',
+    'aso2024'
+);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = $pdo->prepare("select * from user where `e-mail`=? and password=?");
+
+    $sql->execute([$_POST['mail'], $_POST['password']]);
+    $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+    if ($reviews) {
+        foreach ($reviews as $row) {
+        $_SESSION['user_id']=$row['user_id'];
+        $_SESSION['user_name']=$row['user_name'];
+        $_SESSION['user_name_kana']=$row['user_name_kana'];
+        $_SESSION['e-mail']=$row['e-mail'];
+        $_SESSION['password']=$row['password'];
+        $_SESSION['birthday']=$row['birthday'];
+        $_SESSION['adless_number']=$row['adless_number'];
+        $_SESSION['adless']=$row['adless'];
+        $_SESSION['tell']=$row['tell'];
+        $_SESSION['cart_id']=$row['cart_id'];
+        }
+    }else{
+        $_SESSION['message'] = 'ログインできませんでした。';
+        header('Location: G1.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
@@ -34,32 +66,7 @@ session_start();
     </header>
 
 
-    <?php
-    //会員情報の記憶
-    $pdo = new PDO(
-        'mysql:host=mysql309.phy.lolipop.lan;
-            dbname=LAA1554862-kaihatsu;charset=utf8',
-        'LAA1554862',
-        'aso2024'
-    );
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $sql = $pdo->prepare("select * from user where `e-mail`=? and password=?");
-    
-        $sql->execute([$_POST['mail'], $_POST['password']]);
-        foreach ($sql as $row) {
-        $_SESSION['user_id']=$row['user_id'];
-        $_SESSION['user_name']=$row['user_name'];
-        $_SESSION['user_name_kana']=$row['user_name_kana'];
-        $_SESSION['e-mail']=$row['e-mail'];
-        $_SESSION['password']=$row['password'];
-        $_SESSION['birthday']=$row['birthday'];
-        $_SESSION['adless_number']=$row['adless_number'];
-        $_SESSION['adless']=$row['adless'];
-        $_SESSION['tell']=$row['tell'];
-        $_SESSION['cart_id']=$row['cart_id'];
-        }
-    ?>
 
 
     <div class="image-topp">

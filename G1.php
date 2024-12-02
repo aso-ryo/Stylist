@@ -1,4 +1,6 @@
-
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="jp">
 <head>
@@ -14,6 +16,13 @@
     <h1>Stylista</h1><br>
     <h3>ログイン</h3><br>
     <form action="G4.php" method="post">
+        <?php
+           if (!empty($_SESSION['message'])){
+            echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
+            unset($_SESSION['message']);
+
+           }
+        ?>
     <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
     <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
 
