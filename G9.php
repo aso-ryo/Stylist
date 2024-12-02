@@ -31,8 +31,8 @@ session_start();
     </header>
     <p>注文確認</p>
     <p>配送先住所</p>
-    <form action="G10.png" method="post">
-    <?
+    <form action="G10.php" method="post">
+    <?php
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
     dbname=LAA1554862-kaihatsu;charset=utf8',
     'LAA1554862',
@@ -42,23 +42,31 @@ session_start();
     $sql->execute([$_SESSION['user_id']]);
     $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
 
-    echo $reviews['user_name'];
-    echo '(',$reviews['user_name_kana'],')';
-    echo $reviews['adless_number'];
-    echo $reviews['adless'];
+    foreach ($reviews as $row) {
+        echo $row['user_name'];
+        echo '(',$row['user_name_kana'],')';
+        echo $row['adless_number'];
+        echo $row['adless'];
+     }
 
-    $sql = $pdo->prepare("select goods.image,goods.goods_name,goods.price
- from goods 
- INNER JOIN cart ON cart.goods_id=goods.goods_id where cart.cart_id=?");
+    $sql = $pdo->prepare("SELECT goods.goods_id AS id, goods.image AS image, goods.goods_name AS name, goods.price AS price,cart.qty AS qty 
+    FROM goods INNER JOIN cart 
+    ON cart.goods_id = goods.goods_id 
+    WHERE cart.cart_id = ?
+    ");
  $sql->execute([$_SESSION['cart_id']]);
  $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+ 
  if ($reviews) {
-     foreach ($reviews as $review) {     //商品表示
-         $goods_id=$review['goods.goods_id']; 
-         echo '<p><img src="images/' . $review['goods.image'] . '"></p>';
-         echo '<p>' . $review['goods.goods_name'] . '</p>';
-         echo '<p>￥' . $review['goods.price'] . '</p>';
-          
+     foreach ($reviews as $review) {
+        $price = (float)$review['price']; // 明示的に数値に変換
+        $qty = (int)$review['qty']; // 明示的に数値に変換
+        $subtotal = $price * $qty;
+
+         echo '<img src="images/' . $review['image'].'" alt="商品画像">';
+         echo $review['name'];
+         echo '￥' . number_format($subtotal);
+         echo '<br>';
      }
  }
 ?>
@@ -69,10 +77,10 @@ session_start();
         <option value="コンビニ支払い">コンビニ支払い</option>
         <option value="キャリア支払い">キャリア支払い</option>
     </select>
-
+    <br>
     <?php
-    echo '商品合計：',$_SESSION['$total_qty'],'点';
-    echo '￥',$SESSION['$total_amount'];
+    echo '商品合計：',$_SESSION['total_qty'],'点<br>';
+    echo '￥',$_SESSION['total_amount'];
     ?>
 
     <button type="submit">注文する</button>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +45,8 @@ foreach ($cart_items as $item) {
     // order テーブルへの挿入クエリ
     $insert_sql = $pdo->prepare("
         INSERT INTO `order` 
-        (goods_id, order_date, qty, number, pay_status, delivery, delivery_data, pay_method, user_id) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        (goods_id, order_date, qty, pay_status, delivery, delivery_date, pay_method, user_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ");
     $insert_sql->execute([
         $goods_id,
@@ -61,7 +64,7 @@ echo $order_date;
 echo '到着予定日';
 echo $delivery_date;
 echo '合計金額';
-echo '￥',$SESSION['$total_amount'];
+echo '￥',$_SESSION['total_amount'];
 
 ?>
 <form action="G4.php" mehtod="post">
