@@ -1,5 +1,6 @@
 <?php
     session_start();
+    unset($_SESSION['goods_id']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,17 +37,18 @@
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
         $sql = $pdo->prepare("
-        SELECT goods.image, goods.category
+        SELECT goods.goods_id, goods.image, goods.category
         FROM goods
         INNER JOIN favorite ON goods.goods_id = favorite.goods_id
-        WHERE favorite.user_id = ? limit 5;
+        WHERE favorite.user_id = ? LIMIT 6;
         ");
         $sql->execute([$_SESSION['user_id']]); 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
 
         foreach ($results as $item) {
-            echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150">';
-            echo 'Category: ' . $item['category'] . '<br>';
+            echo '<a href="./G6.php?id=',$item['goods_id'],'">';
+            echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150"></a>';
+            echo $item['category'] . '<br>';
 }
 
         ?>  

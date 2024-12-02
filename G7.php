@@ -1,6 +1,8 @@
 <?php
     session_start();
 
+// 戻るボタンのためのリファラ処理
+$prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                 dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -16,6 +18,9 @@
         $result = $stmt->execute([$_SESSION['cart_id'],$_SESSION['goods_id'],$_SESSION['user_id'],1]);
             if ($result) {
                 $_SESSION['message'] = 'カートに入れました。';
+                $sql = "UPDATE stock SET stock = stock - 1 WHERE goods_id = ?";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([$_SESSION['goods_id']]);
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
             }      
@@ -25,12 +30,15 @@
         $result = $stmt->execute([$_SESSION['cart_id']]);
             if ($result) {
                 $_SESSION['message'] = 'カートに入れました。';
+                $sql = "UPDATE stock SET stock = stock - 1 WHERE goods_id = ?";
+                $stmt = $pdo->prepare($sql);
+                $stmt->execute([$_SESSION['goods_id']]);
             } else {
                 $_SESSION['message'] = 'データ挿入に失敗しました。';
             } 
             
         }
-        header('Location: G6.php');
+        header('Location:' .$prevPage);
         exit;
 ?>
 <!DOCTYPE html>
