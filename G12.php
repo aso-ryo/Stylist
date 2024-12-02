@@ -33,14 +33,18 @@
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
-        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
-        $stmt->execute();
-        $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
-         
-        foreach ($goods as $good){
-            echo '<a href="details.php?id=',$good['goods_id'],'">';
-            echo '<img src="images/'.$good['image'].'" alt="',$good['category'],'" width="150" height="150"></a>';
-            echo $good['category'];
+        $sql = $pdo->prepare("
+        SELECT goods.image, goods.category
+        FROM goods
+        INNER JOIN favorite ON goods.goods_id = favorite.goods_id
+        WHERE favorite.user_id = ? limit 5;
+        ");
+        $sql->execute([$_SESSION['user_id']]); 
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($results as $item) {
+            echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150">';
+            echo 'Category: ' . $item['category'] . '<br>';
         }
         ?>  
 </body>

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,17 +35,22 @@
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                    
-        $stmt=$pdo->query("SELECT goods_id, category, image FROM goods");
-        $stmt->execute();
-        $goods=$stmt->fetchAll(PDO::FETCH_ASSOC);
-         
-        foreach ($goods as $good){
-            echo '<a href="details.php?id=',$good['goods_id'],'">';
-            echo '<img src="images/'.$good['image'].'" alt="',$good['category'],'" width="150" height="150"></a>';
-            echo $good['category'];
-        }
+        $sql = $pdo->prepare("
+        SELECT goods.image, goods.category
+        FROM goods
+        INNER JOIN favorite ON goods.goods_id = favorite.goods_id
+        WHERE favorite.user_id = ? limit 5;
+        ");
+        $sql->execute([$_SESSION['user_id']]); 
+        $results = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($results as $item) {
+            echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150">';
+            echo 'Category: ' . $item['category'] . '<br>';
+}
+
         ?>  
-    <a href="">すべて見る</a>
+    <a href="G12.php">すべて見る</a>
 
     <p>お知らせ</p>
     <img src="" alt="1">セール
@@ -55,13 +63,13 @@
     <hr>
 
     <p>会員登録情報</p>
-    <form action="G19_user_info.php" method="post">
+    <form action="G13.php" method="post">
     <button type="submit">会員登録の確認・変更</button>
     </form>
-    <form action="G25_goods_history.php" method="post">
+    <form action="G16.php" method="post">
     <button type="submit">購入履歴</button>
     </form>
-    <form action="G27_logout.php" method="post">
+    <form action="G17.php" method="post">
     <button type="submit">ログアウト</button>
     </form>
 </body>

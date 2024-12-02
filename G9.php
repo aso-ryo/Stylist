@@ -1,5 +1,7 @@
 <?php
 session_start();
+// 戻るボタンのためのリファラ処理
+$prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -29,6 +31,11 @@ session_start();
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
+
+    <form action="<?php echo $prevPage; ?>" method="get">
+            <button type="submit">戻る</button>
+        </form>
+
     <p>注文確認</p>
     <p>配送先住所</p>
     <form action="G10.php" method="post">

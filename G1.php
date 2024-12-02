@@ -7,8 +7,8 @@ session_start()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン画面</title>
-    <link rel="stylesheet" href="css/G17.css">
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./CSS/G17.css">
+    <link rel="stylesheet" href="./CSS/reset.css">
 </head>
 <body>
 <div class="a">
@@ -18,9 +18,15 @@ session_start()
     <form action="G4.php" method="post">
         <?php
            if (!empty($_SESSION['message'])){
-            echo '<div class="" id="message-box"><strong>' . $_SESSION['message'] . '</strong></div><br>';
+            echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
             unset($_SESSION['message']);
-            }
+
+           }
+           if (!empty($_POST['message'])){
+            $message=$_POST['message'];
+            echo $message;
+            $message='null';
+           }
         ?>
     <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
     <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
