@@ -51,6 +51,7 @@
         $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
         if ($reviews) {
             foreach ($reviews as $review) {     //商品表示
+                $goods_id=$review['goods_id'];
                 $_SESSION['goods_id']=$review['goods_id']; 
                 
                 echo '<img src="images/'.$review['image'].'" alt="',$good['category'],'"></a>';
@@ -65,7 +66,7 @@
         echo '</form>';
 
         //お気に入り登録
-        if (isset($_SESSION['user_id'], $goods_id)) {
+        if (isset($_SESSION['user_id'], $_SESSION['goods_id'])) {
             $user_id = $_SESSION['user_id'];
         
             // ユーザーがお気に入り登録済みかチェック
@@ -78,7 +79,8 @@
             echo '<button id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
             echo $is_favorited ? '★' : '☆';
             echo '</button>';
-
+            
+        //在庫表示
         $sql = $pdo->prepare("select stock from stock where goods_id=?");
         $sql->execute([$_SESSION['goods_id']]);
         $stock = $sql->fetchColumn();
