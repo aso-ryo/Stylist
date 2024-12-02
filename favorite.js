@@ -8,15 +8,15 @@ function toggleFavorite(goodsId) {
         },
         body: JSON.stringify({ goods_id: goodsId }),
     })
-        .then((response) => response.json())
-        .then((data) => {
-            if (data.success) {
-                button.textContent = data.is_favorited ? '★' : '☆';
-            } else {
-                alert('お気に入りの更新に失敗しました。');
-            }
-        })
-        .catch((error) => {
-            console.error('エラー:', error);
-        });
+    .then((response) => response.json())
+    .then((data) => {
+        if (data.success) {
+            button.textContent = data.is_favorited ? '★' : '☆';
+        } else {
+            alert(data.message || 'お気に入りの更新に失敗しました。');
+        }
+    })
+    .catch((error) => {
+        console.error('エラー:', error);
+    });
 }
