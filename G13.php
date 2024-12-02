@@ -65,7 +65,7 @@
     <hr>
 
     <p>会員登録情報</p>
-    <form action="G13.php" method="post">
+    <form action="G14.php" method="post">
     <button type="submit">会員登録の確認・変更</button>
     </form>
     <form action="G16.php" method="post">
