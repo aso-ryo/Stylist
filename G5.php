@@ -1,3 +1,8 @@
+<?php
+session_start();
+unset($_SESSION['goods_id']);
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -31,9 +36,14 @@
                     dbname=LAA1554862-kaihatsu;charset=utf8',
                     'LAA1554862','aso2024');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                   
+        
+        if(isset($_GET['category'])){
         $category = isset($_GET['category']) ? htmlspecialchars($_GET['category'], ENT_QUOTES, 'UTF-8') : null;
-
+        $_SESSION['category']=$category;
+        }
+        else{
+            $category=$_SESSION['category'];
+        }
     if ($category) {
         // カテゴリーに基づいてデータを取得
         $stmt = $pdo->prepare("SELECT goods_id, category, image FROM goods WHERE category = :category");
@@ -41,7 +51,6 @@
         $stmt->execute();
         $goods = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo $category;
-        unset($_SESSION['goods_id']);
          
         foreach ($goods as $good){
             echo '<a href="./G6.php?id=',$good['goods_id'],'">';

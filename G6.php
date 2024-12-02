@@ -36,6 +36,9 @@
                 'LAA1554862',
                 'aso2024');
 
+    // 戻るボタンのためのリファラ処理
+    $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
+
         echo '<form action="G7.php" method="post">';
 
         $sql = $pdo->prepare("select * from goods where goods_id=?");
@@ -49,6 +52,7 @@
         if ($reviews) {
             foreach ($reviews as $review) {     //商品表示
                 $_SESSION['goods_id']=$review['goods_id']; 
+                
                 echo '<img src="images/'.$review['image'].'" alt="',$good['category'],'"></a>';
                 echo '<p>' . $review['goods_name'] . '</p>';
                 echo '<p>￥' . $review['price'] . '</p>';
@@ -88,7 +92,13 @@
                 unset($_SESSION['message']); //メッセージを消去
     
         }
+
 ?>
+<form action="<?php echo $prevPage; ?>" method="get">
+    <button type="submit">戻る</button>
+</form>
+
+
 <script src="favorite.js" defer></script>
 <script src="cart.js"></script>
 </body>
