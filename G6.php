@@ -1,5 +1,8 @@
 <?php
     session_start();
+    
+    // 戻るボタンのためのリファラ処理
+    $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +17,9 @@
 <body>
     
 <header>
+
+
+
         <a href="G4.php" class="site__name">Stylista</a>
         <form class="search__box" action="G11.php" method="post">
             <input class="search__bar" type="text" name="query" placeholder="アイテムの検索">
@@ -30,14 +36,17 @@
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
+    
+    <form action="<?php echo $prevPage; ?>" method="get">
+            <button type="submit">戻る</button>
+        </form>
 <?php
+    
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                 dbname=LAA1554862-kaihatsu;charset=utf8',
                 'LAA1554862',
                 'aso2024');
 
-    // 戻るボタンのためのリファラ処理
-    $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 
         echo '<form action="G7.php" method="post">';
 
@@ -96,9 +105,7 @@
         }
 
 ?>
-<form action="<?php echo $prevPage; ?>" method="get">
-    <button type="submit">戻る</button>
-</form>
+
 
 
 <script src="favorite.js" defer></script>
