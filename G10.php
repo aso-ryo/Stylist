@@ -22,6 +22,12 @@ dbname=LAA1554862-kaihatsu;charset=utf8',
 'LAA1554862',
 'aso2024');
 
+// `order_id` の最大値を取得
+$max_sql = $pdo->query("SELECT MAX(order_id) AS max_id FROM `order`");
+$max_result = $max_sql->fetch(PDO::FETCH_ASSOC);
+$number = $max_result['max_id'] ? $max_result['max_id'] + 1 : 1; // 最大値+1、または初期値1
+
+
 $sql = $pdo->prepare("
 SELECT goods.goods_id, goods.image, goods.goods_name, goods.price, cart.qty 
 FROM goods
@@ -45,13 +51,14 @@ foreach ($cart_items as $item) {
     // order テーブルへの挿入クエリ
     $insert_sql = $pdo->prepare("
         INSERT INTO `order` 
-        (goods_id, order_date, qty, pay_status, delivery, delivery_date, pay_method, user_id) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        (goods_id, order_date, qty,number, pay_status, delivery, delivery_date, pay_method, user_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?,?)
     ");
     $insert_sql->execute([
         $goods_id,
         $order_date,
         $qty,
+        $number,
         $pay_status,
         $delivery,
         $delivery_date,
@@ -67,7 +74,7 @@ echo '合計金額';
 echo '￥',$_SESSION['total_amount'];
 
 ?>
-<form action="G4.php" mehtod="post">
+<form action="G4.php" method="post">
 <button type="submit" class="button">トップページへ戻る</button>
 </form>
 </body>
