@@ -1,5 +1,7 @@
 <?php
 session_start();
+  // 戻るボタンのためのリファラ処理
+  $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -31,6 +33,9 @@ session_start();
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
+    <form action="<?php echo $prevPage; ?>" method="get">
+            <button type="submit">戻る</button>
+        </form>
     <p>カート</p>
 <form action="G9.php" method="post">
 <?php
@@ -39,7 +44,7 @@ session_start();
  'LAA1554862',
  'aso2024');
 
- $sql = $pdo->prepare("select goods.image,goods.goods_name,goods.price,cart.qty 
+ $sql = $pdo->prepare("select goods.goods_id,goods.image,goods.goods_name,goods.price,cart.qty 
  from goods 
  INNER JOIN cart ON cart.goods_id=goods.goods_id where cart.cart_id=?");
  $sql->execute([$_SESSION['cart_id']]);
