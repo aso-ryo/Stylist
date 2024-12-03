@@ -35,6 +35,7 @@ if (isset($_GET['message'])) {
     <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
 
     <p><button class="login-button" name="login">ログイン</button><br><br>
+    </form>
 
 <form action="G2.php" method="post">
 <button class="new" name="touroku">新規会員登録はこちら</button>
