@@ -28,16 +28,15 @@ session_start();
         $stmt = $pdo->query('SELECT COUNT(*) FROM user');
         $cart = $stmt->fetchColumn();
         $cart = $cart + 1;
+        if (!empty($_POST['user_name'])&&!empty($_POST['user_name_kana'])&&!empty($_POST['e-mail'])&&!empty($_POST['password'])&&!empty($_POST['birthday'])&&!empty($_POST['adless_number'])&&!empty($_POST['adless'])&&!empty($_POST['tell'])) {
         $sql = $pdo->prepare("insert into user (user_name,user_name_kana,`e-mail`,password,birthday,adless_number,adless,tell,cart_id)VALUES (?,?,?,?,?,?,?,?,?)");
         $result = $sql->execute([$_POST['user_name'], $_POST['user_name_kana'], $_POST['e-mail'], $_POST['password'], $_POST['birthday'], $_POST['adless_number'], $_POST['adless'], $_POST['tell'], $cart]);
-        // if ($result) {
-        //     echo '<div class="kanryou"><p>', "会員登録が完了しました", '</p></div>';
-        //     echo '<form action="G1.php" method="post">';
-        //     echo '<button type="submit"  class="button" name="action" value="send">ログイン画面へ戻る</button>';
-        //     echo '</form>';
-        // } else {
-        //     echo 'データが正常に挿入されませんでした';
-        // }
+        }
+        else{
+            $_SESSION['message'] = '空白の欄があります。';
+            header('Location: G2.php');
+            exit;
+        }
         ?>
         <?php if ($result): ?>
             <p class="kanryou">会員登録が完了しました</p>

@@ -1,3 +1,6 @@
+<?php
+ session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,6 +14,13 @@
   <form action="G3" method="post">
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
+    <?php
+    if (!empty($_SESSION['message'])){
+            echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
+            unset($_SESSION['message']);
+
+        }
+    ?>
     <p>メールアドレス<input type="text" name="e-mail" placeholder="メールアドレス"></p>
     <p>パスワード<input type="text" name="password" placeholder="パスワード"></p>
     <p>氏名　<input type="text" name="user_name" placeholder="氏名"></p>
