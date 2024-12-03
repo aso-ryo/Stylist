@@ -11,9 +11,12 @@
     <link rel="stylesheet" href=".vscode/CSS/G2.css">
 </head>
 <body>
-  <form action="G3" method="post">
     <h1>Stylista</h1>
     <h3>新規会員登録</h3>
+    <form action="G1.php" method="post">
+    <button type="submit">戻る</button>
+    </form>
+    <form action="G3.php" method="post">
     <?php
     if (!empty($_SESSION['message'])){
             echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
@@ -30,6 +33,7 @@
     <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
     <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p>
     <p><input type="submit" value="送信する"></p>
+    </form>
 
 </body>
 </html>
