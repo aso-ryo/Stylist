@@ -1,12 +1,12 @@
 function toggleFavorite(goodsId) {
     const button = document.getElementById(`favorite-${goodsId}`);
 
-    fetch('', { // 同じファイルに送信
+    fetch('G6.php', { // 同じファイルに送信
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ goods_id: goodsId }),
+        body: JSON.stringify({ goods_id: goodsId, action: 'toggle'}),
     })
     .then(response => response.json())
     .then(data => {
