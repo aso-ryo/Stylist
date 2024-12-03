@@ -1,5 +1,8 @@
 <?php
-session_start()
+session_start();
+if (isset($_GET['message'])) {
+    $message = htmlspecialchars($_GET['message']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="jp">
@@ -17,16 +20,16 @@ session_start()
     <h3>ログイン</h3><br>
     <form action="G4.php" method="post">
         <?php
-           if (!empty($_SESSION['message'])){
+        if (!empty($message)){
+            echo '<div class="message" id="message-box">',$message ,'</div>';
+        }
+        
+        if (!empty($_SESSION['message'])){
             echo '<div class="message" id="message-box">' . $_SESSION['message'] . '</div>';
             unset($_SESSION['message']);
 
-           }
-           if (!empty($_POST['message'])){
-            $message=$_POST['message'];
-            echo $message;
-            $message='null';
-           }
+        }
+           
         ?>
     <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
     <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
