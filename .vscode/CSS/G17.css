@@ -59,7 +59,17 @@ h3 {
     border-radius: 30px; 
 }
 
-
+.new{
+    background-color: black;
+    border: none;
+    flex-direction: row;
+    color: #ffffff;
+    height: 57px;
+    justify-content: center;
+    top: 400px;
+    width: 180px;
+    border-radius: 30px; 
+}
 
 .a{
     text-align: center;
