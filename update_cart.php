@@ -1,6 +1,5 @@
 <?php
 session_start();
-error_log('Current session cart_id: ' . $_SESSION['cart_id']);
 
 try {
     $pdo = new PDO('mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -11,6 +10,7 @@ try {
     $goodsId = isset($_POST['goods_id']) ? $_POST['goods_id'] : null;
     $qty = isset($_POST['qty']) ? $_POST['qty'] : null;
 
+    // データを確認（デバッグ用）
     error_log("Received goods_id: $goodsId, qty: $qty");
 
     if ($goodsId && $qty !== null && $qty > 0) {
@@ -21,11 +21,20 @@ try {
         $stmt->bindParam(':goods_id', $goodsId, PDO::PARAM_INT);
         $stmt->bindParam(':cart_id', $_SESSION['cart_id'], PDO::PARAM_INT);
 
-        $stmt->execute();
+        // SQLの実行
+        if ($stmt->execute()) {
+            error_log("Successfully updated cart for goods_id: $goodsId");
+            echo 'success'; // 成功時のレスポンス
+        } else {
+            error_log("Failed to execute the query for goods_id: $goodsId");
+            echo 'Error: Failed to update cart';
+        }
+    } else {
+        echo 'Invalid data';
     }
-    
-    echo 'success'; // 成功時のレスポンス
 } catch (PDOException $e) {
+    error_log('Database error: ' . $e->getMessage());
     echo 'Error: ' . $e->getMessage();
 }
 ?>
+
