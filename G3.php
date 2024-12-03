@@ -29,7 +29,7 @@ session_start();
         $cart = $stmt->fetchColumn();
         $cart = $cart + 1;
         $sql = $pdo->prepare("insert into user (user_name,user_name_kana,`e-mail`,password,birthday,adless_number,adless,tell,cart_id)VALUES (?,?,?,?,?,?,?,?,?)");
-        $result = $sql->execute([$_POST['name'], $_POST['name_kana'], $_POST['mail'], $_POST['pass'], $_POST['birthday'], $_POST['yuubin'], $_POST['jyuusyo'], $_POST['tell'], $cart]);
+        $result = $sql->execute([$_POST['user_name'], $_POST['user_name_kana'], $_POST['e-mail'], $_POST['password'], $_POST['birthday'], $_POST['adless_number'], $_POST['adless'], $_POST['tell'], $cart]);
         // if ($result) {
         //     echo '<div class="kanryou"><p>', "会員登録が完了しました", '</p></div>';
         //     echo '<form action="G1.php" method="post">';

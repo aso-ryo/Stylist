@@ -37,7 +37,6 @@ session_start();
             <button type="submit">戻る</button>
         </form>
     <p>カート</p>
-<form action="G9.php" method="post">
 <?php
  $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
  dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -52,12 +51,13 @@ session_start();
 
             $totalQty = 0;
             $totalAmount = 0;
+            echo '<div id="cart">';
 
             foreach ($items as $item) {
                 $totalQty += $item['qty'];
                 $totalAmount += $item['price'] * $item['qty'];
 
-                echo '<div class="cart-item" data-price="' . $item['price'] . '">';
+                echo '<div class="cart-item" data-price="' . $item['price'] . '"data-goods-id="'.$item['goods_id'] .'">';
                 echo '<p><img src="images/' . $item['image'] . '" alt="商品画像"></p>';
                 echo '<p>' . $item['goods_name'] . '</p>';
                 echo '<p>価格: ￥' . $item['price'] . '</p>';
@@ -68,7 +68,9 @@ session_start();
                     echo '<option value="' . $i . '" ' . $selected . '>' . $i . '</option>';
                 }
                 echo '</select>';
+                echo '<form action="cart_delete.php" method="post">';
                 echo '<button type="submit" name="delete" value="' . $item['goods_id'] . '">削除</button>';
+                echo '</form>';
                 echo '</div>';
             }
 
@@ -79,7 +81,8 @@ session_start();
             $_SESSION['total_amount'] = $totalAmount;
             ?>
         </div>
+        <form action="G9.php" method="post">
         <button type="submit">レジへ進む</button>
-    </form>
+        </form>
 </body>
 </html>
