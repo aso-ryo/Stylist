@@ -3,6 +3,20 @@
     
     // 戻るボタンのためのリファラ処理
     $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
+    if (!isset($_SESSION['history'])) {
+        $_SESSION['history'] = [];
+    }
+    
+    // 現在のページのURLを記録
+    $currentURL = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    if (empty($_SESSION['history']) || end($_SESSION['history']) !== $currentURL) {
+        $_SESSION['history'][] = $currentURL;
+    
+        // 履歴が多すぎる場合は古いものを削除
+        if (count($_SESSION['history']) > 10) {
+            array_shift($_SESSION['history']);
+        }
+    }
 
     ?>
 <!DOCTYPE html>
@@ -38,10 +52,18 @@
         </form>
     </header>
     
-    <form action="<?php echo $prevPage; ?>" method="get">
-            <button type="submit">戻る</button>
-        </form>
+    
 <?php
+if (isset($_SESSION['history']) && count($_SESSION['history']) >= 3) {
+    $twoPagesBack = $_SESSION['history'][count($_SESSION['history']) - 3];
+    echo '<form action="',$twoPagesBack,'" method="post">'; 
+    echo '<button type="submit">戻る</button>';
+    echo '</form>';
+}else{
+    echo '<form action="',$prevPage,'" method="get">';
+    echo '<button type="submit">戻る</button>';
+    echo '</form>';
+}
     
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                 dbname=LAA1554862-kaihatsu;charset=utf8',
