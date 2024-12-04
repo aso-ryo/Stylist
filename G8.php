@@ -1,5 +1,6 @@
 <?php
 session_start();
+unset($_SESSION['goods_id']);
   // 戻るボタンのためのリファラ処理
   $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 ?>
@@ -58,7 +59,8 @@ session_start();
                 $totalAmount += $item['price'] * $item['qty'];
 
                 echo '<div class="cart-item" data-price="' . $item['price'] . '"data-goods-id="'.$item['goods_id'] .'">';
-                echo '<p><img src="images/' . $item['image'] . '" alt="商品画像"></p>';
+                echo '<a href="./G6.php?id=',$item['goods_id'],'">';
+                echo  '<img src="images/' . $item['image'] . '" alt="', $good['category'], '" width="150" height="150"></a>';
                 echo '<p>' . $item['goods_name'] . '</p>';
                 echo '<p>価格: ￥' . $item['price'] . '</p>';
                 echo '<label for="count-' . $item['goods_id'] . '">個数:</label>';

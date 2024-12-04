@@ -2,8 +2,10 @@
     session_start();
     
     // 戻るボタンのためのリファラ処理
-    $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
-?>
+    $_SESSION['prevPage'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
+
+
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,12 +39,11 @@
         </form>
     </header>
     
-    <form action="<?php echo $prevPage; ?>" method="get">
-            <button type="submit">戻る</button>
-        </form>
-
 <?php
-    
+    echo '<form action="',$_SESSION['prevPage'],'" method="get">';
+    echo '<button type="submit">戻る</button>';
+    echo '</form>';
+
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                 dbname=LAA1554862-kaihatsu;charset=utf8',
                 'LAA1554862',
@@ -73,17 +74,16 @@
 
         echo '<br><input type="submit" class="cart-button" value="カートにいれる">';
         echo '</form>';
-
         //お気に入り登録
-        if (isset($_SESSION['user_id'], $_SESSION['goods_id'])) {
-            $user_id = $_SESSION['user_id'];
-        
-            // ユーザーがお気に入り登録済みかチェック
-            $sql = $pdo->prepare("SELECT COUNT(*) FROM favorite WHERE user_id = ? AND goods_id = ?");
-            $sql->execute([$user_id, $_SESSION['goods_id']]);
-            $is_favorited = $sql->fetchColumn() > 0;
+        $sql = $pdo->prepare("SELECT * FROM favorite WHERE user_id = ? AND goods_id = ?");
+        $sql->execute([$_SESSION['user_id'], $_SESSION['goods_id']]);
+        $favorite = $sql->fetch();
+
+        if ($favorite) {
+        $is_favorited = true;
+        }else{
+        $is_favorited = false; 
         }
-        
             // ボタン表示
             echo '<button="submit" id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
             echo $is_favorited ? '<i class="bi bi-star-fill"></i>' : '<i class="header__icon bi bi-star"></i>';
