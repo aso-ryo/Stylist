@@ -92,6 +92,8 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
          echo '<img src="images/' . $review['image'].'" alt="商品画像">';
          echo $review['name'];
          echo '￥' . number_format($subtotal);
+         $totalQty=+$qty;
+         $totalAmount=+$subtotal;
          echo '<br>';
      }
  }
@@ -106,7 +108,7 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     <br>
     <?php
     echo '商品合計：',$totalQty,'点<br>';
-    echo '￥',$number_format($totalAmount);
+    echo '￥',number_format($totalAmount);
     ?>
 
     <button type="submit">注文する</button>

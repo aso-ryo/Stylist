@@ -53,6 +53,7 @@ unset($_SESSION['goods_id']);
             $totalQty = 0;
             $totalAmount = 0;
             echo '<div id="cart">';
+            echo '<form action="update_cart.php" method="POST">';
 
             foreach ($items as $item) {
                 $totalQty += $item['qty'];
@@ -79,8 +80,6 @@ unset($_SESSION['goods_id']);
             echo '<p id="total-qty">商品合計: ' . $totalQty . '点</p>';
             echo '<p id="total-price">合計金額: ￥' . $totalAmount . '</p>';
 
-            $_SESSION['total_qty'] = $totalQty;
-            $_SESSION['total_amount'] = $totalAmount;
             ?>
         </div>
         <form action="G9.php" method="post">
