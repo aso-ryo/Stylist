@@ -5,7 +5,7 @@ dbname=LAA1554862-kaihatsu;charset=utf8',
 'LAA1554862',
 'aso2024');
 
-$sql = $pdo->prepare("SELECT id FROM favorite WHERE user_id = ? AND goods_id = ?");
+$sql = $pdo->prepare("SELECT * FROM favorite WHERE user_id = ? AND goods_id = ?");
 $sql->execute([$_SESSION['user_id'], $_SESSION['goods_id']]);
 $favorite = $sql->fetch();
 
@@ -21,7 +21,7 @@ if ($favorite) {
         $sql = $pdo->prepare("INSERT INTO favorite (user_id, goods_id) VALUES (?, ?)");
         $sql->execute([$_SESSION['user_id'], $_SESSION['goods_id']]);
         $is_favorited = true;
-        header('Location: G2.php');
+        header('Location: G6.php');
         exit;
 }
 ?>
