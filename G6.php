@@ -10,9 +10,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品詳細画面</title>
-    <link rel="stylesheet" href=".vscode/CSS/reset.css">
-    <link rel="stylesheet" href=".vscode/CSS/header.css">
-    <link rel="stylesheet" href=".vscode/CSS/G6.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/G6.css">
 </head>
 <body>
     
@@ -40,6 +40,7 @@
     <form action="<?php echo $prevPage; ?>" method="get">
             <button type="submit">戻る</button>
         </form>
+
 <?php
     
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
@@ -63,15 +64,14 @@
                 $goods_id=$review['goods_id'];
                 $_SESSION['goods_id']=$review['goods_id']; 
                 
-                echo '<img src="images/'.$review['image'].'" alt="',$good['category'],'"></a>';
-                echo '<p>' . $review['goods_name'] . '</p>';
-                echo '<p>￥' . $review['price'] . '</p>';
-                echo '<p>' . $review['explain'] . '</p>';
-                 
+                echo '<img src="images/'.$review['image'].'" alt="',$good['category'],'" align="left" style="margin-left: 150px; margin-right: 120px; width: 400px; height=auto;">';
+                echo '<p style="font-size: 20px;">' . $review['goods_name'] . '</p><br>';
+                echo '<p style="font-size: 30px;">￥' . $review['price'] . '</p><br>';
+                echo '<p>' . $review['explain'] . '</p>';                 
             }
         }
 
-        echo '<input type="submit" value="カートにいれる">';
+        echo '<br><input type="submit" class="cart-button" value="カートにいれる">';
         echo '</form>';
 
         //お気に入り登録
@@ -85,8 +85,8 @@
         }
         
             // ボタン表示
-            echo '<button id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
-            echo $is_favorited ? '★' : '☆';
+            echo '<button="submit" id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
+            echo $is_favorited ? '<i class="bi bi-star-fill"></i>' : '<i class="header__icon bi bi-star"></i>';
             echo '</button>';
             
         //在庫表示
@@ -105,7 +105,6 @@
         }
 
 ?>
-
 
 
 <script src="favorite.js" defer></script>
