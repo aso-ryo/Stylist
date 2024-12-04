@@ -2,6 +2,8 @@
 session_start();
 // 戻るボタンのためのリファラ処理
 $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
+$totalQty = isset($_SESSION['total_qty']) ? $_SESSION['total_qty'] : 0;
+$totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -45,6 +47,23 @@ $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php
     'LAA1554862',
     'aso2024');
 
+    foreach ($_POST as $key => $value) {
+        // keyが「count-」で始まる場合、goods_idとqtyを取得
+        if (strpos($key, 'count-') === 0) {
+            $goodsId = str_replace('count-', '', $key); // goods_idを取り出す
+            $qty = (int)$value; // 数量を整数に変換
+    
+            // データベース内のカートを更新
+            $sql = "UPDATE cart SET qty = :qty WHERE goods_id = :goods_id AND cart_id = :cart_id";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':qty', $qty, PDO::PARAM_INT);
+            $stmt->bindParam(':goods_id', $goodsId, PDO::PARAM_INT);
+            $stmt->bindParam(':cart_id', $_SESSION['cart_id'], PDO::PARAM_INT);
+    
+            $stmt->execute();
+        }
+    }
+
     $sql = $pdo->prepare("select * from user where user_id=?");
     $sql->execute([$_SESSION['user_id']]);
     $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -86,8 +105,8 @@ $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php
     </select>
     <br>
     <?php
-    echo '商品合計：',$_SESSION['total_qty'],'点<br>';
-    echo '￥',$_SESSION['total_amount'];
+    echo '商品合計：',$totalQty,'点<br>';
+    echo '￥',$number_format($totalAmount);
     ?>
 
     <button type="submit">注文する</button>

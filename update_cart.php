@@ -9,6 +9,8 @@ try {
     // POSTデータを受け取る
     $goodsId = isset($_POST['goods_id']) ? $_POST['goods_id'] : null;
     $qty = isset($_POST['qty']) ? $_POST['qty'] : null;
+    $totalQty = isset($_POST['totalQty']) ? $_POST['totalQty'] : null;
+    $totalPrice = isset($_POST['totalPrice']) ? $_POST['totalPrice'] : null;
 
     // データを確認（デバッグ用）
     error_log("Received goods_id: $goodsId, qty: $qty");
@@ -23,6 +25,8 @@ try {
 
         // SQLの実行
         if ($stmt->execute()) {
+            $_SESSION['total_qty'] = $totalQty;
+            $_SESSION['total_amount'] = $totalPrice;
             error_log("Successfully updated cart for goods_id: $goodsId");
             echo 'success'; // 成功時のレスポンス
         } else {

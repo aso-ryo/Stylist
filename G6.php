@@ -12,9 +12,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>商品詳細画面</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/G6.css">
+    <link rel="stylesheet" href=".vscode/CSS/reset.css">
+    <link rel="stylesheet" href=".vscode/CSS/header.css">
+    <link rel="stylesheet" href=".vscode/CSS/G6.css">
 </head>
 <body>
     
@@ -84,10 +84,10 @@
         }else{
         $is_favorited = false; 
         }
-            // ボタン表示
-            echo '<button="submit" id="favorite-' . $_SESSION['goods_id'] . '" onclick="toggleFavorite(' . $_SESSION['goods_id'] . ')">';
-            echo $is_favorited ? '<i class="bi bi-star-fill"></i>' : '<i class="header__icon bi bi-star"></i>';
-            echo '</button>';
+        echo '<form action="favorite.php" method="post" id="favorite-form-' . $_SESSION['goods_id'] . '">';
+        echo '<button type="submit">',$is_favorited ? '<i class="bi bi-star-fill"></i>' : '<i class="header__icon bi bi-star"></i>';
+        echo '</button>';
+        echo '</form>';
             
         //在庫表示
         $sql = $pdo->prepare("select stock from stock where goods_id=?");

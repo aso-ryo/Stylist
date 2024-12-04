@@ -30,6 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
             // DOMに新しい値を反映
             totalQtyElement.textContent = `商品合計: ${totalQty}点`;
             totalPriceElement.textContent = `合計金額: ￥${totalPrice}`;
+            $_SESSION['totalQty']=totalQty;
+            $_SESSION['totalPrice']=totalPrice;
+
         });
     });
 
