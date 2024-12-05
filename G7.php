@@ -36,7 +36,7 @@
             } 
             
         }
-        header('Location:' .$_SESSION['prevPage']);
+        header('Location:G6.php');
         exit;
 ?>
 <!DOCTYPE html>
