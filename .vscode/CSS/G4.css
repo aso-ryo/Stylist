@@ -18,9 +18,9 @@
 .category-cards {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  /*ä¸€åˆ—ã«5å€‹*/
+
   gap: 10px;
-  /* ä½™ç™½ */
+
   position: relative;
   left: 300px;
   margin-top: -290px;
@@ -32,21 +32,21 @@
   text-align: center;
   box-sizing: border-box;
   border-radius: 8px;
-  /* ã‚«ãƒ¼ãƒ‰ã®è§’ã‚’ä¸¸ã */
+
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* å½±ã‚’è¿½åŠ  */
+
   height: 200px;
   width: 100%;
 }
 
 .category-card img {
   width: 100%;
-  /* ç”»åƒã®å¹…ã‚’ã‚«ãƒ¼ãƒ‰ã®å¹…ã«åˆã‚ã›ã‚‹ */
+
   height: 150px;
-  /* é«˜ã•ã‚’å›ºå®š */
+
   object-fit: cover;
-  /* ç”»åƒã‚’åˆ‡ã‚ŠæŠœã„ã¦ãƒ•ã‚£ãƒƒãƒˆ */
+
   border-radius: 8px 8px 0 0;
 }
 

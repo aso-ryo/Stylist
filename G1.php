@@ -10,8 +10,8 @@ if (isset($_GET['message'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ログイン画面</title>
-    <link rel="stylesheet" href="./CSS/G17.css">
-    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./css/G1.css">
+    <link rel="stylesheet" href="./css/reset.css">
 </head>
 <body>
 <div class="a">
@@ -32,10 +32,9 @@ if (isset($_GET['message'])) {
            
         ?>
     <p><input class="mail" type="text" name="mail" placeholder="メールアドレス"></p><br>
-    <p><input class="pass" type="password" name="password" placeholder="パスワード"></p><br><br>
+    <p><input class="pass" name="password" placeholder="パスワード"></p><br><br>
 
     <p><button class="login-button" name="login">ログイン</button><br><br>
-    </form>
 
 <form action="G2.php" method="post">
 <button class="new" name="touroku">新規会員登録はこちら</button>

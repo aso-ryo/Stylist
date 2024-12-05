@@ -1,11 +1,24 @@
-.cart-button{
-  background-color: black;
-  border: none;
-  flex-direction: row;
-  color: #ffffff;
-  height: 57px;
-  justify-content: center;
-  top: 400px;
-  width: 180px;
-  border-radius: 8px; 
-}
+G6　商品詳細
+h1{
+   left: 20px;
+  }
+  
+  .search {
+    left: 50px;
+  }
+  
+ .button {
+    left: 300px;
+  }
+  
+  .kato {
+    left: 400px;
+  }
+  
+  .favorite {
+    left: 450px;
+  }
+  
+  .mypage {
+      left: 500px;
+  }
