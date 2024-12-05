@@ -77,9 +77,11 @@ unset($_SESSION['goods_id']);
                 echo '</div>';
             }
 
+            echo '<div class="total">';
+
             echo '<p id="total-qty">商品合計: ' . $totalQty . '点</p>';
             echo '<p id="total-price">合計金額: ￥' . $totalAmount . '</p>';
-
+            echo '</div>';
             ?>
         </div>
         <form action="G9.php" method="post">

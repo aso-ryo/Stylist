@@ -108,6 +108,6 @@
 
 
 <script src="favorite.js" defer></script>
-<script src="cart.js"></script>
+
 </body>
 </html>

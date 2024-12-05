@@ -55,13 +55,13 @@
     <a href="G12.php">すべて見る</a>
 
     <p>お知らせ</p>
-    <img src="" alt="1">セール
+    <img src="./images/セール広告写真.jpg" alt="1">セール
     <hr>
-    <img src="" alt="2">タイムセール
+    <img src="./images/セール写真.jpg" alt="2">タイムセール
     <hr>
-    <img src="" alt="3">人気アイテム
+    <img src="./images/香水広告.jpg" alt="3">人気アイテム
     <hr>
-    <img src="" alt="4">インテリア
+    <img src="./images/ファッション雑貨.jpg" alt="4">インテリア
     <hr>
 
     <p>会員登録情報</p>

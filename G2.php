@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stylista</title>
     <link rel="stylesheet" href=".vscode/CSS/reset.css">
+    <link rel="stylesheet" href=".vscode/CSS/header.css">
     <link rel="stylesheet" href=".vscode/CSS/G2.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
     <p>住所　<textarea name="adless" rows="5" cols="33"></textarea></p>
     <p>電話番号　<input type="text" name="tell" placeholder="半角数字"></p>
     <p>誕生日　<input type="text" name="birthday" placeholder="2024-01-01"></p>
-    <p><input type="submit" value="送信する"></p>
+    <p><input type="submit" value="登録する"></p>
     </form>
 
 </body>

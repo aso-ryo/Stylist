@@ -45,11 +45,13 @@
         ");
         $sql->execute([$_SESSION['user_id']]); 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
-
+    echo '<div class="goods">';
         foreach ($results as $item) {
+            echo '<div class="category-card">';
             echo '<a href="./G6.php?id=',$item['goods_id'],'">';
             echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150"></a>';
             echo $item['category'] . '<br>';
+            echo '</div>';
         }
         ?>  
 </body>
