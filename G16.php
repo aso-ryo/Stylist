@@ -1,6 +1,8 @@
 <?php
 session_start();
 unset($_SESSION['goods_id']);
+ // 戻るボタンのためのリファラ処理
+ $_SESSION['prevPage'] = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +33,9 @@ unset($_SESSION['goods_id']);
 </header>
 <h2>注文履歴</h2>
 <?php
+ echo '<form action="',$_SESSION['prevPage'],'" method="get">';
+ echo '<button type="submit">戻る</button>';
+ echo '</form>';
 $pdo = new PDO(
     'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1554862-kaihatsu;charset=utf8',
     'LAA1554862',
