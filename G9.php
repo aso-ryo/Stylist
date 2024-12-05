@@ -82,18 +82,21 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     ");
  $sql->execute([$_SESSION['cart_id']]);
  $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+ $totalQty=0;
+ $totalAmount=0;
  
  if ($reviews) {
      foreach ($reviews as $review) {
         $price = (float)$review['price']; // 明示的に数値に変換
         $qty = (int)$review['qty']; // 明示的に数値に変換
         $subtotal = $price * $qty;
+       
 
          echo '<img src="images/' . $review['image'].'" alt="商品画像">';
          echo $review['name'];
          echo '￥' . number_format($subtotal);
-         $totalQty=+$qty;
-         $totalAmount=+$subtotal;
+         $totalQty+=$qty;
+         $totalAmount+=$subtotal;
          echo '<br>';
      }
  }
@@ -108,9 +111,9 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     <br>
     <?php
     echo '商品合計：',$totalQty,'点<br>';
-    echo '￥',number_format($totalAmount);
+    echo '￥',$totalAmount;
     ?>
-
+    <input type="hidden" name="totalAmount" value="<?php echo $totalAmount; ?>">
     <button type="submit">注文する</button>
     </form>
 </body>

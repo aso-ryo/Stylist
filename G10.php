@@ -71,8 +71,10 @@ echo $order_date;
 echo '到着予定日';
 echo $delivery_date;
 echo '合計金額';
-echo '￥',$_SESSION['total_amount'];
+echo '￥',$_POST['totalAmount'];
 
+$sql = $pdo->prepare("DELETE FROM cart WHERE user_id = ?");
+        $sql->execute([$_SESSION['user_id']]);
 ?>
 <form action="G4.php" method="post">
 <button type="submit" class="button">トップページへ戻る</button>
