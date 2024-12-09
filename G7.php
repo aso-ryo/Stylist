@@ -42,7 +42,7 @@ $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php
             } 
             
         }
-        header('Location:' .$prevPage);
+        header('Location:G6.php');
         exit;
 ?>
 <!DOCTYPE html>

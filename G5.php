@@ -56,15 +56,12 @@ unset($_SESSION['goods_id']);
         $stmt->execute();
         $goods = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<h2>',$category,'</h2><br>';
-    ?>
-
-        <div class="goods">
-        <?php
-        foreach ($goods as $good) {
+        echo '<div class="goods">'; 
+        foreach ($goods as $good){
             echo '<div class="category-card">';
-            echo '<a href="./G6.php?id=', $good['goods_id'], '">';
-            echo '<img src="images/' . $good['image'] . '" alt="', $good['category'], '" width="150" height="150"></a>';
-            echo $good['category'];
+            echo '<a href="./G6.php?id=',$good['goods_id'],'">';
+            echo '<img src="images/'.$good['image'].'" alt="',$good['category'],'" width="150" height="150"></a>';
+            echo $good['goods_name'];
             echo '</div>';
         }
     }

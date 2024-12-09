@@ -1,5 +1,29 @@
 <?php
 session_start();
+        $pdo = new PDO(
+        'mysql:host=mysql309.phy.lolipop.lan;dbname=LAA1554862-kaihatsu;charset=utf8',
+            'LAA1554862',
+            'aso2024'
+        );
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        if (!empty($_POST['user_name'])&&!empty($_POST['user_name_kana'])&&!empty($_POST['e-mail'])&&!empty($_POST['password'])&&!empty($_POST['birthday'])&&!empty($_POST['adless_number'])&&!empty($_POST['adless'])&&!empty($_POST['tell'])) {
+        $sql = $pdo->prepare("insert into user (user_name,user_name_kana,`e-mail`,password,birthday,adless_number,adless,tell)VALUES (?,?,?,?,?,?,?,?)");
+        $result = $sql->execute([$_POST['user_name'], $_POST['user_name_kana'], $_POST['e-mail'], $_POST['password'], $_POST['birthday'], $_POST['adless_number'], $_POST['adless'], $_POST['tell']]);
+        }else{
+            $_SESSION['message'] = '空白の欄があります。';
+            header('Location: G2.php');
+            exit;
+        }
+        if ($result) {
+            // 挿入したレコードの user_id を取得
+            $user_id = $pdo->lastInsertId();
+    
+            // cart_id を更新
+            $updateSql = $pdo->prepare("UPDATE user SET cart_id = ? WHERE user_id = ?");
+            $updateSql->execute([$user_id, $user_id]);
+        }
+
 ?>
 <!DOCTYPE html>
 <html lang="jp">
