@@ -2,8 +2,6 @@
 session_start();
 // 戻るボタンのためのリファラ処理
 $prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
-$totalQty = isset($_SESSION['total_qty']) ? $_SESSION['total_qty'] : 0;
-$totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -11,9 +9,9 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>注文確認画面</title>
-    <link rel="stylesheet" href=".vscode/CSS/reset.css">
-    <link rel="stylesheet" href=".vscode/CSS/header.css">
-    <link rel="stylesheet" href=".vscode/CSS/G9.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/G9.css">
 </head>
 <body>
 <header>
@@ -47,23 +45,6 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     'LAA1554862',
     'aso2024');
 
-    foreach ($_POST as $key => $value) {
-        // keyが「count-」で始まる場合、goods_idとqtyを取得
-        if (strpos($key, 'count-') === 0) {
-            $goodsId = str_replace('count-', '', $key); // goods_idを取り出す
-            $qty = (int)$value; // 数量を整数に変換
-    
-            // データベース内のカートを更新
-            $sql = "UPDATE cart SET qty = :qty WHERE goods_id = :goods_id AND cart_id = :cart_id";
-            $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':qty', $qty, PDO::PARAM_INT);
-            $stmt->bindParam(':goods_id', $goodsId, PDO::PARAM_INT);
-            $stmt->bindParam(':cart_id', $_SESSION['cart_id'], PDO::PARAM_INT);
-    
-            $stmt->execute();
-        }
-    }
-
     $sql = $pdo->prepare("select * from user where user_id=?");
     $sql->execute([$_SESSION['user_id']]);
     $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
@@ -82,21 +63,16 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     ");
  $sql->execute([$_SESSION['cart_id']]);
  $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
- $totalQty=0;
- $totalAmount=0;
  
  if ($reviews) {
      foreach ($reviews as $review) {
         $price = (float)$review['price']; // 明示的に数値に変換
         $qty = (int)$review['qty']; // 明示的に数値に変換
         $subtotal = $price * $qty;
-       
 
          echo '<img src="images/' . $review['image'].'" alt="商品画像">';
          echo $review['name'];
          echo '￥' . number_format($subtotal);
-         $totalQty+=$qty;
-         $totalAmount+=$subtotal;
          echo '<br>';
      }
  }
@@ -110,10 +86,10 @@ $totalAmount = isset($_SESSION['total_amount']) ? $_SESSION['total_amount'] : 0;
     </select>
     <br>
     <?php
-    echo '商品合計：',$totalQty,'点<br>';
-    echo '￥',$totalAmount;
+    echo '商品合計：',$_SESSION['total_qty'],'点<br>';
+    echo '￥',$_SESSION['total_amount'];
     ?>
-    <input type="hidden" name="totalAmount" value="<?php echo $totalAmount; ?>">
+
     <button type="submit">注文する</button>
     </form>
 </body>

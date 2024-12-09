@@ -11,9 +11,9 @@ unset($_SESSION['goods_id']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".vscode/CSS/G9.css">
     <title>カート内画面</title>
-    <link rel="stylesheet" href=".vscode/CSS/reset.css">
-    <link rel="stylesheet" href=".vscode/CSS/header.css">
-    <link rel="stylesheet" href=".vscode/CSS/G8.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/G8.css">
+    <link rel="stylesheet" href="./css/header.css">
     <script src="cartlist.js" defer></script>
 </head>
 <body>
@@ -35,7 +35,7 @@ unset($_SESSION['goods_id']);
         </form>
     </header>
     <form action="<?php echo $prevPage; ?>" method="get">
-            <button type="submit">戻る</button>
+            <button type="submit"><i class="bi bi-arrow-left"></i></button>
         </form>
     <p>カート</p>
 <?php
@@ -76,10 +76,12 @@ unset($_SESSION['goods_id']);
                 echo '</form>';
                 echo '</div>';
             }
+            echo '<div class="total">';
 
             echo '<p id="total-qty">商品合計: ' . $totalQty . '点</p>';
             echo '<p id="total-price">合計金額: ￥' . $totalAmount . '</p>';
 
+            echo '</div>';
             ?>
         </div>
         <form action="G9.php" method="post">

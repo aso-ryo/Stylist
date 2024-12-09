@@ -44,9 +44,9 @@ $sql = $pdo->prepare("select * from user where `e-mail`=? and password=?");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".vscode/CSS/reset.css">
-    <link rel="stylesheet" href=".vscode/CSS/header.css">
-    <link rel="stylesheet" href=".vscode/CSS/G4.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/G4.css">
     <title>トップページ</title>
 </head>
 

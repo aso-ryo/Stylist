@@ -1,6 +1,12 @@
+
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/header.css">
+<link rel="stylesheet" href="./css/G7.css">
 <?php
     session_start();
 
+// 戻るボタンのためのリファラ処理
+$prevPage = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : 'G4.php';
 
     $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                 dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -36,7 +42,7 @@
             } 
             
         }
-        header('Location:' .$_SESSION['prevPage']);
+        header('Location:' .$prevPage);
         exit;
 ?>
 <!DOCTYPE html>
@@ -68,6 +74,47 @@
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
+    <?
+    /*
+    $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
+                dbname=LAA1554862-kaihatsu;charset=utf8',
+                'LAA1554862',
+                'aso2024');
 
+        echo '<form action="G7.php" method="post">';
+
+        $goods_id=$_POST['id'];
+        $sql = $pdo->prepare("select * from goods where goods_id=?");
+        $sql->execute([$goods_id]);
+        $reviews = $sql->fetchAll(PDO::FETCH_ASSOC);
+        if ($reviews) {
+            foreach ($reviews as $review) {
+                $goods_id=$review['goods_id'];
+                echo '<p><img src="images/' . $review['image'] . '"></p>';
+                echo '<p>' . $review['goods_name'] . '</p>';
+                echo '<p>' . $review['price'] . '</p>';
+                echo '<p>' . $review['explain'] . '</p>';
+                  
+            }
+        }
+
+        echo '<button disabled>カートにいれる</button>';
+        echo '</form>';
+
+
+        // ボタン表示
+        echo '<button id="favorite-' . $goods_id . '" onclick="toggleFavorite(' . $goods_id . ')">';
+        echo $is_favorited ? '★' : '☆';
+        echo '</button>';
+
+        $sql = $pdo->prepare("select stock from stock where goods_id=?");
+        $sql->execute([$goods_id]);
+        $stock = $sql->fetchColumn();
+        if ($stock !== false && $stock > 0) {
+            echo "在庫あり: $stock 個";
+        } else {
+            echo "在庫なし";
+        } */  
+     ?> 
 </body>
 </html>
