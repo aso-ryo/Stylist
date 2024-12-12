@@ -8,9 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マイページ画面</title>
-    <link rel="stylesheet" href=".vscode/CSS/reset.css">
-    <link rel="stylesheet" href=".vscode/CSS/header.css">
-    <link rel="stylesheet" href=".vscode/CSS/G13.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/G13.css">
 </head>
 <body>
 <header>
@@ -30,6 +30,11 @@
             <button type="submit"><i class="header__icon bi bi-person"></i></button>
         </form>
     </header>
+
+    <div class="favorite">
+        <h2>お気に入り</h2>
+        <a href="G12.php" class="all">すべて見る</a>
+        </div>
     <?php
         $pdo=new PDO('mysql:host=mysql309.phy.lolipop.lan;
                     dbname=LAA1554862-kaihatsu;charset=utf8',
@@ -45,12 +50,14 @@
         $sql->execute([$_SESSION['user_id']]); 
         $results = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+        echo '<div class="images">';
         foreach ($results as $item) {
             echo '<a href="./G6.php?id=',$item['goods_id'],'">';
             echo '<img src="images/' . $item['image'] . '" alt="Product Image" width="150" height="150"></a>';
             echo $item['category'] . '<br>';
+            echo '</div>';
 }
-
+echo '</div>';
         ?>  
     <a href="G12.php">すべて見る</a>
 

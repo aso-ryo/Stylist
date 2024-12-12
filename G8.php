@@ -11,9 +11,9 @@ unset($_SESSION['goods_id']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href=".vscode/CSS/G9.css">
     <title>カート内画面</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/G8.css">
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/G8.css">
     <script src="cartlist.js" defer></script>
 </head>
 <body>
