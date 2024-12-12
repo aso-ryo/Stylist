@@ -1,26 +1,45 @@
-h1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
-.button {
-    background-color: red;
-    color: #ffffff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin: 0 auto;
-    border-radius: 5px;
+.comprete h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .kanryou {
-    background-color: skyblue;
-    padding: 2rem 4rem;
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    background-color: #007bff; /* 青色 */
+    width:500px;
+    margin:0 auto;
+    padding: 10px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.all {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* 注文情報 */
+.order, .delivery, .total {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: red; /* ボタンの赤色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }

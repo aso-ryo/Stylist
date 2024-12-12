@@ -1,72 +1,104 @@
 #cart {
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-  }
-  
-  /* カートアイテムを横並びにする */
-  .cart-item {
-    display: flex;                 /* 横並びにする */
-    align-items: center;           /* 縦方向の中央揃え */
-    justify-content: space-between;/* 各要素を均等に配置 */
-    width: 100%;                    /* カートアイテムの幅 */
-    padding: 15px;                 /* 内側の余白 */
-    border-bottom: 1px solid #ccc; /* 下線で仕切る */
-    box-sizing: border-box;
-    /* 幅にパディングとボーダーを含める */
-  }
-  
-  /* 画像のスタイル */
-  .cart-item img {
-    width: 150px;                 /* 画像の幅 */
-    height: 200px;                 /* 高さは自動調整 */
-    margin-right: 20px;           /* 右側の余白 */
-  }
-  
-  /* 商品名や価格のスタイル */
-  .cart-item p {
-    margin: 0;                    /* デフォルトのマージンを削除 */
-    flex: 1;                      /* 商品名や価格のスペースを均等に分ける */
-    text-align: center;
-  }
-  
-  /* セレクトボックスのスタイル */
-  .item-quantity {
-    width: 50px;                  /* 数量選択ボックスの幅 */
-    margin-right: 20px;
-  }
-  
-  /* 削除ボタンのスタイル */
-  .cart-item button {
-    background-color: #f44336;    /* 削除ボタンの色 */
-    color: white;                 /* 文字色 */
-    border: none;                 /* 枠線を削除 */
-    padding: 10px 15px;
-    cursor: pointer;              /* カーソルをポインタに */
-    border-radius: 5px;           /* 角を丸くする */
-  }
-  
-  /* 削除ボタンのホバー効果 */
-  .cart-item button:hover {
-    background-color: #d32f2f;
-  }
-  
-  /* 合計金額やボタンのスタイル */
-  #total-qty, #total-price {
-    font-weight: bold;            /* 太字にする */
-    margin-top: 20px;
-  }
-  
-  /* レジへ進むボタン */
-  form[action="G9.php"] button {
-    background-color: #000;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-  .total{
-    
-  }
+/* カートアイテムを横並びにする */
+.cart-item {
+  display: flex;
+  /* 横並びにする */
+  align-items: center;
+  /* 縦方向の中央揃え */
+  justify-content: space-between;
+  /* 各要素を均等に配置 */
+  width: 100%;
+  /* カートアイテムの幅 */
+  padding: 15px;
+  /* 内側の余白 */
+  border-bottom: 1px solid #ccc;
+  /* 下線で仕切る */
+  box-sizing: border-box;
+  /* 幅にパディングとボーダーを含める */
+}
+
+/* 画像のスタイル */
+.cart-item img {
+  width: 150px;
+  /* 画像の幅 */
+  height: 200px;
+  /* 高さは自動調整 */
+  margin-right: 20px;
+  /* 右側の余白 */
+}
+
+/* 商品名や価格のスタイル */
+.cart-item p {
+  margin: 0;
+  /* デフォルトのマージンを削除 */
+  flex: 1;
+  /* 商品名や価格のスペースを均等に分ける */
+  text-align: center;
+}
+
+/* セレクトボックスのスタイル */
+.item-quantity {
+  width: 50px;
+  /* 数量選択ボックスの幅 */
+  margin-right: 20px;
+}
+
+/* 削除ボタンのスタイル */
+.cart-item button {
+  background-color: #f44336;
+  /* 削除ボタンの色 */
+  color: white;
+  /* 文字色 */
+  border: none;
+  /* 枠線を削除 */
+  padding: 10px 15px;
+  cursor: pointer;
+  /* カーソルをポインタに */
+  border-radius: 5px;
+  /* 角を丸くする */
+}
+
+/* 削除ボタンのホバー効果 */
+.cart-item button:hover {
+  background-color: #d32f2f;
+}
+
+/* 合計金額やボタンのスタイル */
+#total-qty,
+#total-price {
+  font-weight: bold;
+  /* 太字にする */
+  margin-top: 20px;
+}
+
+/* レジへ進むボタン */
+form[action="G9.php"] button {
+  background-color: #000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.total {
+  display: flex;
+  /* 横並びにする */
+  justify-content: center;
+  /* 水平方向 */
+  align-items: center;
+  /* 垂直方向 */
+  height: 10vh;
+  column-gap: 2rem;
+}
+
+
+.arrow {
+  display: contents;
+  font-size: 40px;
+}

@@ -17,6 +17,8 @@ G15　会員情報変更完了画面
   .kanryou {
     background-color: skyblue;
     padding: 2rem 4rem;
+    width:700px;
+     margin:0 auto;
     font-size: 2rem;
     font-weight: bold;
     display: flex;

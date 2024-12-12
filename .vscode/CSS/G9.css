@@ -1,1 +1,71 @@
-G9 注文確認画面
+.content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.content .arrow {
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.image{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 5px;
+}
+
+.image img{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #ccc;
+}
+
+.image span{
+    display: inline-block;
+    
+}
+
+/* 支払い方法 */
+.pay {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.pay select {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+}
+
+/* 合計金額とボタン */
+.total {
+    margin-top: 20px;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pay_button {
+    margin-top: 20px;
+    margin-right:10em;
+}
+
+.pay_button button {
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}

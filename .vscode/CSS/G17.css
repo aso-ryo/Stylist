@@ -7,7 +7,7 @@ h1 {
     height: 100px;
     font-size: 60px;
 }
-
+ 
 h3 {
     background-color: #ffffff;
     display: flex;
@@ -18,7 +18,7 @@ h3 {
     left: 502px;
     font-size: 25px;
 }
-
+ 
 .mail {
     background-color: #d9d9d9;
     border: none;
@@ -32,7 +32,7 @@ h3 {
     border-radius: 7px;
     margin: 0 auto;
 }
-
+ 
 .pass {
     background-color: #d9d9d9;
     border: none;
@@ -46,7 +46,7 @@ h3 {
     border-radius: 7px;
     margin: 0 auto;
 }
-
+ 
 .login-button{
     background-color: black;
     border: none;
@@ -56,12 +56,22 @@ h3 {
     justify-content: center;
     top: 400px;
     width: 180px;
-    border-radius: 30px; 
+    border-radius: 30px;
 }
-
-
-
+ 
+.new{
+    background-color: black;
+    border: none;
+    flex-direction: row;
+    color: #ffffff;
+    height: 57px;
+    justify-content: center;
+    top: 400px;
+    width: 180px;
+    border-radius: 30px;
+}
+ 
 .a{
     text-align: center;
-
+ 
  }

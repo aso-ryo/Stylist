@@ -1,8 +1,28 @@
-.category-cards {
+.images{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
-  position: relative;
-  left: 300px;
-  margin-top: -290px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 3px;
+}
+ 
+.image img{
+  border-radius: 20px;
+}
+ 
+.favorite{
+  display: flex;
+    justify-content: space-between;  /* 要素間を等間隔に配置 */
+    align-items: center;             /* 縦方向の中央揃え */
+    width: 100%;                     /* 幅を画面いっぱいに広げる */
+    padding: 20px 50px;
+}
+ 
+.image{
+  width:200px;
+  height:200px;
+}
+
+.news{
+  width: 100px;
+  height: 100px;
+  margin-left: 50px
 }
